@@ -1,0 +1,83 @@
+#skill {
+    transition:background-color 4s ease; background:linear-gradient(70deg,#3f69ff,#8426f6,#7490f5,#42cbed,#9a5af5); 
+    background-size:auto; background-size:500% 250%; animation:degradeFond 30s ease infinite;
+}
+
+@keyframes degradeFond {
+	0% {background-position:0 50%;}
+	50% {background-position:50% 50%;}
+	100% {background-position:0 50%;}
+}
+
+#skill h1 {
+    color: white;
+}
+
+
+.skill_box {
+    background-color: white;
+    min-height: 0px;
+    width: calc(100% - 100px);
+    padding: 50px 50px 50px 50px;
+    min-width: 230px;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
+}
+
+.skill_box ul {
+    display:flex;
+    justify-content:space-between;
+}
+
+.skill_title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    color: white;
+}
+
+.skill_box {
+    display: flex;
+    justify-content: center;
+}
+
+.skill_box, .skill_title {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.div_box {  
+    /*display: flex;
+    justify-content: center;*/  /* Pour changer le style de positionnement des box */
+
+    margin-bottom: 50px;
+}
+
+.description_box {
+    width: 400px;
+    max-width: 400px;
+}
+
+.skill_box li img {
+    -webkit-transition: all 0.8s ease; /* Safari et Chrome */
+    -moz-transition: all 0.8s ease; /* Firefox */
+    -ms-transition: all 0.8s ease; /* Internet Explorer 9 */
+    -o-transition: all 0.8s ease; /* Opera */
+    transition: all 0.8s ease;
+}
+
+.skill_box li img:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+.icone_text {
+    text-align: center;
+}
+
+.icone_text p {
+    color: black;
+    margin-top: 10px;
+}
