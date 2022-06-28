@@ -14,10 +14,6 @@
         <link rel="stylesheet" type="text/css" href="src/CSS/competences.css" />
         <link rel="stylesheet" type="text/css" href="src/CSS/contact.css" />
         <link rel="stylesheet" type="text/css" href="src/CSS/footer.css" />
-
-        <!-- SCRIPTS -->
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <!--<script type="module" src="src/JS/script.js"></script>-->
         
 	</head>
 
@@ -28,41 +24,41 @@
             <img class="logo" src="Ressources/Gallonet Blue.png" width="12%">
             <nav class="nav_links">
                 <ul>
-                    <li> <a href="#"> Accueil</a> </li>
-                    <li> <a href="#projects"> Projets </a></li>
-                    <li> <a href="#skill"> Compétences </a></li>
+                    <li> <a href="#" class="btn-first"> Accueil</a> </li>
+                    <li> <a href="#projects" class="btn-first"> Projets </a></li>
+                    <li> <a href="#skill" class="btn-first"> Compétences </a></li>
                 </ul>
             </nav>
-            <a href="#contact_section"> <button> Contact </button> </a>
+            <a href="#contact_section" class="btn-first"> <button> Contact </button> </a>
         </header> <br>
 
         
         <!------------------------------------------------------- PRESENTATION ----------------------------------------------------------------->
-        <div id="presentation">
+        <section id="presentation">
             <!-- Texte Presentation -->
             <div id="presentation_text">
-                <p> Bonjour, je m'appelle </p> <br>
-                <h1> Alexi GALLONET </h1> <br>
-                <p> J'ai 19 ans et je suis étudiant en France. </p>
-                <p> A l'<a href="https://www.uca.fr/" target="_blank">IUT Informatique Graphique</a> du Puy-en-Velay. </p>
+                <p> <span> Bonjour, je m'appelle</span> </p> <br>
+                <h1> <span> Alexi </span> <span>GALLONET</span> </h1> <br>
+                <p> <span> J'ai 19 ans et je suis étudiant en France.</span> </p>
+                <p> <span> A l'<a href="https://www.uca.fr/" target="_blank">IUT Informatique Graphique</a> du Puy-en-Velay.</span> </p>
             </div>
             <!-- Photo Presentation -->
             <div id="presentation_img">
                 <img src="Ressources/photoMoiCarre2.png" id="PhotoMOI">
             </div>
-        </div>
+        </section>
         
 
         <!--------------------------------------------------------- PROJETS -------------------------------------------------------------------->
-        <div id="projects">
+        <section id="projects">
             <div class="marge">
 
-                <h1 class="titre"> Quelques-uns de mes projets </h1>
+                <h1 class="titre"> Quelques-uns des mes projets </h1>
 
                 <!-- Projet 1 - The Red Knight -->
                 <div id="projet1">
                     <div class="text_show">
-                        <div class="project_text">
+                        <div class="project_text2">
                             <h2> The Red Knight ⚔️ </h2>
                             <span> <center>2021</center> </span><br> 
                             <p>
@@ -81,95 +77,95 @@
 
                     <!-- Download Button -->
                     <div class="div_download_btn">
-                        <a class="download_btn" href="Ressources/download/The Red Knight.zip" download="The Red Knight.zip" rel="noreferrer">TELECHARGER LE JEU</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- Projet 2 - Twitch Tracker -->
-            <div id="projet2">
-                <div class="text_show">
-                    <div class="show_project">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/TwitchTracker.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                    <div class="project_text">
-                        <h2> Twitch Tracker </h2>
-                        <span> <center>2022</center> </span><br> 
-                        <p>
-                            Site web réalisé en HTML, CSS et JavaScript pour la partie front-end et PHP et SQL pour la partie back-end.
-                        </p> <br>
-                        <p>
-                            Nous récupérons les informations des streamers dans une base de données afin de les comprarer entre elles. Ce travail a été fait en groupe de 3.
-                        </p>
+                        <a class="download_btn" href="https://github.com/alexiglnt/The-Red-Knight" target="_blank">TELECHARGER LE JEU</a>
                     </div>
                 </div>
 
-                <!-- Download Button -->
-                <div class="div_download_btn">
-                    <a class="download_btn" href="test.html" download="#" rel="noreferrer">TESTER LE TRACKER</a>
-                </div>
-            </div>
 
 
-             <!-- Projet 3 - Five Guys -->
-             <div id="projet3">
-                <div class="text_show">
-                    <div class="project_text">
-                        <h2> Five Guys 🖐️ </h2>
-                        <span> <center>2022</center> </span><br> 
-                        <p>
-                            Jeu vidéo de type rogue-like 2D avec génération de map aléatoire, réalisé en groupe de 5. Codé via le moteur de jeu Unity et le langage de programmation C#.
-                        </p> <br>
-                        <p>
-                            Parmi les 5 personnages disponibles, vous devez parcourir le donjon afin d'en trouver la sortie. Attention des ennemis et des boss vont barreront la route.
-                        </p>
+                <!-- Projet 2 - Twitch Tracker -->
+                <div id="projet2">
+                    <div class="text_show">
+                        <div class="show_project">
+                            <video class="video_project" autoplay loop muted preload="metadata">
+                                <source src="Ressources/videos/TwitchTracker.mp4" type=video/mp4>
+                            </video>
+                        </div>
+                        <div class="project_text">
+                            <h2> Twitch Tracker </h2>
+                            <span> <center>2022</center> </span><br> 
+                            <p>
+                                Site web réalisé en HTML, CSS et JavaScript pour la partie front-end et PHP et SQL pour la partie back-end.
+                            </p> <br>
+                            <p>
+                                Nous récupérons les informations des streamers dans une base de données afin de les comprarer entre elles. Ce travail a été fait en groupe de 3.
+                            </p>
+                        </div>
                     </div>
-                    <div class="show_project">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/FiveGuys.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                </div>
 
-                <!-- Download Button -->
-                <div class="div_download_btn">
-                    <a class="download_btn" href="Ressources/download/Five Guys.zip" download="Five Guys.zip" rel="noreferrer">TELECHARGER LE JEU</a>
-                </div>
-            </div>
-
-
-            <!-- Projet 4 - Musée VR 3D -->
-            <div id="projet4">
-                <div class="text_show">
-                    <div class="show_project">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/Museum3D.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                    <div class="project_text">
-                        <h2> Musée VR en 3D </h2>
-                        <span> <center>2022</center> </span><br> 
-                        <p>
-                            En groupe de 5, nous devions créer des oeuvres 3D et les texturer via les logiciels 3Ds Max et Substance afin de les ajouter au musée fourni au préalable.
-                        </p> <br>
-                        <p>
-                            Le but final était de montrer ce musée 3D via Unity à nos professeurs durant le passage oral mais nous avons choisi de le leur présenter via un casque VR pour une plus grande immersion.
-                        </p>
+                    <!-- Download Button -->
+                    <div class="div_download_btn">
+                        <a class="download_btn" href="https://github.com/alexiglnt/DATAVIZ---Twitch-Tracker"target="_blank">TESTER LE TRACKER</a>
                     </div>
                 </div>
 
-                <!-- Download Button -->
-                <div class="div_download_btn">
-                    <a class="download_btn" href="Ressources/download/Musee.zip" download="Musee.zip" rel="noreferrer">TELECHARGER LE PROJET 3D</a>
+
+                <!-- Projet 3 - Five Guys -->
+                <div id="projet3">
+                    <div class="text_show">
+                        <div class="project_text2">
+                            <h2> Five Guys 🖐️ </h2>
+                            <span> <center>2022</center> </span><br> 
+                            <p>
+                                Jeu vidéo de type rogue-like 2D avec génération de map aléatoire, réalisé en groupe de 5. Codé via le moteur de jeu Unity et le langage de programmation C#.
+                            </p> <br>
+                            <p>
+                                Parmi les 5 personnages disponibles, vous devez parcourir le donjon afin d'en trouver la sortie. Attention des ennemis et des boss vont barreront la route.
+                            </p>
+                        </div>
+                        <div class="show_project">
+                            <video class="video_project" autoplay loop muted preload="metadata">
+                                <source src="Ressources/videos/FiveGuys.mp4" type=video/mp4>
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- Download Button -->
+                    <div class="div_download_btn">
+                        <a class="download_btn" href="https://github.com/alexiglnt/Five-Guys" target="_blank">TELECHARGER LE JEU</a>
+                    </div>
+                </div>
+
+
+                <!-- Projet 4 - Musée VR 3D -->
+                <div id="projet4">
+                    <div class="text_show">
+                        <div class="show_project">
+                            <video class="video_project" autoplay loop muted preload="metadata">
+                                <source src="Ressources/videos/Museum3D.mp4" type=video/mp4>
+                            </video>
+                        </div>
+                        <div class="project_text">
+                            <h2> Musée VR en 3D </h2>
+                            <span> <center>2022</center> </span><br> 
+                            <p>
+                                En groupe de 5, nous devions créer des oeuvres 3D et les texturer via les logiciels 3Ds Max et Substance afin de les ajouter au musée fourni au préalable.
+                            </p> <br>
+                            <p>
+                                Le but final était de montrer ce musée 3D via Unity à nos professeurs durant le passage oral mais nous avons choisi de le leur présenter via un casque VR pour une plus grande immersion.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Download Button -->
+                    <div class="div_download_btn">
+                        <a class="download_btn" href="https://github.com/alexiglnt/3D-VR-Museum" target="_blank">TELECHARGER LE PROJET 3D</a>
+                    </div>
                 </div>
             </div>
 
          </div>
-        </div>
+        </section>
 
 
         <!--------------------------------------------------------- SKILL -------------------------------------------------------------------->
@@ -306,7 +302,7 @@
 
         <!-------------------------------------------------------- BAS DE PAGE ----------------------------------------------------------------->
         <section id="footer">
-            <img src="Ressources/Gallonet Companyy.png" width="8%">
+            <img src="Ressources/Gallonet underlign.png" width="8%">
             <div>
                 <p> Créé par Alexi GALLONET et fait en HTML, CSS et JavaScript </p>
                 <p> Merci à vous d'avoir lu jusqu'au bout. </p>
@@ -322,27 +318,40 @@
 			<a href="#top"><img src="Ressources/arrow-up-Blue.png" alt="Remonter"/></a> 			
 		</div>
 
+
+        <!-- SCRIPTS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
         <script>
-            // NAV BAR
-            window.addEventListener("scroll", function() {
+            // NAVIGATION BARRE
+            window.addEventListener("scroll", function() 
+            {
                 var header = document.querySelector("header");
                 header.classList.toggle("sticky", window.scrollY > 0);
             })
 
 
+            // ANIMATION AU DEMARAGE
+            const titreSpans = document.querySelectorAll('h1 span');
+            const pSpans = document.querySelectorAll('p span');
 
-            // Anim click
-            window.addEventListener('click', (e) => {
-                console.log(e);
-                const rond = document.createElement('div');
-                rond.className = 'clickAnim';
-                rond.style.top = `${e.pageY}px`;
-                rond.style.left = `${e.pageX}px`;
-                document.body.appendChild(rond);
+            const btns = document.querySelectorAll('.btn-first');
+            const logo = document.querySelector('.logo');
+            const picture = document.querySelectorAll('#presentation_img');
 
-                setTimeout(() => {
-                    rond.remove();
-                }, 1500)
+            window.addEventListener('load', () => {
+
+            const TL = gsap.timeline({paused: true});
+
+            TL
+            .staggerFrom(btns, 1, {bottom: -50, opacity: 0, ease: "power2.out"}, 0.3)
+            .staggerFrom(pSpans, 1, {bottom: -50, opacity: 0, ease: "power2.out"}, 0.3, '-=1')
+            .staggerFrom(titreSpans, 1, {bottom: -50, opacity: 0, ease: "power2.out"}, 0.3, '-=0.5')
+            .staggerFrom(picture, 1, {bottom: -50, opacity: 0, ease: "power2.out"}, 0.3, '-=0.25')
+
+            
+            TL.play();
             })
         </script>
 
