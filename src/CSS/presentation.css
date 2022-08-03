@@ -52,3 +52,15 @@
     -o-transform:scale(1.25); /* Opera */
     transform:scale(1.25);
 }
+
+@media screen and (max-width:999px)
+{
+    #presentation_img img {
+        display: none;
+    }
+
+    #presentation {
+        display: flex;
+        justify-content: center;
+    }
+}

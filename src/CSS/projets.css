@@ -2,7 +2,7 @@
 
 #projects {
     background-color: #fff;
-
+    box-sizing: border-box;
     width: 100%;
     margin: 0%;
     padding: 0%;
@@ -152,5 +152,22 @@ video {
 #Museum3D {
     font-family: 'Monoton', cursive;
     font-size: 25px;
+}
+
+
+@media screen and (max-width:999px)
+{
+    .text_show {
+        display: block;
+        justify-content: center;
+    }
+
+    .project_text2, .project_text {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 50px;
+
+        font-size:xx-large;
+    }
 }
 

@@ -112,6 +112,12 @@ p {
 }
 
 
+@media screen and (max-width:999px) 
+{
+    nav a {
+        font-size:16px;
+    }
+}
 
 /*.nav_links a {
     margin: 0 10px;
