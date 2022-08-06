@@ -191,8 +191,11 @@ p {
     }
 
     .nav_links ul li {
-        margin: 25px 0px;
-        font-size: 2em;
+        margin: 40px 0px;
+    }
+
+    .nav_links ul li a {
+        font-size: 60px;
     }
 
     .btnContact {
