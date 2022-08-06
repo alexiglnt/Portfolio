@@ -82,7 +82,7 @@ li, nav a, button {
 
 button {
     padding: 9px 25px;
-    background-color: rgb(14, 63, 241);     /* #0e3ff1 */
+    background-color: #0e3ff1;     /* #0e3ff1 */
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -111,13 +111,102 @@ p {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.cube {
+    position:absolute;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+
+    top: 40px;
+    right: 40px;
+}
+
+.menu-hamburger {
+    display: none;
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: 40px;
+
+    -webkit-transition: all 0.5s ease; /* Safari et Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* Internet Explorer 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+}
+
+.menu-hamburger:hover {
+    -webkit-transform:scale(1.1); /* Safari et Chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    -ms-transform:scale(1.1); /* Internet Explorer 9 */
+    -o-transform:scale(1.1); /* Opera */
+    transform:scale(1.1);
+}
+
+.hide {
+    display: none;
+}
+
+
 
 @media screen and (max-width:999px) 
 {
-    nav a {
-        font-size:16px;
+    .logo {
+        margin: 0 auto;
+        width: 20%;
+        z-index: 10;
+    }
+
+    .menu-hamburger {
+        display: block;
+    }
+
+    .nav_links {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.437);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+
+        transition: all 0.8s ease;
+    }
+
+    .mobile-menu {
+        margin-left: 0;
+    }    
+
+    .nav_links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links ul li {
+        margin: 25px 0px;
+        font-size: 2em;
+    }
+
+    .btnContact {
+        position:absolute;
+        top: 50px;
+        right: 50px;
     }
 }
+
+
+
+
+
+
 
 /*.nav_links a {
     margin: 0 10px;
