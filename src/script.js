@@ -52,11 +52,3 @@ a1.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); }
 a2.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); });
 a3.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); });
 a4.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); });
-
-
-// Ecran de chargement
-const loader = document.querySelector('.loader');
-
-window.addEventListener('load', () => {
-    loader.classList.add('fondu-out');
-});
