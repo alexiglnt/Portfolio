@@ -154,6 +154,25 @@ video {
     font-size: 25px;
 }
 
+#Wiki-Search {
+    font-family: 'EB Garamond', serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+    word-spacing: 7px;
+}
+
+#Wiki-Search span {
+    font-family: 'EB Garamond', serif;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+#Infinite-Scroll {
+    font-family: 'Roboto', serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
 
 @media screen and (max-width:999px)
 {
@@ -168,6 +187,10 @@ video {
         margin-bottom: 50px;
 
         font-size:xx-large;
+    }
+
+    .show_project {
+        margin-bottom: 20px;
     }
 }
 

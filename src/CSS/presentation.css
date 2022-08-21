@@ -64,4 +64,13 @@
         display: flex;
         justify-content: center;
     }
+
+    #presentation_text p {
+        font-size: 22px;
+    }
+
+    #presentation_text a {
+        color: rgb(121, 121, 255);
+        text-decoration: underline;
+    }
 }
