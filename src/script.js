@@ -52,3 +52,14 @@ a1.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); }
 a2.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); });
 a3.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); });
 a4.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); });
+
+// Bouton retour en haut
+const scrollToTop = document.querySelector('.scroll-to-top');
+scrollToTop.addEventListener('click', pushToTop);
+
+function pushToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}

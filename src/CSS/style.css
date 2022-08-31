@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
 
 @font-face {
 	font-family: "Dimitri";
@@ -43,6 +44,10 @@ body {
 #remonter img { 
     width: 45px; 								/* définit une largeur de 45px */
   }
+
+.scroll-to-top {
+    cursor: pointer;
+}
 
 .titre {
     font-size: 50px;

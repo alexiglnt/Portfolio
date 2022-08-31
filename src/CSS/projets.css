@@ -173,6 +173,16 @@ video {
     letter-spacing: 3px;
 }
 
+#Morpion {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 30px;
+}
+
+#Morpion span {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 50px;
+    margin-left: 5px;
+}
 
 @media screen and (max-width:999px)
 {
