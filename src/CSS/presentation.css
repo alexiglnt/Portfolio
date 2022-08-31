@@ -65,6 +65,7 @@
     #presentation {
         display: flex;
         justify-content: center;
+        height: 100%;
     }
 
     #presentation_text p {
