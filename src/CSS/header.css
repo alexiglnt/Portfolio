@@ -158,6 +158,7 @@ a.menu-hamburger {
     cursor: pointer;
     /*background: red;*/
     z-index: 1001;
+    position: absolute;
 }
 
 span.line {
