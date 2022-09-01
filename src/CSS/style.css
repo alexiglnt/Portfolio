@@ -56,6 +56,16 @@ body {
     margin-bottom: 100px;
 }
 
+.gif {
+    transform: translateY(10px);
+}
+
+.gifmail {
+    transform: translateY(30px);
+}
+
+
+
 .clickAnim {
     width: 20px;
     height: 20px;
