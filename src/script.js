@@ -1,4 +1,4 @@
-// NAVIGATION BARRE
+//**********************************************************  NAVIGATION BAR **************************************************************** */
 window.addEventListener("scroll", function() 
 {
     var header = document.querySelector("header");
@@ -6,7 +6,7 @@ window.addEventListener("scroll", function()
 })
 
 
-// ANIMATION AU DEMARAGE
+//*******************************************************  ANIMATION AU DEMARRAGE ********************************************************** */
 const titreSpans = document.querySelectorAll('h1 span');
 const pSpans = document.querySelectorAll('p span');
 
@@ -34,7 +34,7 @@ TL.play();
 
 
 
-// NAVBAR HAMBURGER
+//**********************************************************  NAVBAR HAMBURGER **************************************************************** */
 const menuHamburger = document.querySelector(".menu-hamburger");
 const navLinks = document.querySelector(".nav_links");
 
@@ -62,13 +62,34 @@ a4.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); a
 
 
 
-// Bouton retour en haut
+//**********************************************************  SCROLL **************************************************************** */
 const scrollToTop = document.querySelector('.scroll-to-top');
 scrollToTop.addEventListener('click', pushToTop);
+
+const homeBtn = document.querySelector('#nav1');
+homeBtn.addEventListener('click', pushToTop);
 
 function pushToTop() {
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     })
+}
+
+// SCROLL INTO VIEW
+const projects = document.querySelector('#projects');
+const skills = document.querySelector('#skill');
+const contact = document.querySelector('#contact_section');
+
+const projectBtn = document.querySelector('#nav2');
+const skillBtn = document.querySelector('#nav3');
+const contactBtn = document.querySelector('#nav4');
+
+
+projectBtn.addEventListener('click', () => { navigateScrollTo(projects) });
+skillBtn.addEventListener('click', () => { navigateScrollTo(skills) });
+contactBtn.addEventListener('click', () => { navigateScrollTo(contact) });
+
+function navigateScrollTo(id) {
+    id.scrollIntoView({behavior: "smooth"});
 }
