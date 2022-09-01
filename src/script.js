@@ -43,15 +43,24 @@ menuHamburger.addEventListener('click', () => {
 });
 
 
+const a = document.querySelector(".menu-hamburger");
+
+a.addEventListener('click', () => {
+    a.classList.toggle('mobile-menu');
+})
+
+
 const a1 = document.querySelector('.a1');
 const a2 = document.querySelector('.a2');
 const a3 = document.querySelector('.a3');
 const a4 = document.querySelector('.a4');
 
-a1.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); });
-a2.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); });
-a3.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); });
-a4.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); });
+a1.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); a.classList.remove('mobile-menu'); });
+a2.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); a.classList.remove('mobile-menu'); });
+a3.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); a.classList.remove('mobile-menu'); });
+a4.addEventListener("click", () => { navLinks.classList.remove('mobile-menu'); a.classList.remove('mobile-menu'); });
+
+
 
 // Bouton retour en haut
 const scrollToTop = document.querySelector('.scroll-to-top');

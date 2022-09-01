@@ -126,8 +126,8 @@ p {
     position:absolute;
     width: 50px;
     height: 50px;
-    top: 40px;
-    left: 40px;
+    top: 60px;
+    left: 50px;
 
     -webkit-transition: all 0.5s ease; /* Safari et Chrome */
     -moz-transition: all 0.5s ease; /* Firefox */
@@ -146,6 +146,47 @@ p {
 
 .hide {
     display: none;
+}
+
+
+/*******************************************************************************************/
+
+a.menu-hamburger {
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+    /*background: red;*/
+}
+
+span.line {
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #f1f1f1;
+    transition: 0.8s ease;
+}
+
+.l1 {
+    transform: translateY(-10px);
+}
+.l3 {
+    transform: translateY(10px);
+}
+
+a.mobile-menu .l1 {
+    transform: rotate(135deg) translateY(-5px);
+    transition: 0.8s ease;
+}
+
+a.mobile-menu .l2 {
+    opacity: 0;
+    transition: 0.8s ease;
+}
+
+a.mobile-menu .l3 {
+    transform: rotate(-135deg) translateY(5px);
+    transition: 0.8s ease;
 }
 
 
