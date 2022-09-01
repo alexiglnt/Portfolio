@@ -157,6 +157,7 @@ a.menu-hamburger {
     text-align: center;
     cursor: pointer;
     /*background: red;*/
+    z-index: 1001;
 }
 
 span.line {
