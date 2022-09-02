@@ -53,6 +53,7 @@ nav li {
 .nav_links a {
     text-decoration: none;
     position: relative;
+    cursor: pointer;
 }
 
 .nav_links a::after {
