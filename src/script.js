@@ -95,3 +95,12 @@ contactBtn.addEventListener('click', () => { navigateScrollTo(contact) });
 function navigateScrollTo(id) {
     id.scrollIntoView({behavior: "smooth"});
 }
+
+
+//**********************************************************  LOADER **************************************************************** */
+
+window.addEventListener('load', () => {
+    document.querySelector('.preloader').style.display = "none";
+})
+
+
