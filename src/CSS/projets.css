@@ -87,10 +87,15 @@
 
 .project_text p, .project_text2 p {
     color: white;
-    padding: 20px;
+    padding: 10px;
     letter-spacing: 1px;
-    word-spacing: 5px;
+    word-spacing: 2px;
     text-align: justify;
+}
+
+.project_text p b, .project_text2 p b {
+    
+    border-bottom: 1px solid #f1f1f1;
 }
 
 .project_text h2, .project_text2 h2 {

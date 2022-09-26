@@ -12,8 +12,10 @@
 }
 
 #presentation_text a {
-    color: rgb(14, 63, 241);    /* #0e3ff1 */
+    color: #88a2ff;    /* #0e3ff1 */
     text-decoration: none;
+    border-bottom: 1px solid #88a2ff;
+    padding-bottom: 2px;
 }
 
 #presentation 
