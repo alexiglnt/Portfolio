@@ -39,7 +39,7 @@
     max-height : 500px;
 
     box-shadow: 5px 5px 5px black;
-}   
+} 
 
 #presentation_img img {
     -webkit-transition: all 0.8s ease; /* Safari et Chrome */
