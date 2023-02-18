@@ -139,12 +139,31 @@ video {
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
 }
 
+#projects p a {
+    color: #fff;
+    text-decoration: none;
+
+    /*** Button ***/
+    display: flex;
+    justify-content: center;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    margin: 5px auto;
+
+}
+
 #The-Red-Knight {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
 }
 
-#TwitchTracker {
+#TwitchTracker, #ComicsMore {
     font-family: "Dimis";
     font-size: 35px;
 }

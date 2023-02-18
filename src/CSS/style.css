@@ -96,6 +96,7 @@ body {
 
 .scroll-to-top {
     cursor: pointer;
+    display: none;
 }
 
 .titre {

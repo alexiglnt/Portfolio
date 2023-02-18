@@ -1,522 +1,510 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<script src="https://use.fontawesome.com/edf3ae3229.js"></script>				
-		<title>Alexi GALLONET</title>
-		<link rel="icon" type="image/png" sizes="16x16" href="Ressources/logo_fond_blue.png">
 
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://use.fontawesome.com/edf3ae3229.js"></script>
+    <title>Alexi GALLONET</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="Ressources/logo_fond_blue.png">
 
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="src/CSS/style.css" />
-        <link rel="stylesheet" type="text/css" href="src/CSS/header.css" />
-        <link rel="stylesheet" type="text/css" href="src/CSS/presentation.css" />
-        <link rel="stylesheet" type="text/css" href="src/CSS/projets.css" />
-        <link rel="stylesheet" type="text/css" href="src/CSS/competences.css" />
-        <link rel="stylesheet" type="text/css" href="src/CSS/contact.css" />
-        <link rel="stylesheet" type="text/css" href="src/CSS/footer.css" />
-        
-	</head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <body>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="src/CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="src/CSS/header.css" />
+    <link rel="stylesheet" type="text/css" href="src/CSS/presentation.css" />
+    <link rel="stylesheet" type="text/css" href="src/CSS/projets.css" />
+    <link rel="stylesheet" type="text/css" href="src/CSS/competences.css" />
+    <link rel="stylesheet" type="text/css" href="src/CSS/contact.css" />
+    <link rel="stylesheet" type="text/css" href="src/CSS/footer.css" />
 
-        <div class="preloader">
-            <h1>Chargement...</h1> <br> <br>
-            <img class="loader" src="Ressources/LOGO 1 Blue.png"></img>
+</head>
+
+<body>
+
+    <div class="preloader">
+        <h1>Chargement...</h1> <br> <br>
+        <img class="loader" src="Ressources/LOGO 1 Blue.png"></img>
+    </div>
+
+    <!------------------------------------------------------ MENU NAVIGATION -------------------------------------------------------------->
+    <header>
+        <img id="logoimg" class="logo" src="Ressources/Gallonet Blue.png" width="12%">
+        <nav class="nav_links">
+            <ul>
+                <li> <a id="nav1" class="btn-first a1"> Accueil</a> </li>
+                <!-- ATTENTION SI JE SUPPRIME LUI (animation bug) -->
+                <li> <a id="nav2" class="btn-first a2"> Projets </a></li>
+                <li> <a id="nav3" class="btn-first a3"> Compétences </a></li>
+            </ul>
+        </nav>
+        <a id="nav4" class="btn-first btnContact a4"> <button> Contact </button> </a>
+        <a src="Ressources/hamburgerBtnWWhite.png" class="menu-hamburger" alt="">
+            <span class="line l1"></span>
+            <span class="line l2"></span>
+            <span class="line l3"></span>
+        </a>
+    </header> <br>
+
+
+    <!------------------------------------------------------- PRESENTATION ----------------------------------------------------------------->
+    <section id="presentation">
+        <!-- Texte Presentation -->
+        <div id="presentation_text">
+            <p> <span> Bonjour, je m'appelle</span> </p> <br>
+            <h1> <span> Alexi </span> <span>GALLONET </span> </h1> <br>
+            <p> <span> J'ai <span id="age"></span> ans et je suis un future technicien en informatique à l'IUT du
+                    Puy-en-Velay. J'ai pour
+                    ambition de devenir développeur web fullstack </span> </p> <br>
+            <p> <span> <a href="Ressources/CV - Alexi GALLONET.pdf" target="_blank">Télécharger mon CV</a> </span> </p>
         </div>
 
-        <!------------------------------------------------------ MENU NAVIGATION -------------------------------------------------------------->
-        <header>    
-            <img class="logo" src="Ressources/Gallonet Blue.png" width="12%">
-            <nav class="nav_links">
-                <ul>
-                    <li> <a id="nav1" class="btn-first a1"> Accueil</a> </li>
-                    <li> <a id="nav2" class="btn-first a2"> Projets </a></li>
-                    <li> <a id="nav3" class="btn-first a3"> Compétences </a></li>
-                    <!--<li> <a href="#contact_section" class="btn-first a4 hide"></a></li>-->
-                </ul>
-            </nav>
-            <a id="nav4" class="btn-first btnContact a4"> <button> Contact </button> </a>
-            <a src="Ressources/hamburgerBtnWWhite.png" class="menu-hamburger" alt="">
-                <span class="line l1"></span>
-                <span class="line l2"></span>
-                <span class="line l3"></span>
-            </a>
-        </header> <br>
+        <!-- Photo Presentation -->
+        <div id="presentation_img">
+            <img src="Ressources/ReadyPlayerMe-Avatar.jpeg" id="PhotoMOI">
+        </div>
+    </section>
 
-        
-        <!------------------------------------------------------- PRESENTATION ----------------------------------------------------------------->
-        <section id="presentation">
-            <!-- Texte Presentation -->
-            <div id="presentation_text">
-                <p> <span> Bonjour, je m'appelle</span> </p> <br>
-                <h1> <span> Alexi </span> <span>GALLONET </span> </h1> <br>
-                <p> <span> J'ai 19 ans et je suis étudiant en France. </span> </p> <br>
-                <p> <span> A l'<a href="https://www.uca.fr/" target="_blank">IUT Informatique Graphique</a> du Puy-en-Velay.</span> </p>
-            </div>
-            <!-- Photo Presentation -->
-            <div id="presentation_img">
-                <!--<img src="Ressources/photoMoiCarre2.png" id="PhotoMOI">-->
-                <!--<img src="Ressources/crop.jpg" id="PhotoMOI">-->
-                <img src="Ressources/crop.jpg" id="PhotoMOI">
-            </div>
-        </section>
-        
 
-        <!--------------------------------------------------------- PROJETS -------------------------------------------------------------------->
-        <section id="projects">
-            <div class="marge">
+    <!--------------------------------------------------------- PROJETS -------------------------------------------------------------------->
+    <section id="projects">
+        <div class="marge">
 
-                <h1 class="titre" data-aos="fade-down"> Quelques-uns des mes projets <img class="gif" src="Ressources/giphy.gif" width="70px"> </h1>
+            <h1 class="titre" data-aos="fade-down"> Quelques-uns des mes projets <img class="gif"
+                    src="Ressources/giphy.gif" width="70px"> </h1>
 
-                <!-- Projet 1 - The Red Knight -->
-                <div id="projet1" class="onePerOneProject">
-                    <div class="text_show">
-                        <div class="project_text2" data-aos="fade-up-right">
-                            <h2 id="The-Red-Knight"> The Red Knight </h2>
-                            <span> <center> 2021</center> </span><br>
-                            <p>
-                                <b>But du jeu :</b> Incarnant un courageux chevalier, vous devrez parcourir le monde et combattre de nombreux ennemis afin de vous en sortir !
-                            </p>
-                            <p>
-                                <b>Description :</b> Jeu vidéo de type <i>plateformer 2D</i>
-                            </p>
-                            <p>
-                                <b>Technologies :</b> C#, moteur Unity
-                            </p>
-                            <p>
-                                <b>Type de projet :</b> Projet étudiant, réalisé en binome
-                            </p>
-                        </div>
-                        <div class="show_project" data-aos="fade-up-left">
-                            <video class="video_project" autoplay loop muted preload="metadata">
-                                <source src="Ressources/videos/The Red Knight 2022-06-26 16-31-25.mp4" type=video/mp4>
-                            </video>
-                        </div>
+            <!-- Projet 1 - The Red Knight -->
+            <div id="projet1" class="onePerOneProject">
+                <div class="text_show">
+                    <div class="project_text2" data-aos="fade-up-right">
+                        <h2 id="The-Red-Knight"> The Red Knight </h2>
+                        <span>
+                            <center> 2021</center>
+                        </span><br>
+                        <p>
+                            <b>But du jeu :</b> Incarnant un courageux chevalier, vous devrez parcourir le monde et
+                            combattre de nombreux ennemis afin de vous en sortir !
+                        </p>
+                        <p>
+                            <b>Description :</b> Jeu vidéo de type <i>plateformer 2D</i>
+                        </p>
+                        <p>
+                            <b>Technologies :</b> C#, moteur Unity
+                        </p>
+                        <p>
+                            <b>Type de projet :</b> Projet étudiant, réalisé en binome
+                        </p>
                     </div>
-
-                    <!-- Download Button -->
-                    <div class="div_download_btn" data-aos="fade-up">
-                        <a class="download_btn" href="https://github.com/alexiglnt/The-Red-Knight" target="_blank">TELECHARGER LE JEU</a>
+                    <div class="show_project" data-aos="fade-up-left">
+                        <video class="video_project" autoplay loop muted preload="metadata">
+                            <source src="Ressources/videos/The Red Knight 2022-06-26 16-31-25.mp4" type=video/mp4>
+                        </video>
                     </div>
                 </div>
 
-
-
-                <!-- Projet 2 - Twitch Tracker -->
-                <div id="projet2" class="onePerOneProject">
-                    <div class="text_show">
-                        <div class="show_project" data-aos="fade-up-right">
-                            <video class="video_project" autoplay loop muted preload="metadata">
-                                <source src="Ressources/videos/TwitchTracker.mp4" type=video/mp4>
-                            </video>
-                        </div>
-                        <div class="project_text" data-aos="fade-up-left">
-                            <h2 id="TwitchTracker"> Twitch Tracker </h2>
-                            <span> <center>2022</center> </span><br>
-                            <p>
-                                <b>But :</b> Site web stockant les informations de streamers Twitch dans une BDD. L’utilisateur peut par la suite afficher les statistiques de ses streamers préférés
-                            </p>
-                            <p>
-                                <b>Description :</b> Site web
-                            </p>
-                            <p>
-                                <b>Technologies :</b> JavaScript, PHP, HTML, CSS
-                            </p>
-                            <p>
-                                <b>Type de projet :</b> Projet étudiant, réalisé en trinome
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Download Button -->
-                    <div class="div_download_btn" data-aos="fade-up">
-                        <a class="download_btn" href="https://github.com/alexiglnt/DATAVIZ---Twitch-Tracker"target="_blank">TESTER LE TRACKER</a>
-                    </div>
-                </div>
-
-
-                <!-- Projet 3 - Five Guys -->
-                <div id="projet3" class="onePerOneProject">
-                    <div class="text_show">
-                        <div class="project_text2" data-aos="fade-up-right">
-                            <h2 id="Five-Guys"> Five Guys </h2>
-                            <span> <center>2022</center> </span><br> 
-                            <p>
-                                <b>But du jeu :</b> Choisissez l’un des 5 personnages disponibles pour parcourir le donjon. Récoltez des items, affrontez les ennemis, terrassez les boss pour trouver la sortie.
-                            </p>
-                            <p>
-                                <b>Description :</b> Jeu vidéo de type <i>rogue-like 2D</i> avec génération de <i>map</i> aléatoire
-                            </p>
-                            <p>
-                                <b>Technologies :</b> C#, moteur Unity
-                            </p>
-                            <p>
-                                <b>Type de projet :</b> Projet étudiant, réalisé en groupe de 5
-                            </p>
-                        </div>
-                        <div class="show_project" data-aos="fade-up-left">
-                            <video class="video_project" autoplay loop muted preload="metadata">
-                                <source src="Ressources/videos/FiveGuys.mp4" type=video/mp4>
-                            </video>
-                        </div>
-                    </div>
-
-                    <!-- Download Button -->
-                    <div class="div_download_btn" data-aos="fade-up">
-                        <a class="download_btn" href="https://github.com/alexiglnt/Five-Guys" target="_blank">TELECHARGER LE JEU</a>
-                    </div>
-                </div>
-
-
-                <!-- Projet 4 - Musée VR 3D -->
-                <div id="projet4" class="onePerOneProject">
-                    <div class="text_show">
-                        <div class="show_project" data-aos="fade-up-right">
-                            <video class="video_project" autoplay loop muted preload="metadata">
-                                <source src="Ressources/videos/Museum3D.mp4" type=video/mp4>
-                            </video>
-                        </div>
-                        <div class="project_text" data-aos="fade-up-left">
-                            <h2 id="Museum3D"> Musée VR en 3D </h2>
-                            <span> <center>2022</center> </span><br>
-                            <p>
-                                <b>But :</b> Créer et texturer des oeuvres 3D afin de les exposer dans un musée en réalité virtuelle (VR)
-                            </p>
-                            <p>
-                                <b>Description :</b> Projet de création et texturisation 3D
-                            </p>
-                            <p>
-                                <b>Technologies :</b> VR, 3Ds Max, moteur Unity, C#, Substance Painter
-                            </p>
-                            <p>
-                                <b>Type de projet :</b> Projet étudiant, réalisé en groupe de 5
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Download Button -->
-                    <div class="div_download_btn" data-aos="fade-up">
-                        <a class="download_btn" href="https://github.com/alexiglnt/3D-VR-Museum" target="_blank">TELECHARGER LE PROJET 3D</a>
-                    </div>
-                </div>
-
-
-                <!-- Projet 5 - Wiki Search -->
-                <div id="projet5" class="onePerOneProject">
-                    <div class="text_show">
-                        <div class="project_text2" data-aos="fade-up-right">
-                            <h2 id="Wiki-Search"> <span>W</span>IKI <span>S</span>EARCH </h2>
-                            <span> <center>2022</center> </span><br>
-                            <p>
-                                <b>But :</b> Basé sur l'API fournie par Wikipedia, nous proposons une interface épurée pour rechercher des articles sur la célèbre encyclopédie. L’utilisateur pourra consulter le contenu directement sur Wikipedia grâce aux liens cliquables.
-                            </p>
-                            <p>
-                                <b>Description :</b> Site web utilisant une API
-                            </p>
-                            <p>
-                                <b>Technologies :</b> JavaScript, HTML, CSS
-                            </p>
-                            <p>
-                                <b>Type de projet :</b> Projet personnel
-                            </p>
-                        </div>
-                        <div class="show_project" data-aos="fade-up-left">
-                            <video class="video_project" autoplay loop muted preload="metadata">
-                                <source src="Ressources/videos/Wiki Search - Google Chrome 2022-08-21 14-46-02.mp4" type=video/mp4>
-                            </video>
-                        </div>
-                    </div>
-
-                    <!-- Download Button -->
-                    <div class="div_download_btn" data-aos="fade-up">
-                        <a class="download_btn" href="https://alexiglnt.github.io/Wiki-Search" target="_blank">ME RENDRE SUR LE SITE</a>
-                    </div>
-                </div>
-
-                <!-- Projet 6 - Infinite Scroll -->
-                <div id="projet6" class="onePerOneProject">
-                    <div class="text_show">
-                        <div class="show_project" data-aos="fade-up-right">
-                            <video class="video_project" autoplay loop muted preload="metadata">
-                                <source src="Ressources/videos/Scroll Infini - Google Chrome 2022-08-21 14-46-56.mp4" type=video/mp4>
-                            </video>
-                        </div>
-                        <div class="project_text" data-aos="fade-up-left">
-                            <h2 id="Infinite-Scroll"> Infinite Scroll </h2>
-                            <span> <center>2022</center> </span><br>
-                            <p>
-                                <b>But :</b> En se basant sur l’API fournie par Unsplash, cette page permet de rechercher des images par mots clés. Les résultats sont affichés sous forme de liste infinie, courantes sur internet comme sur Instagram ou Twitter par exemple.                                
-                            </p>
-                            <p>
-                                <b>Description :</b> Site web avec fonctionnalité de scroll infini
-                            </p>
-                            <p>
-                                <b>Technologies :</b> JavaScript, HTML, CSS
-                            </p>
-                            <p>
-                                <b>Type de projet :</b> Projet personnel
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Download Button -->
-                    <div class="div_download_btn" data-aos="fade-up">
-                        <a class="download_btn" href="https://alexiglnt.github.io/Infinite-Scroll-Unsplash" target="_blank">ME RENDRE SUR LE SITE</a>
-                    </div>
-                </div>
-
-
-                <!-- Projet 7 - Le Morpion -->
-                <div id="projet7" class="onePerOneProject">
-                    <div class="text_show">
-                        <div class="project_text2" data-aos="fade-up-right">
-                            <h2 id="Morpion"> Le <span>Morpion</span> </h2>
-                            <span> <center>2022</center> </span><br> 
-                            <!--<p>
-                                Jeu du Morpion au tour par tour, à jouer avec un ami. Le but étant d'être le premier à créer un alignement de 3 symboles identiques sur la grille.
-                            </p> <br>
-                            <p>
-                                Fonctionnalités du jeu du Morpion réalisées en JavaScript et design du site en HTML et CSS.
-                            </p>-->
-
-                            <p>
-                                <b>But :</b> Célèbre jeu du Morpion ou chaque joueur doit être le premier à aligner 3 symboles identiques sur la grille. Cette version permet de jouer à 2 en tour par tour.                               
-                            </p>
-                            <p>
-                                <b>Description :</b> Jeu du morpion sur le web
-                            </p>
-                            <p>
-                                <b>Technologies :</b> JavaScript, HTML, CSS
-                            </p>
-                            <p>
-                                <b>Type de projet :</b> Projet personnel
-                            </p>
-                        </div>
-                        <div class="show_project" data-aos="fade-up-left">
-                            <video class="video_project" autoplay loop muted preload="metadata">
-                                <source src="Ressources/videos/Morpion.mp4" type=video/mp4>
-                            </video>
-                        </div>
-                    </div>
-
-                    <!-- Download Button -->
-                    <div class="div_download_btn" data-aos="fade-up">
-                        <a class="download_btn" href="https://alexiglnt.github.io/Morpion" target="_blank">JOUER AU JEU</a>
-                    </div>
-                </div>
-
-
-                <!-- Projet 8 - Blog API / Articles -->
-                <div id="projet8" class="onePerOneProject">
-                    <div class="text_show">
-                        <div class="show_project" data-aos="fade-up-right">
-                            <video class="video_project" autoplay loop muted preload="metadata">
-                                <source src="Ressources/videos/Artikles.mp4" type=video/mp4>
-                            </video>
-                        </div>
-                        <div class="project_text" data-aos="fade-up-left">
-                            <h2 id="BlogAPI"> Site Blog Api </h2>
-                            <span> <center>2022</center> </span><br>
-                            <p>
-                                <b>But :</b> Créer une API avec <strong>Symfony</strong> et récupérer les données avec <strong> Vue.js</strong>. Possibilité de se créer un compte, de se connecter, de créer des articles, de les trier, de les liker ainsi que de les commenter et les ajouter à ses favoris.
-                            </p>
-                            <p>
-                                <b>Description :</b> Site web de type blog
-                            </p>
-                            <p>
-                                <b>Technologies :</b> Vue.js, Symfony, HTML, CSS
-                            </p>
-                            <p>
-                                <b>Type de projet :</b> Projet étudiant
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Download Button -->
-                    <div class="div_download_btn" data-aos="fade-up">
-                        <a class="download_btn" href="https://github.com/alexiglnt/Blog-API-Framework" target="_blank">DECOUVRIR LE PROJET</a>
-                    </div>
-                </div>
-
-            </div>
-
-         </div>
-        </section>
-
-
-        <!--------------------------------------------------------- SKILL -------------------------------------------------------------------->
-
-        <section id="skill">
-            <div class="marge">
-
-                <h1 class="titre" data-aos="fade-down"> Mes compétences <img class="gif" src="Ressources/giphy-2.gif" width="70px"> </h1>
-
-                <div id="all_skill_box">
-
-                    <!-- Box 1 -->
-                    <div class="div_box" data-aos="fade-down">
-                        
-                        <div class="description_box">
-                            <h3 class="skill_title"> Développement logiciels / jeux </h3> 
-                        </div>
-                        <div class="skill_box">
-                            <ul>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/C.svg" alt="" width="30%"> </li>
-                                    <p> C </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/Cpp.svg" alt="" width="30%"> </li>
-                                    <p> C++ </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/Python.svg" alt="" width="30%"> </li>
-                                    <p> Python </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/C_sharp.svg" alt="" width="30%"> </li>
-                                    <p> C# </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/Unity.svg" alt="" width="30%"> </li>
-                                    <p> Unity </p>
-                                </div>
-                            </ul>
-                        </div> <br>
-                    </div>
-
-                    <!-- Box 2 -->
-                    <div class="div_box" data-aos="fade-down">
-                        <div class="description_box">
-                            <h3 class="skill_title"> Développement web </h3> 
-                        </div>
-                        <div class="skill_box">
-                            <ul>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/Html.svg" alt="" width="30%"> </li>
-                                    <p> HTML </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/Css.svg" alt="" width="30%"> </li>
-                                    <p> CSS </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/JavaScript.svg" alt="" width="30%"> </li>
-                                    <p> JavaScript </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/Sql.svg" alt="" width="30%"> </li>
-                                    <p> MySQL </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/phplogo.svg" alt="" width="37.5%"> </li>
-                                    <p> PHP </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/vuejs.svg" alt="" width="35%"> </li>
-                                    <p> Vue.js </p>
-                                </div>
-                            </ul>
-                        </div> <br>
-                    </div>
-
-                    <!-- Box 3 -->
-                    <div class="div_box" data-aos="fade-down">
-                        <div class="description_box">
-                            <h3 class="skill_title"> Design / 3D </h3> 
-                        </div>
-                        <div class="skill_box">
-                            <ul>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/Photoshop.svg" alt="" width="25%"> </li>
-                                    <p> Photoshop </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/Logo_AffinityDesigner.svg" alt="" width="25%"> </li>
-                                    <p> Affinity Designer </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/3dsMax.svg" alt="" width="38%"> </li>
-                                    <p> 3ds Max </p>
-                                </div>
-                                <div class="icone_text">
-                                    <li> <img src="Ressources/icone_skills/cdnlogo.com_substance.svg" alt="" width="26%"> </li>
-                                    <p> Substance Painter </p>
-                                </div>
-                            </ul>
-                        </div> <br>
-                    </div>
-
+                <!-- Download Button -->
+                <div class="div_download_btn" data-aos="fade-up">
+                    <a class="download_btn" href="src/projects/TheRedKnight.html" target="_blank">PLUS
+                        D'INFORMATIONS</a>
                 </div>
             </div>
-        </section>
 
 
-        <!--------------------------------------------------------- CONTACT -------------------------------------------------------------------->
-        <section class="section" id="contact_section">
-            <div class="content_leaning">
-                <h1 class="titre" data-aos="fade-down">Comment me contacter ? <img class="gif gifmail" src="Ressources/giphy7.gif" width="150px"> </h1>
-                <div class="contact_content">
-                    <div class="social_line" data-aos="fade-down" data-aos-duration="1000">
-                        <a class="social_link" href="https://www.linkedin.com/in/alexi-gallonet" target="_blank" style="--size: 119.13px;">
-                            <img src="Ressources/téléchargement.svg" width="12%"/>
-                            <div class="social_text">
-                                <span>in/alexi-gallonet</span>
-                            </div>
+
+            <!-- Projet 2 - Twitch Tracker -->
+            <div id="projet2" class="onePerOneProject">
+                <div class="text_show">
+                    <div class="show_project" data-aos="fade-up-right">
+                        <video class="video_project" autoplay loop muted preload="metadata">
+                            <source src="Ressources/videos/TwitchTracker.mp4" type=video/mp4>
+                        </video>
+                    </div>
+                    <div class="project_text" data-aos="fade-up-left">
+                        <h2 id="TwitchTracker"> Twitch Tracker </h2>
+                        <span>
+                            <center>2022</center>
+                        </span><br>
+                        <p>
+                            <b>But :</b> Site web stockant les informations de streamers Twitch dans une BDD.
+                            L’utilisateur peut par la suite afficher les statistiques de ses streamers préférés
+                        </p>
+                        <p>
+                            <b>Description :</b> Site web
+                        </p>
+                        <p>
+                            <b>Technologies :</b> JavaScript, PHP, HTML, CSS
+                        </p>
+                        <p>
+                            <b>Type de projet :</b> Projet étudiant, réalisé en trinome
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Download Button -->
+                <div class="div_download_btn" data-aos="fade-up">
+                    <a class="download_btn" href="src/projects/TwitchTracker.html" target="_blank">PLUS
+                        D'INFORMATIONS</a>
+                </div>
+            </div>
+
+
+            <!-- Projet 3 - Five Guys -->
+            <div id="projet3" class="onePerOneProject">
+                <div class="text_show">
+                    <div class="project_text2" data-aos="fade-up-right">
+                        <h2 id="Five-Guys"> Five Guys </h2>
+                        <span>
+                            <center>2022</center>
+                        </span><br>
+                        <p>
+                            <b>But du jeu :</b> Choisissez l’un des 5 personnages disponibles pour parcourir le donjon.
+                            Récoltez des items, affrontez les ennemis, terrassez les boss pour trouver la sortie.
+                        </p>
+                        <p>
+                            <b>Description :</b> Jeu vidéo de type <i>rogue-like 2D</i> avec génération de <i>map</i>
+                            aléatoire
+                        </p>
+                        <p>
+                            <b>Technologies :</b> C#, moteur Unity
+                        </p>
+                        <p>
+                            <b>Type de projet :</b> Projet étudiant, réalisé en groupe de 5
+                        </p>
+                    </div>
+                    <div class="show_project" data-aos="fade-up-left">
+                        <video class="video_project" autoplay loop muted preload="metadata">
+                            <source src="Ressources/videos/FiveGuys.mp4" type=video/mp4>
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Download Button -->
+                <div class="div_download_btn" data-aos="fade-up">
+                    <a class="download_btn" href="src/projects/FiveGuys.html" target="_blank">
+                        PLUS D'INFORMATIONS
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Projet 4 - Musée VR 3D -->
+            <!-- <div id="projet4" class="onePerOneProject">
+                <div class="text_show">
+                    <div class="show_project" data-aos="fade-up-right">
+                        <video class="video_project" autoplay loop muted preload="metadata">
+                            <source src="Ressources/videos/Museum3D.mp4" type=video/mp4>
+                        </video>
+                    </div>
+                    <div class="project_text" data-aos="fade-up-left">
+                        <h2 id="Museum3D"> Musée VR en 3D </h2>
+                        <span>
+                            <center>2022</center>
+                        </span><br>
+                        <p>
+                            <b>But :</b> Créer et texturer des oeuvres 3D afin de les exposer dans un musée en réalité
+                            virtuelle (VR)
+                        </p>
+                        <p>
+                            <b>Description :</b> Projet de création et texturisation 3D
+                        </p>
+                        <p>
+                            <b>Technologies :</b> VR, 3Ds Max, moteur Unity, C#, Substance Painter
+                        </p>
+                        <p>
+                            <b>Type de projet :</b> Projet étudiant, réalisé en groupe de 5
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div class="div_download_btn" data-aos="fade-up">
+                    <a class="download_btn" href="https://github.com/alexiglnt/3D-VR-Museum" target="_blank">TELECHARGER
+                        LE PROJET 3D</a>
+                </div>
+            </div> -->
+
+
+            <!-- Projet 5 - Wiki Search -->
+            <!-- <div id="projet5" class="onePerOneProject">
+                <div class="text_show">
+                    <div class="project_text2" data-aos="fade-up-right">
+                        <h2 id="Wiki-Search"> <span>W</span>IKI <span>S</span>EARCH </h2>
+                        <span>
+                            <center>2022</center>
+                        </span><br>
+                        <p>
+                            <b>But :</b> Basé sur l'API fournie par Wikipedia, nous proposons une interface épurée pour
+                            rechercher des articles sur la célèbre encyclopédie. L’utilisateur pourra consulter le
+                            contenu directement sur Wikipedia grâce aux liens cliquables.
+                        </p>
+                        <p>
+                            <b>Description :</b> Site web utilisant une API
+                        </p>
+                        <p>
+                            <b>Technologies :</b> JavaScript, HTML, CSS
+                        </p>
+                        <p>
+                            <b>Type de projet :</b> Projet personnel
+                        </p>
+                    </div>
+                    <div class="show_project" data-aos="fade-up-left">
+                        <video class="video_project" autoplay loop muted preload="metadata">
+                            <source src="Ressources/videos/Wiki Search - Google Chrome 2022-08-21 14-46-02.mp4"
+                                type=video/mp4>
+                        </video>
+                    </div>
+                </div>
+
+                
+                <div class="div_download_btn" data-aos="fade-up">
+                    <a class="download_btn" href="https://alexiglnt.github.io/Wiki-Search" target="_blank">ME RENDRE SUR
+                        LE SITE</a>
+                </div>
+            </div> -->
+
+            <!-- Projet 6 - Infinite Scroll -->
+            <div id="projet6" class="onePerOneProject">
+                <div class="text_show">
+                    <div class="show_project" data-aos="fade-up-right">
+                        <video class="video_project" autoplay loop muted preload="metadata">
+                            <source src="Ressources/videos/Scroll Infini - Google Chrome 2022-08-21 14-46-56.mp4"
+                                type=video/mp4>
+                        </video>
+                    </div>
+                    <div class="project_text" data-aos="fade-up-left">
+                        <h2 id="Infinite-Scroll"> Infinite Scroll </h2>
+                        <span>
+                            <center>2022</center>
+                        </span><br>
+                        <p>
+                            <b>But :</b> En se basant sur l’API fournie par Unsplash, cette page permet de rechercher
+                            des images par mots clés. Les résultats sont affichés sous forme de liste infinie, courantes
+                            sur internet comme sur Instagram ou Twitter par exemple.
+                        </p>
+                        <p>
+                            <b>Description :</b> Site web avec fonctionnalité de scroll infini
+                        </p>
+                        <p>
+                            <b>Technologies :</b> JavaScript, HTML, CSS
+                        </p>
+                        <p>
+                            <b>Type de projet :</b> Projet personnel
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Download Button -->
+                <div class="div_download_btn" data-aos="fade-up">
+                    <a class="download_btn" href="src/projects/InfiniteScrollUnsplash.html" target="_blank">
+                        PLUS D'INFORMATIONS
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Projet 7 - Le Morpion -->
+            <div id="projet7" class="onePerOneProject">
+                <div class="text_show">
+                    <div class="project_text2" data-aos="fade-up-right">
+                        <h2 id="Morpion"> Le <span>Morpion</span> </h2>
+                        <span>
+                            <center>2022</center>
+                        </span><br>
+                        <p>
+                            <b>But :</b> Célèbre jeu du Morpion ou chaque joueur doit être le premier à aligner 3
+                            symboles identiques sur la grille. Cette version permet de jouer à 2 en tour par tour.
+                        </p>
+                        <p>
+                            <b>Description :</b> Jeu du morpion sur le web
+                        </p>
+                        <p>
+                            <b>Technologies :</b> JavaScript, HTML, CSS
+                        </p>
+                        <p>
+                            <b>Type de projet :</b> Projet personnel
+                        </p>
+                    </div>
+                    <div class="show_project" data-aos="fade-up-left">
+                        <video class="video_project" autoplay loop muted preload="metadata">
+                            <source src="Ressources/videos/Morpion.mp4" type=video/mp4>
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Download Button -->
+                <div class="div_download_btn" data-aos="fade-up">
+                    <a class="download_btn" href="src/projects/Morpion.html" target="_blank">
+                        PLUS D'INFORMATIONS
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Projet 8 - Blog API / Articles -->
+            <div id="projet8" class="onePerOneProject">
+                <div class="text_show">
+                    <div class="show_project" data-aos="fade-up-right">
+                        <video class="video_project" autoplay loop muted preload="metadata">
+                            <source src="Ressources/videos/Artikles.mp4" type=video/mp4>
+                        </video>
+                    </div>
+                    <div class="project_text" data-aos="fade-up-left">
+                        <h2 id="BlogAPI"> Site Blog Api </h2>
+                        <span>
+                            <center>2022</center>
+                        </span><br>
+                        <p>
+                            <b>But :</b> Créer une API avec <strong>Symfony</strong> et récupérer les données avec
+                            <strong> Vue.js</strong>. Possibilité de se créer un compte, de se connecter, de créer des
+                            articles, de les trier, de les liker ainsi que de les commenter et les ajouter à ses
+                            favoris.
+                        </p>
+                        <p>
+                            <b>Description :</b> Site web de type blog
+                        </p>
+                        <p>
+                            <b>Technologies :</b> Vue.js, Symfony, HTML, CSS
+                        </p>
+                        <p>
+                            <b>Type de projet :</b> Projet étudiant
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Download Button -->
+                <div class="div_download_btn" data-aos="fade-up">
+                    <a class="download_btn" href="src/projects/BlogAPIFramework.html" target="_blank">
+                        PLUS D'INFORMATIONS
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Projet 9 - Comics More -->
+            <div id="projet9" class="onePerOneProject">
+                <div class="text_show">
+                    <div class="project_text2" data-aos="fade-up-right">
+                        <h2 id="ComicsMore"> Comics &nbsp; More </h2>
+                        <span>
+                            <center>2023</center>
+                        </span><br>
+                        <p>
+                            <b>But :</b> Site web de lecture en ligne de comics. Un systeme de crédit est mis en place pour pouvoir acheter des comics. Les crédits peuvent être achetés avec une carte bancaire ou avec un compte Paypal.
+                        </p>
+                        <p>
+                            <b>Description :</b> Site web de lecture de comics
+                        </p>
+                        <p>
+                            <b>Technologies :</b> Vue.js, Symfony, HTML, CSS
+                        </p>
+                        <p>
+                            <b>Type de projet :</b> Projet tutoré
+                        </p>
+                    </div>
+                    <div class="show_project" data-aos="fade-up-left">
+                        <video class="video_project" autoplay loop muted preload="metadata">
+                            <source src="Ressources/videos/ComicsMore.mp4" type=video/mp4>
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Download Button -->
+                <div class="div_download_btn" data-aos="fade-up">
+                    <a class="download_btn" href="src/projects/ComicsMore.html" target="_blank">
+                        PLUS D'INFORMATIONS
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+
+    <!--------------------------------------------------------- SKILL -------------------------------------------------------------------->
+
+    <a id="skills"></a>
+    <section class="section" id="skills_section">
+        <h1 class="titre aos-init" data-aos="fade-down"> Mes compétences <img class="gif" src="Ressources/giphy-2.gif"
+                width="70px"> </h1>
+        <div data-aos="fade-down" class="content leaning">
+            <div class="skills_content">
+                <div class="box"></div>
+            </div>
+        </div>
+    </section>
+    <div class="section_end skills_end"></div>
+
+
+    <!--------------------------------------------------------- CONTACT -------------------------------------------------------------------->
+    <section class="section" id="contact_section">
+        <div class="content_leaning">
+            <h1 class="titre" data-aos="fade-down">Comment me contacter ? <img class="gif gifmail"
+                    src="Ressources/giphy7.gif" width="150px"> </h1>
+            <div class="contact_content">
+                <div class="social_line" data-aos="fade-down" data-aos-duration="1000">
+                    <a class="social_link" href="https://www.linkedin.com/in/alexi-gallonet" target="_blank"
+                        style="--size: 119.13px;">
+                        <img src="Ressources/téléchargement.svg" width="12%" />
+                        <div class="social_text">
+                            <span>in/alexi-gallonet</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="social_line" data-aos="fade-down" data-aos-duration="2000">
+                    <a class="social_link" href="https://github.com/alexiglnt" target="_blank" style="--size: 90.65px;">
+                        <img src="Ressources/téléchargement (1).svg" width="12%" />
+                        <div class="social_text">
+                            <span>alexi_glnt</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="social_line" data-aos="fade-down" data-aos-duration="3000">
+                    <div class="social_link" style="--size: 202.84px;">
+                        <a href="alexigallonet@gmail.com" target="_blank">
+                            <img src="Ressources/téléchargement (2).svg" width="12%" />
                         </a>
-                    </div>
-                    <div class="social_line" data-aos="fade-down" data-aos-duration="2000">
-                            <a class="social_link" href="https://github.com/alexiglnt" target="_blank" style="--size: 90.65px;">
-                                <img src="Ressources/téléchargement (1).svg" width="12%"/>
-                                <div class="social_text">
-                                    <span>alexi_glnt</span>
-                                </div>
-                            </a>
-                    </div>
-                    <div class="social_line" data-aos="fade-down" data-aos-duration="3000">
-                        <div class="social_link" style="--size: 202.84px;">
-                            <a href="alexigallonet@gmail.com" target="_blank">
-                                <img src="Ressources/téléchargement (2).svg" width="12%"/>
-                            </a>
-                            <div class="social_text">
-                                <span>alexigallonet@gmail.com</span>
-                            </div>
+                        <div class="social_text">
+                            <span>alexigallonet@gmail.com</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <!-------------------------------------------------------- BAS DE PAGE ----------------------------------------------------------------->
-        <section id="footer">
-            <img src="Ressources/Gallonet underlign.png" width="8%">
-            <div>
-                <p> Créé en HTML, CSS et JavaScript par Alexi GALLONET </p>
-                <p> Merci d'avoir lu jusqu'au bout. </p>
-            </div>
-            <p> Juin 2022 </p>
-        </section>
+    <!-------------------------------------------------------- BAS DE PAGE ----------------------------------------------------------------->
+    <section id="footer">
+        <img src="Ressources/Gallonet underlign.png" width="8%">
+        <div>
+            <p> Créé en HTML, CSS et JavaScript par Alexi GALLONET </p>
+            <p> Merci d'avoir lu jusqu'au bout. </p>
+        </div>
+        <p> Juin 2022 </p>
+    </section>
 
 
-        <!------------------------------------------------------------ AUTRES ------------------------------------------------------------------>
+    <!------------------------------------------------------------ AUTRES ------------------------------------------------------------------>
 
-        <!-- Bouton #top -->
-        <div id="remonter"> 
-			<a class="scroll-to-top"><img src="Ressources/arrow-up-Blue.png" alt="Remonter"/></a> 			
-		</div>
-
-
-        <!-- SCRIPTS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-
-        <script src="src/script.js"></script>
+    <!-- Bouton #top -->
+    <div id="remonter">
+        <a class="scroll-to-top"><img src="Ressources/arrow-up-Blue.png" alt="Remonter" /></a>
+    </div>
 
 
-    </body>
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+    <script src="src/script.js"></script>
+    <script src="src/generateSkills.js"></script>
+
+
+</body>
+
 </html>
