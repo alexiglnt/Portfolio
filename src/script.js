@@ -44,21 +44,21 @@ const picture = document.querySelectorAll('#presentation_img');
 
 const btnHamburger = document.querySelector('.menu-hamburger');
 
-// window.addEventListener('load', () => {
+window.addEventListener('load', () => {
 
-//     // ANIMATION
-//     const TL = gsap.timeline({ paused: true });
+    // ANIMATION
+    const TL = gsap.timeline({ paused: true });
 
-//     TL
-//         .staggerFrom(btnHamburger, 1, { bottom: -50, opacity: 0, ease: "power2.out" }, 0.3)
-//         .staggerFrom(btns, 1, { bottom: -50, opacity: 0, ease: "power2.out" }, 0.3, '-=1')
-//         .staggerFrom(pSpans, 1, { bottom: -50, opacity: 0, ease: "power2.out" }, 0.3, '-=0.5')
-//         .staggerFrom(titreSpans, 1, { bottom: -50, opacity: 0, ease: "power2.out" }, 0.3, '-=0.25')
-//         .staggerFrom(picture, 1, { bottom: -50, opacity: 0, ease: "power2.out" }, 0.3, '-=0.125')
+    TL
+        .staggerFrom(btnHamburger, 1, { bottom: -50, opacity: 0, ease: "power2.out" }, 0.3)
+        .staggerFrom(btns, 1, { bottom: -50, opacity: 0, ease: "power2.out" }, 0.3, '-=1')
+        .staggerFrom(pSpans, 1, { bottom: -50, opacity: 0, ease: "power2.out" }, 0.3, '-=0.5')
+        .staggerFrom(titreSpans, 1, { bottom: -50, opacity: 0, ease: "power2.out" }, 0.3, '-=0.25')
+        .staggerFrom(picture, 1, { bottom: -50, opacity: 0, ease: "power2.out" }, 0.3, '-=0.125')
 
 
-//     TL.play();
-// })
+    TL.play();
+})
 
 
 
