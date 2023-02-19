@@ -261,8 +261,16 @@
 	color: black;
 }
 
-@media screen and (max-width: 930px)
+
+@media screen and (max-width: 1000px)
 {
+
+	#skills_section
+	{
+		height: 100%;
+		padding-bottom: 100px;
+	}
+
 	#skills_section .box
 	{
 		display: -webkit-box;

@@ -164,3 +164,62 @@ ol.breadcrumb {
 .col-md-8 p {
     text-align: justify;
 }
+
+@media screen and (max-width: 1440px) {
+
+    .container {
+        width: 1440px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container h1 {
+        font-size: 120px;
+        width: 100vw;
+    }
+
+    .container h3 {
+        font-size: 70px;
+        width: 100vw;
+    }
+
+    .container h4 {
+        font-size: 55px;
+        width: 100vw;
+    }
+
+    .container p {
+        font-size: 50px;
+        width: 85vw;
+    }
+
+    .container video {
+        width: 80vw;
+    }
+
+    .col-md-8 p {
+        font-size: 50px;
+    }
+
+    .row,
+    html {
+        width: 100vw;
+        text-align: justify;
+    }
+
+    .container ul {
+        font-size: 40px;
+        width: 85vw;
+    }
+
+    .container li img {
+        width: 80px;
+        height: 80px;
+
+    }
+
+    ol.breadcrumb {
+        font-size: 40px;
+    }
+
+}
