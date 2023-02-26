@@ -44,6 +44,10 @@
     margin-bottom: 200px;
 }
 
+.social_text a {
+	text-decoration: none;
+}
+
 #contact_section .social_line
 {
 	display: -webkit-box;
