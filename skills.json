@@ -177,6 +177,16 @@
 					"name": "Créativité",
 					"logo": "Ressources/skills/softskills/design-thinking.png",
 					"link": "/Ressources/CV%20-%20Alexi%20GALLONET.pdf"
+				},
+				{
+					"name": "Numérique responsable",
+					"logo": "Ressources/skills/softskills/information-ecology.png",
+					"link": "/Ressources/CV%20-%20Alexi%20GALLONET.pdf"
+				},
+				{
+					"name": "Analyse besoin client",
+					"logo": "Ressources/skills/softskills/client.png",
+					"link": "/Ressources/CV%20-%20Alexi%20GALLONET.pdf"
 				}
 			]
 		}
