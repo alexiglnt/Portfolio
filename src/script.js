@@ -105,7 +105,7 @@ window.addEventListener('scroll', () => {
 scrollToTop.addEventListener('click', pushToTop);
 
 const homeBtn = document.querySelector('#nav1');
-homeBtn.addEventListener('click', pushToTop);
+// homeBtn.addEventListener('click', pushToTop);
 
 function pushToTop() {
     window.scrollTo({

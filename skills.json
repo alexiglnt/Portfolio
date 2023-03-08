@@ -41,6 +41,11 @@
 					"link": "https://nextjs.org"
 				},
 				{
+					"name": "Photoshop",
+					"logo": "Ressources/skills/Photoshop.svg",
+					"link": "https://www.adobe.com/products/photoshop.html"
+				},
+				{
 					"name": "Vite",
 					"logo": "Ressources/skills/Vite.svg",
 					"link": "https://vitejs.dev/"
@@ -150,38 +155,28 @@
 			]
 		},
 		{
-			"name" : "Design / 3D",
+			"name" : "Softskills",
 			"skills" :
 			[
 				{
-					"name": "Photoshop",
-					"logo": "Ressources/skills/Photoshop.svg",
-					"link": "https://www.adobe.com/products/photoshop.html"
+					"name": "Travail d'équipe",
+					"logo": "Ressources/skills/softskills/brainstorm.png",
+					"link": "/Ressources/CV%20-%20Alexi%20GALLONET.pdf"
 				},
 				{
-					"name": "Figma",
-					"logo": "Ressources/skills/Figma.svg",
-					"link": "https://www.figma.com/"
+					"name": "Capacité d’adaptation",
+					"logo": "Ressources/skills/softskills/adaptation.png",
+					"link": "/Ressources/CV%20-%20Alexi%20GALLONET.pdf"
 				},
 				{
-					"name": "Affinity Designer",
-					"logo": "Ressources/skills/Logo_AffinityDesigner.svg",
-					"link": "https://affinity.serif.com/en-gb/designer/"
+					"name": "Communication",
+					"logo": "Ressources/skills/softskills/communication.png",
+					"link": "/Ressources/CV%20-%20Alexi%20GALLONET.pdf"
 				},
 				{
-					"name": "Substance Painter",
-					"logo": "Ressources/skills/cdnlogo.com_substance.svg",
-					"link": "https://www.substance3d.com/products/substance-painter/"
-				},
-				{
-					"name": "Blender",
-					"logo": "Ressources/skills/blender.svg",
-					"link": "https://www.blender.org/"
-				},
-				{
-					"name": "3DS Max",
-					"logo": "Ressources/skills/3dsMax.svg",
-					"link": "https://www.substance3d.com/products/substance-painter/"
+					"name": "Créativité",
+					"logo": "Ressources/skills/softskills/design-thinking.png",
+					"link": "/Ressources/CV%20-%20Alexi%20GALLONET.pdf"
 				}
 			]
 		}
