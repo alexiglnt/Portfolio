@@ -123,6 +123,10 @@ ol.breadcrumb {
     margin-right: 0.5rem;
 }
 
+.arrow {
+    transform: translateY(-4px);
+}
+
 
 /********************************************* Bouton GitHub Corner *********************************************/
 .github-corner:hover .octo-arm {
