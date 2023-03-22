@@ -1,10 +1,8 @@
 {
-	"skills_categories":
-	[
+	"skills_categories": [
 		{
-			"name" : "Front-end Web",
-			"skills" :
-			[
+			"name": "Front-end Web",
+			"skills": [
 				{
 					"name": "HTML",
 					"logo": "Ressources/skills/Html.svg",
@@ -63,9 +61,8 @@
 			]
 		},
 		{
-			"name" : "Back-end Web",
-			"skills" :
-			[
+			"name": "Back-end Web",
+			"skills": [
 				{
 					"name": "PHP",
 					"logo": "Ressources/skills/phplogo.svg",
@@ -119,9 +116,8 @@
 			]
 		},
 		{
-			"name" : "Logiciels / jeux",
-			"skills" :
-			[
+			"name": "Logiciels / jeux",
+			"skills": [
 				{
 					"name": "C",
 					"logo": "Ressources/skills/C.svg",
@@ -155,9 +151,8 @@
 			]
 		},
 		{
-			"name" : "Softskills",
-			"skills" :
-			[
+			"name": "Softskills",
+			"skills": [
 				{
 					"name": "Travail d'équipe",
 					"logo": "Ressources/skills/softskills/brainstorm.png",
@@ -181,11 +176,16 @@
 				{
 					"name": "Numérique responsable",
 					"logo": "Ressources/skills/softskills/information-ecology.png",
-					"link": "https://alexiglnt.github.io/Portfolio/Ressources/CV%20-%20Alexi%20GALLONET.pdf"
+					"link": "https://label-nr.fr/#:~:text=Le%20num%C3%A9rique%20responsable%20est%20une,r%C3%A9duire%20l'impact%20du%20num%C3%A9rique."
 				},
 				{
 					"name": "Analyse besoin client",
 					"logo": "Ressources/skills/softskills/client.png",
+					"link": "https://alexiglnt.github.io/Portfolio/Ressources/CV%20-%20Alexi%20GALLONET.pdf"
+				},
+				{
+					"name": "Anglais",
+					"logo": "Ressources/skills/softskills/language.png",
 					"link": "https://alexiglnt.github.io/Portfolio/Ressources/CV%20-%20Alexi%20GALLONET.pdf"
 				}
 			]

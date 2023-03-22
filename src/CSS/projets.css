@@ -208,6 +208,10 @@ video {
     margin-left: 5px;
 }
 
+#Remindr {
+    font-size: 35px;
+}
+
 #BlogAPI {
     font-family: 'Lobster', cursive;
     font-size: 30px;
