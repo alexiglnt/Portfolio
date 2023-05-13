@@ -24,6 +24,11 @@
 					"link": "https://www.typescriptlang.org"
 				},
 				{
+					"name": "jQuery",
+					"logo": "Ressources/skills/jquery.svg",
+					"link": "https://www.typescriptlang.org"
+				},
+				{
 					"name": "Vue.js",
 					"logo": "Ressources/skills/vuejs.svg",
 					"link": "https://vuejs.org"
@@ -69,9 +74,19 @@
 					"link": "https://nodejs.org/en/"
 				},
 				{
+					"name": "C#",
+					"logo": "Ressources/skills/C_sharp.svg",
+					"link": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
+				},
+				{
 					"name": "Symfony",
 					"logo": "Ressources/skills/symfony.svg",
 					"link": "https://symfony.com/"
+				},
+				{
+					"name": ".NET",
+					"logo": "Ressources/skills/dotnet-logo.svg",
+					"link": "https://dotnet.microsoft.com/en-us/"
 				},
 				{
 					"name": "API Platform",
