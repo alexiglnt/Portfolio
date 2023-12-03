@@ -1,0 +1,154 @@
+{
+	"skills_categories": [
+		{
+			"name": "Front-end Web",
+			"skills": [
+				{
+					"name": "HTML",
+					"logo": "Html.svg",
+					"link": "https://en.wikipedia.org/wiki/HTML"
+				},
+				{
+					"name": "CSS",
+					"logo": "Css.svg",
+					"link": "https://en.wikipedia.org/wiki/CSS"
+				},
+				{
+					"name": "JavaScript",
+					"logo": "JavaScript.svg",
+					"link": "https://en.wikipedia.org/wiki/JavaScript"
+				},
+				{
+					"name": "TypeScript",
+					"logo": "TypeScript.svg",
+					"link": "https://www.typescriptlang.org"
+				},
+				{
+					"name": "jQuery",
+					"logo": "jquery-icon.svg",
+					"link": "https://jquery.com/"
+				},
+				{
+					"name": "Vue.js",
+					"logo": "vuejs.svg",
+					"link": "https://vuejs.org"
+				},
+				{
+					"name": "React",
+					"logo": "react.svg",
+					"link": "https://reactjs.org"
+				},
+				{
+					"name": "Next.js",
+					"logo": "nextjs.svg",
+					"link": "https://nextjs.org"
+				},
+				{
+					"name": "Photoshop",
+					"logo": "Photoshop.svg",
+					"link": "https://www.adobe.com/products/photoshop.html"
+				},
+				{
+					"name": "Git",
+					"logo": "Git.svg",
+					"link": "https://git-scm.com/"
+				}
+			]
+		},
+		{
+			"name": "Back-end Web",
+			"skills": [
+				{
+					"name": "PHP",
+					"logo": "phplogo.svg",
+					"link": "https://nodejs.org/en/"
+				},
+				{
+					"name": "C#",
+					"logo": "C_sharp.svg",
+					"link": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
+				},
+				{
+					"name": "Symfony",
+					"logo": "symfony.svg",
+					"link": "https://symfony.com/"
+				},
+				{
+					"name": ".NET",
+					"logo": "dotnet-logo.svg",
+					"link": "https://dotnet.microsoft.com/en-us/"
+				},
+				{
+					"name": "API Platform",
+					"logo": "apiplatform.svg",
+					"link": "https://api-platform.com/"
+				},
+				{
+					"name": "NodeJS",
+					"logo": "NodeJS.svg",
+					"link": "https://nodejs.org/en/"
+				},
+				{
+					"name": "MySQL",
+					"logo": "Sql.svg",
+					"link": "https://sql.sh"
+				},
+				{
+					"name": "Docker",
+					"logo": "docker.svg",
+					"link": "https://www.docker.com/"
+				},
+				{
+					"name": "MongoDB",
+					"logo": "MongoDB.svg",
+					"link": "https://www.mongodb.com"
+				},
+				{
+					"name": "Redis",
+					"logo": "redis.svg",
+					"link": "https://redis.io"
+				},
+				{
+					"name": "Git",
+					"logo": "Git.svg",
+					"link": "https://git-scm.com/"
+				}
+			]
+		},
+		{
+			"name": "Logiciels / jeux",
+			"skills": [
+				{
+					"name": "C",
+					"logo": "C.svg",
+					"link": "https://en.wikipedia.org/wiki/C_(programming_language)"
+				},
+				{
+					"name": "C++",
+					"logo": "Cpp.svg",
+					"link": "https://en.wikipedia.org/wiki/C%2B%2B"
+				},
+				{
+					"name": "C#",
+					"logo": "C_sharp.svg",
+					"link": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
+				},
+				{
+					"name": "Python",
+					"logo": "Python.svg",
+					"link": "https://www.python.org/"
+				},
+				{
+					"name": "Unity",
+					"logo": "Unity.svg",
+					"link": "https://unity.com/"
+				},
+				{
+					"name": "Git",
+					"logo": "Git.svg",
+					"link": "https://git-scm.com/"
+				}
+			]
+		}
+	]
+}
