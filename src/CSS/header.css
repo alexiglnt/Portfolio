@@ -10,6 +10,13 @@ header {
     text-decoration: none;
     z-index: 1000;
     width: 100%;
+    height: 100px;
+    transition: top 0.3s ease; /* Ajoutez une transition smooth de 0.3s */
+}
+
+/* Style pour le header caché */
+header[style="top: -150px;"] {
+    top: -150px; /* Assurez-vous que la position est correcte pour cacher le header */
 }
 
 header.sticky {
@@ -246,9 +253,6 @@ a.mobile-menu .l3 {
         right: 50px;
     }
 }
-
-
-
 
 
 

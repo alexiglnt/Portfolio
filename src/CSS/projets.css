@@ -64,6 +64,8 @@
     transition: all .4s ease;
 }
 
+
+
 .project_text::before {
     content: "";
     position: absolute;
@@ -274,4 +276,34 @@ video {
         margin-bottom: 20px;
     }
 }
+
+#sortButtons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#sortButtons h2 {
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.sort-btn {
+    margin-inline: 7px;
+    transition: all 0.3s ease 0s;
+    border: 0px solid transparent; /* Définissez une bordure transparente */
+}
+
+.sort-btn.checked {
+    background-color: #fff; /* Couleur de fond lorsque le bouton est "checked" */
+    border-color: #007bff; /* Couleur de la bordure lorsque le bouton est "checked" */
+    color: black; /* Couleur du texte lorsque le bouton est "checked" */
+    transition: all 0.3s ease 0s;
+    border: 4px solid #007bff; /* Définissez une bordure transparente */
+}
+
+
 

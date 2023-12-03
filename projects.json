@@ -1,0 +1,70 @@
+{
+    "projects": [
+        {
+            "name": "Comics More",
+            "date": "2023",
+            "but": "Site web de lecture en ligne de comics. Un systeme de crédit est mis en place pour pouvoir acheter des comics. Les crédits peuvent être achetés avec une carte bancaire ou avec un compte Paypal.",
+            "description": "Site web e-commerce de lecture de comics",
+            "technologies": "Vue.js, Symfony, HTML, CSS",
+            "project_type": "Projet étudiant",
+            "video": "Ressources/videos/ComicsMore.mp4",
+            "link_project_page": "https://comicsmore.vercel.app/",
+            "type": "web"
+        },
+        {
+            "name": "Remindr",
+            "date": "2023",
+            "but": "L'application permet aux utilisateurs de créer des groupes, d'inviter d'autres utilisateurs et d'ajouter des rappels aux groupes. L'utilisateur peut se connecter à son compte a l'aide du provider GitHub.",
+            "description": "Site web de gestion de \"/reminder\" (rappel)",
+            "technologies": "NextJS, React, TypeScript",
+            "project_type": "Projet étudiant",
+            "video": "Ressources/videos/Remindr.mp4",
+            "link_project_page": "src/projects/Remindr.html",
+            "type": "web"
+        },
+        {
+            "name": "Artikle's - Site Blog",
+            "date": "2023",
+            "but": "Créer une API avec Symfony et récupérer les données avec Vue.js. Possibilité de se créer un compte, de se connecter, de créer des articles, de les trier, de les liker ainsi que de les commenter et les ajouter à ses favoris.",
+            "description": "Site web de type blog",
+            "technologies": "Vue.js, Symfony, HTML, CSS",
+            "project_type": "Projet étudiant",
+            "video": "Ressources/videos/Artikles.mp4",
+            "link_project_page": "src/projects/BlogAPIFramework.html",
+            "type": "web"
+        },
+        {
+            "name": "Twitch Tracker",
+            "date": "2022",
+            "but": "Site web stockant les informations de streamers Twitch dans une BDD. L’utilisateur peut par la suite afficher les statistiques de ses streamers préférés",
+            "description": "Site web",
+            "technologies": "JavaScript, PHP, HTML",
+            "project_type": "Projet étudiant, réalisé en trinome",
+            "video": "Ressources/videos/TwitchTracker.mp4",
+            "link_project_page": "src/projects/TwitchTracker.html",
+            "type": "web"
+        },
+        {
+            "name": "Five Guys",
+            "date": "2022",
+            "but": "Choisissez l’un des 5 personnages disponibles pour parcourir le donjon. Récoltez des items, affrontez les ennemis, terrassez les boss pour trouver la sortie.",
+            "description": "Jeu vidéo de type rogue-like 2D avec génération de map aléatoire",
+            "technologies": "C#, moteur Unity",
+            "project_type": "Projet étudiant, réalisé en groupe de 5",
+            "video": "Ressources/videos/FiveGuys.mp4",
+            "link_project_page": "src/projects/FiveGuys.html",
+            "type": "game"
+        },
+        {
+            "name": "The Red Knight",
+            "date": "2021",
+            "but": "Incarnant un courageux chevalier, vous devrez parcourir le monde et combattre de nombreux ennemis afin de vous en sortir !",
+            "description": "Jeu vidéo de type plateformer 2D",
+            "technologies": "C#, moteur Unity",
+            "project_type": "Projet étudiant, réalisé en binome",
+            "video": "Ressources/videos/The Red Knight 2022-06-26 16-31-25.mp4",
+            "link_project_page": "src/projects/TheRedKnight.html",
+            "type": "game"
+        }
+    ]
+}

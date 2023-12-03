@@ -5,11 +5,28 @@ document.querySelector('#logoimg').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
 })
 
-//**********************************************************  NAVIGATION BAR **************************************************************** */
+//********************************************************  NAVIGATION BAR ********************************************************** */
 window.addEventListener("scroll", function () {
     var header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
 })
+
+let lastScroll = 0; // Stocke la position du dernier défilement
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > lastScroll) {
+        // L'utilisateur fait défiler vers le bas
+        document.querySelector("header").style.top = "-150px"; // Cache le header vers le haut
+    } else {
+        // L'utilisateur fait défiler vers le haut
+        document.querySelector("header").style.top = "0"; // Affiche le header
+    }
+
+    lastScroll = currentScroll; // Met à jour la position du dernier défilement
+});
+
 
 
 //*******************************************************  CALCUL AGE ********************************************************** */
@@ -118,15 +135,18 @@ function pushToTop() {
 const projects = document.querySelector('#projects');
 const skills = document.querySelector('#skills_section');
 const contact = document.querySelector('#contact_section');
+const experience = document.querySelector('#experience');
 
 const projectBtn = document.querySelector('#nav2');
 const skillBtn = document.querySelector('#nav3');
 const contactBtn = document.querySelector('#nav4');
+const experienceBtn = document.querySelector('#nav5');
 
 
 projectBtn.addEventListener('click', () => { navigateScrollTo(projects) });
 skillBtn.addEventListener('click', () => { navigateScrollTo(skills) });
 contactBtn.addEventListener('click', () => { navigateScrollTo(contact) });
+experienceBtn.addEventListener('click', () => { navigateScrollTo(experience) });
 
 function navigateScrollTo(id) {
     id.scrollIntoView({ behavior: "smooth" });

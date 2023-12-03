@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="src/CSS/presentation.css" />
     <link rel="stylesheet" type="text/css" href="src/CSS/projets.css" />
     <link rel="stylesheet" type="text/css" href="src/CSS/competences.css" />
+    <link rel="stylesheet" type="text/css" href="src/CSS/experience.css" />
     <link rel="stylesheet" type="text/css" href="src/CSS/contact.css" />
     <link rel="stylesheet" type="text/css" href="src/CSS/footer.css" />
 
@@ -28,18 +29,19 @@
     </div>
 
     <!------------------------------------------------------ MENU NAVIGATION -------------------------------------------------->
-    <header>
+    <header class="sticky">
         <img id="logoimg" class="logo" src="Ressources/Gallonet Blue.png" width="12%">
         <nav class="nav_links">
             <ul>
                 <!-- ATTENTION SI JE SUPPRIME UN DE CES BTNs (animation bug) -->
                 <li> <a id="nav2" class="btn-first a2"> Projets </a></li>
                 <li> <a id="nav3" class="btn-first a3"> Compétences </a></li>
-                <li> <a  href="src/projects/INR.html" id="nav1" class="btn-first a1"> NR </a> </li>
+                <li> <a id="nav5" class="btn-first a5"> Expériences </a></li>
+                <li> <a href="src/projects/INR.html" id="nav1" class="btn-first a1"> NR </a> </li>
             </ul>
         </nav>
         <a id="nav4" class="btn-first btnContact a4"> <button> Contact </button> </a>
-        <a src="Ressources/hamburgerBtnWWhite.png" class="menu-hamburger" alt="">   
+        <a src="Ressources/hamburgerBtnWWhite.png" class="menu-hamburger" alt="">
             <span class="line l1"></span>
             <span class="line l2"></span>
             <span class="line l3"></span>
@@ -53,14 +55,13 @@
         <div id="presentation_text">
             <p> <span> Bonjour, je m'appelle</span> </p> <br>
             <h1> <span> Alexi </span> <span>GALLONET </span> </h1> <br>
-            <p> <span> J'ai <span id="age"></span> ans et je suis un future technicien en informatique à l'IUT du
-                    Puy-en-Velay. J'ai pour
-                    ambition de devenir développeur web fullstack </span> </p> <br>
+            <p> <span> J'ai <span id="age"></span> ans et je développeur web <br> J'ai pour
+                    ambition de devenir <span id="job">développeur web fullstack</span> </span> </p> <br>
             <p> <span> <a href="Ressources/CV - Alexi GALLONET.pdf" target="_blank">Télécharger mon CV</a> </span> </p>
         </div>
 
         <!-- Photo Presentation -->
-        <div class="gravityItem" >
+        <div class="gravityItem">
             <div id="presentation_img">
                 <img src="Ressources/ReadyPlayerMe-Avatar.jpeg" id="PhotoMOI">
             </div>
@@ -75,389 +76,18 @@
             <h1 class="titre" data-aos="fade-down"> Quelques-uns des mes projets <img class="gif"
                     src="Ressources/giphy.gif" width="70px"> </h1>
 
-            <!-- Projet 1 - The Red Knight -->
-            <div id="projet1" class="onePerOneProject">
-                <div class="text_show">
-                    <div class="project_text2" data-aos="fade-up-right">
-                        <h2 id="The-Red-Knight"> The Red Knight </h2>
-                        <span>
-                            <center> 2021</center>
-                        </span><br>
-                        <p>
-                            <b>But du jeu :</b> Incarnant un courageux chevalier, vous devrez parcourir le monde et
-                            combattre de nombreux ennemis afin de vous en sortir !
-                        </p>
-                        <p>
-                            <b>Description :</b> Jeu vidéo de type <i>plateformer 2D</i>
-                        </p>
-                        <p>
-                            <b>Technologies :</b> C#, moteur Unity
-                        </p>
-                        <p>
-                            <b>Type de projet :</b> Projet étudiant, réalisé en binome
-                        </p>
-                    </div>
-                    <div class="show_project" data-aos="fade-up-left">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/The Red Knight 2022-06-26 16-31-25.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                </div>
-
-                <!-- Download Button -->
-                <div class="div_download_btn" data-aos="fade-up">
-                    <a class="download_btn" href="src/projects/TheRedKnight.html">PLUS
-                        D'INFORMATIONS</a>
-                </div>
+            <div id="sortButtons">
+                <h2>Trier par </h2>
+                <!-- <button id="sortByDefault" class="sort-btn checked"> Défaut </button> -->
+                <button id="sortByDate" class="sort-btn checked">Date</button>
+                <button id="sortByWebProject" class="sort-btn"> Web</button>
+                <button id="sortByGameProject" class="sort-btn"> Game </button>
+                <!-- Ajoutez d'autres boutons de tri ici selon vos besoins -->
             </div>
 
+            <div id="generateProjects"></div>
 
 
-            <!-- Projet 2 - Twitch Tracker -->
-            <div id="projet2" class="onePerOneProject">
-                <div class="text_show">
-                    <div class="show_project" data-aos="fade-up-right">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/TwitchTracker.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                    <div class="project_text" data-aos="fade-up-left">
-                        <h2 id="TwitchTracker"> Twitch Tracker </h2>
-                        <span>
-                            <center>2022</center>
-                        </span><br>
-                        <p>
-                            <b>But :</b> Site web stockant les informations de streamers Twitch dans une BDD.
-                            L’utilisateur peut par la suite afficher les statistiques de ses streamers préférés
-                        </p>
-                        <p>
-                            <b>Description :</b> Site web
-                        </p>
-                        <p>
-                            <b>Technologies :</b> JavaScript, PHP, HTML, CSS
-                        </p>
-                        <p>
-                            <b>Type de projet :</b> Projet étudiant, réalisé en trinome
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Download Button -->
-                <div class="div_download_btn" data-aos="fade-up">
-                    <a class="download_btn" href="src/projects/TwitchTracker.html">PLUS
-                        D'INFORMATIONS</a>
-                </div>
-            </div>
-
-
-            <!-- Projet 3 - Five Guys -->
-            <div id="projet3" class="onePerOneProject">
-                <div class="text_show">
-                    <div class="project_text2" data-aos="fade-up-right">
-                        <h2 id="Five-Guys"> Five Guys </h2>
-                        <span>
-                            <center>2022</center>
-                        </span><br>
-                        <p>
-                            <b>But du jeu :</b> Choisissez l’un des 5 personnages disponibles pour parcourir le donjon.
-                            Récoltez des items, affrontez les ennemis, terrassez les boss pour trouver la sortie.
-                        </p>
-                        <p>
-                            <b>Description :</b> Jeu vidéo de type <i>rogue-like 2D</i> avec génération de <i>map</i>
-                            aléatoire
-                        </p>
-                        <p>
-                            <b>Technologies :</b> C#, moteur Unity
-                        </p>
-                        <p>
-                            <b>Type de projet :</b> Projet étudiant, réalisé en groupe de 5
-                        </p>
-                    </div>
-                    <div class="show_project" data-aos="fade-up-left">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/FiveGuys.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                </div>
-
-                <!-- Download Button -->
-                <div class="div_download_btn" data-aos="fade-up">
-                    <a class="download_btn" href="src/projects/FiveGuys.html">
-                        PLUS D'INFORMATIONS
-                    </a>
-                </div>
-            </div>
-
-
-            <!-- Projet 4 - Musée VR 3D -->
-            <!-- <div id="projet4" class="onePerOneProject">
-                <div class="text_show">
-                    <div class="show_project" data-aos="fade-up-right">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/Museum3D.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                    <div class="project_text" data-aos="fade-up-left">
-                        <h2 id="Museum3D"> Musée VR en 3D </h2>
-                        <span>
-                            <center>2022</center>
-                        </span><br>
-                        <p>
-                            <b>But :</b> Créer et texturer des oeuvres 3D afin de les exposer dans un musée en réalité
-                            virtuelle (VR)
-                        </p>
-                        <p>
-                            <b>Description :</b> Projet de création et texturisation 3D
-                        </p>
-                        <p>
-                            <b>Technologies :</b> VR, 3Ds Max, moteur Unity, C#, Substance Painter
-                        </p>
-                        <p>
-                            <b>Type de projet :</b> Projet étudiant, réalisé en groupe de 5
-                        </p>
-                    </div>
-                </div>
-
-                
-                <div class="div_download_btn" data-aos="fade-up">
-                    <a class="download_btn" href="https://github.com/alexiglnt/3D-VR-Museum" target="_blank">TELECHARGER
-                        LE PROJET 3D</a>
-                </div>
-            </div> -->
-
-
-            <!-- Projet 5 - Wiki Search -->
-            <!-- <div id="projet5" class="onePerOneProject">
-                <div class="text_show">
-                    <div class="project_text2" data-aos="fade-up-right">
-                        <h2 id="Wiki-Search"> <span>W</span>IKI <span>S</span>EARCH </h2>
-                        <span>
-                            <center>2022</center>
-                        </span><br>
-                        <p>
-                            <b>But :</b> Basé sur l'API fournie par Wikipedia, nous proposons une interface épurée pour
-                            rechercher des articles sur la célèbre encyclopédie. L’utilisateur pourra consulter le
-                            contenu directement sur Wikipedia grâce aux liens cliquables.
-                        </p>
-                        <p>
-                            <b>Description :</b> Site web utilisant une API
-                        </p>
-                        <p>
-                            <b>Technologies :</b> JavaScript, HTML, CSS
-                        </p>
-                        <p>
-                            <b>Type de projet :</b> Projet personnel
-                        </p>
-                    </div>
-                    <div class="show_project" data-aos="fade-up-left">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/Wiki Search - Google Chrome 2022-08-21 14-46-02.mp4"
-                                type=video/mp4>
-                        </video>
-                    </div>
-                </div>
-
-                
-                <div class="div_download_btn" data-aos="fade-up">
-                    <a class="download_btn" href="https://alexiglnt.github.io/Wiki-Search" target="_blank">ME RENDRE SUR
-                        LE SITE</a>
-                </div>
-            </div> -->
-
-            <!-- Projet 6 - Infinite Scroll -->
-            <div id="projet6" class="onePerOneProject">
-                <div class="text_show">
-                    <div class="show_project" data-aos="fade-up-right">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/Scroll Infini - Google Chrome 2022-08-21 14-46-56.mp4"
-                                type=video/mp4>
-                        </video>
-                    </div>
-                    <div class="project_text" data-aos="fade-up-left">
-                        <h2 id="Infinite-Scroll"> Infinite Scroll </h2>
-                        <span>
-                            <center>2022</center>
-                        </span><br>
-                        <p>
-                            <b>But :</b> En se basant sur l’API fournie par Unsplash, cette page permet de rechercher
-                            des images par mots clés. Les résultats sont affichés sous forme de liste infinie, courantes
-                            sur internet comme sur Instagram ou Twitter par exemple.
-                        </p>
-                        <p>
-                            <b>Description :</b> Site web avec fonctionnalité de scroll infini
-                        </p>
-                        <p>
-                            <b>Technologies :</b> JavaScript, HTML, CSS
-                        </p>
-                        <p>
-                            <b>Type de projet :</b> Projet personnel
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Download Button -->
-                <div class="div_download_btn" data-aos="fade-up">
-                    <a class="download_btn" href="src/projects/InfiniteScrollUnsplash.html">
-                        PLUS D'INFORMATIONS
-                    </a>
-                </div>
-            </div>
-
-
-            <!-- Projet 7 - Le Morpion -->
-            <!-- <div id="projet7" class="onePerOneProject">
-                <div class="text_show">
-                    <div class="project_text2" data-aos="fade-up-right">
-                        <h2 id="Morpion"> Le <span>Morpion</span> </h2>
-                        <span>
-                            <center>2022</center>
-                        </span><br>
-                        <p>
-                            <b>But :</b> Célèbre jeu du Morpion ou chaque joueur doit être le premier à aligner 3
-                            symboles identiques sur la grille. Cette version permet de jouer à 2 en tour par tour.
-                        </p>
-                        <p>
-                            <b>Description :</b> Jeu du morpion sur le web
-                        </p>
-                        <p>
-                            <b>Technologies :</b> JavaScript, HTML, CSS
-                        </p>
-                        <p>
-                            <b>Type de projet :</b> Projet personnel
-                        </p>
-                    </div>
-                    <div class="show_project" data-aos="fade-up-left">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/Morpion.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                </div> -->
-
-            <!-- Download Button -->
-            <!-- <div class="div_download_btn" data-aos="fade-up">
-                    <a class="download_btn" href="src/projects/Morpion.html">
-                        PLUS D'INFORMATIONS
-                    </a>
-                </div>
-            </div> -->
-
-
-            <!-- Projet 7 - Le Remindr -->
-            <div id="projet7" class="onePerOneProject">
-                <div class="text_show">
-                    <div class="project_text2" data-aos="fade-up-right">
-                        <h2 id="Remindr"><span>Remindr</span> </h2>
-                        <span>
-                            <center>2023</center>
-                        </span><br>
-                        <p>
-                            <b>But :</b> L'application permet aux utilisateurs de créer des groupes, d'inviter d'autres utilisateurs et d'ajouter des rappels aux groupes. L'utilisateur peut se connecter à son compte a l'aide du provider GitHub. 
-                        </p>
-                        <p>
-                            <b>Description :</b> Site web de gestion de "reminder" (rappel)
-                        </p>
-                        <p>
-                            <b>Technologies :</b> NextJS, React, TypeScript
-                        </p>
-                        <p>
-                            <b>Type de projet :</b> Projet étudiant
-                        </p>
-                    </div>
-                    <div class="show_project" data-aos="fade-up-left">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/Remindr.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                </div>
-
-                <!-- Download Button -->
-                <div class="div_download_btn" data-aos="fade-up">
-                    <a class="download_btn" href="src/projects/Remindr.html">
-                        PLUS D'INFORMATIONS
-                    </a>
-                </div>
-            </div>
-
-
-            <!-- Projet 8 - Blog API / Articles -->
-            <div id="projet8" class="onePerOneProject">
-                <div class="text_show">
-                    <div class="show_project" data-aos="fade-up-right">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/Artikles.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                    <div class="project_text" data-aos="fade-up-left">
-                        <h2 id="BlogAPI"> Site Blog Api </h2>
-                        <span>
-                            <center>2023</center>
-                        </span><br>
-                        <p>
-                            <b>But :</b> Créer une API avec <strong>Symfony</strong> et récupérer les données avec
-                            <strong> Vue.js</strong>. Possibilité de se créer un compte, de se connecter, de créer des
-                            articles, de les trier, de les liker ainsi que de les commenter et les ajouter à ses
-                            favoris.
-                        </p>
-                        <p>
-                            <b>Description :</b> Site web de type blog
-                        </p>
-                        <p>
-                            <b>Technologies :</b> Vue.js, Symfony, HTML, CSS
-                        </p>
-                        <p>
-                            <b>Type de projet :</b> Projet étudiant
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Download Button -->
-                <div class="div_download_btn" data-aos="fade-up">
-                    <a class="download_btn" href="src/projects/BlogAPIFramework.html">
-                        PLUS D'INFORMATIONS
-                    </a>
-                </div>
-            </div>
-
-
-            <!-- Projet 9 - Comics More -->
-            <div id="projet9" class="onePerOneProject">
-                <div class="text_show">
-                    <div class="project_text2" data-aos="fade-up-right">
-                        <h2 id="ComicsMore"> Comics &nbsp; More </h2>
-                        <span>
-                            <center>2023</center>
-                        </span><br>
-                        <p>
-                            <b>But :</b> Site web de lecture en ligne de comics. Un systeme de crédit est mis en place
-                            pour pouvoir acheter des comics. Les crédits peuvent être achetés avec une carte bancaire ou
-                            avec un compte Paypal.
-                        </p>
-                        <p>
-                            <b>Description :</b> Site web de lecture de comics
-                        </p>
-                        <p>
-                            <b>Technologies :</b> Vue.js, Symfony, HTML, CSS
-                        </p>
-                        <p>
-                            <b>Type de projet :</b> Projet tutoré
-                        </p>
-                    </div>
-                    <div class="show_project" data-aos="fade-up-left">
-                        <video class="video_project" autoplay loop muted preload="metadata">
-                            <source src="Ressources/videos/Video_PTUT_sans_commentaires.mp4" type=video/mp4>
-                        </video>
-                    </div>
-                </div>
-
-                <!-- Download Button -->
-                <div class="div_download_btn" data-aos="fade-up">
-                    <a class="download_btn" href="https://comicsmore.vercel.app/" target="_blank" >
-                        PLUS D'INFORMATIONS
-                    </a>
-                </div>
-            </div>
-
-        </div>
 
         </div>
     </section>
@@ -476,6 +106,68 @@
         </div>
     </section>
     <div class="section_end skills_end"></div>
+
+
+    <!--------------------------------------------------------- EXPREIENCES -------------------------------------------------------------------->
+
+    <section id="experience">
+
+        <h1 class="titre aos-init" data-aos="fade-down"> Expériences <img class="gif" src="Ressources/exp.gif"
+                width="100px"> </h1>
+
+        <div class="marge-exp">
+            <center>
+                <div class="exp-grid">
+                    <div>
+                        <div class="card-exp mb-3 aos-animate" data-aos="fade-right" data-aos-delay="100">
+                            <div class="card-header px-3 py-2">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h3 class="h5 mb-1">Développeur web (alternance)</h3>
+                                        <div class="text-muted text-small">isiTecc <small> (2023 - 2024) </small></div>
+                                    </div><img src="Ressources/experiences/isitecc_logo.png" width="48" height="48"
+                                        alt="ui-ux">
+                                </div>
+                            </div>
+                            <div class="card-body px-3 py-2">
+                                <p>Développements d'applications web sur le logiciel <b>Smart Portal</b> en <b>ASP.NET
+                                        MVC</b> et <b>React.js</b></p> <br>
+                                <p>IsiTecc est une ESN (Entreprise du Secteur du Digital) créant et intégrant des
+                                    logiciels informatiques pour l’industrie et le tertiaire.</p> <br>
+                                <p class="text-muted text-small">Situé à Saint-Just-Malmont</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="card-exp mb-3 aos-animate" data-aos="fade-right" data-aos-delay="100">
+                            <div class="card-header px-3 py-2">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h3 class="h5 mb-1">Développeur web (stage)</h3>
+                                        <div class="text-muted text-small"> isiTecc <small>(Avril - Juin 2023)</small>
+                                        </div>
+                                    </div><img src="Ressources/experiences/isitecc_logo.png" width="48" height="48"
+                                        alt="ui-ux">
+                                </div>
+                            </div>
+                            <div class="card-body px-3 py-2">
+                                <p>Développements d'applications web sur le logiciel <b>Smart Portal</b> en <b>ASP.NET
+                                        MVC</b> et <b>React.js</b></p> <br>
+                                <p>IsiTecc est une ESN (Entreprise du Secteur du Digital) créant et intégrant des
+                                    logiciels informatiques pour l’industrie et le tertiaire.</p> <br>
+                                <p class="text-muted text-small">Situé à Saint-Just-Malmont</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+
+    </section>
+
+    <div class="separator" ></div>
 
 
     <!--------------------------------------------------------- CONTACT -------------------------------------------------------------------->
@@ -513,6 +205,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="social_line" data-aos="fade-down" data-aos-duration="2000">
+                    <a class="social_link" href="Ressources/CV - Alexi GALLONET.pdf" target="_blank"
+                        style="--size: 70.65px;">
+                        <img src="Ressources/CVcalque.png" />
+                        <div class="social_text">
+                            <span>Mon CV</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -545,7 +246,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 
     <script src="src/script.js"></script>
-    <script src="src/generateSkills.js"></script>
+    <script src="src/generateData.js"></script>
 
 
 </body>

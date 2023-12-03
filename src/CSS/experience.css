@@ -1,0 +1,85 @@
+#experience {
+    background-color: #fff;
+    padding-top: 50px;
+}
+
+.marge-exp {
+    margin-inline: 200px;
+}
+
+.exp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.card-exp {
+    margin: 3rem;
+    width: 500px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid #f4f6f8;
+    border-radius: 10px;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    transition: all .3s ease;
+}
+
+.card-exp:hover {
+    box-shadow: 0 0 11px #007bff6a;
+    transition: all .3s ease;
+}
+
+.card-header:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.py-2 {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+}
+.px-3 {
+    padding-right: 2rem!important;
+    padding-left: 2rem!important;
+}
+.card-header {
+    padding: 1rem 2rem;
+    margin-bottom: 0;
+    background-color: #f4f6f8;
+    border-bottom: 2px solid #f4f6f8;
+    text-align: start;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 2rem 2rem;
+}
+
+.card-body p {
+    margin-bottom: 0;
+    color: black;
+    text-align: start;
+    text-align: justify;
+
+}
+
+.justify-content-between {
+    justify-content: space-between!important;
+}
+.d-flex {
+    display: flex!important;
+}
+
+.text-small {
+    font-size: .875rem;
+}
+.text-muted {
+    color: #6c757d!important;
+    margin-top: 10px;
+}

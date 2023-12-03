@@ -49,16 +49,6 @@
 					"link": "https://www.adobe.com/products/photoshop.html"
 				},
 				{
-					"name": "Vite",
-					"logo": "Ressources/skills/Vite.svg",
-					"link": "https://vitejs.dev/"
-				},
-				{
-					"name": "GreenSock",
-					"logo": "Ressources/skills/gsap-greensock.svg",
-					"link": "https://greensock.com"
-				},
-				{
 					"name": "Git",
 					"logo": "Ressources/skills/Git.svg",
 					"link": "https://git-scm.com/"
@@ -104,14 +94,9 @@
 					"link": "https://sql.sh"
 				},
 				{
-					"name": "XAMPP",
-					"logo": "Ressources/skills/xampp.svg",
-					"link": "https://www.apachefriends.org/fr/index.html"
-				},
-				{
-					"name": "lexik-JWT-authentication",
-					"logo": "Ressources/skills/jwt.svg",
-					"link": "https://github.com/lexik/LexikJWTAuthenticationBundle"
+					"name": "Docker",
+					"logo": "Ressources/skills/docker.svg",
+					"link": "https://www.docker.com/"
 				},
 				{
 					"name": "MongoDB",

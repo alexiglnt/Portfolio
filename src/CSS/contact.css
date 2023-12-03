@@ -42,6 +42,7 @@
 
 .social_line {
     margin-bottom: 200px;
+
 }
 
 .social_text a {
@@ -83,6 +84,8 @@
 	-webkit-transition: padding 0.5s ease-in-out;
 	-o-transition: padding 0.5s ease-in-out;
 	transition: padding 0.5s ease-in-out;
+
+	height: 100px;
 }
 
 #contact_section .social_link:hover
@@ -132,4 +135,16 @@
 
 #contact_section h1 {
 	padding-top: 100px;
+}
+
+a.dl-cv {
+	text-align: center;
+	transform: translateY(120px);
+	color: black;
+}
+
+.separator {
+	width: 500px;
+	height: 1px;
+	background-color: #000;
 }
