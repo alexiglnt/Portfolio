@@ -46,6 +46,21 @@
             "github": "https://github.com/alexiglnt/Blog-API-Framework"
         },
         {
+            "name": "Portfolio",
+            "date": "2022",
+            "but": "Mon propre Portfolio (sur lequel vous êtes actuellement 😜). Sur ce site, se trouve les projets que j'ai pu réaliser, les compétences que j'ai pu acquérir ainsi que les expériences que j'ai effectuées.",
+            "description": "Site web",
+            "technologies": "React.js",
+            "project_type": "Projet personnel",
+            "video": "Ressources/videos/Artikles.mp4",
+            "img1": "portfolio-phone.png",
+            "img2": "portfolio-home.png",
+            "img3": "portfolio-projects.png",
+            "link_project_page": "src/projects/BlogAPIFramework.html",
+            "type": "web",
+            "github": "https://github.com/alexiglnt/Portfolio"
+        },
+        {
             "name": "Five Guys",
             "date": "2022",
             "but": "Choisissez l’un des 5 personnages disponibles pour parcourir le donjon. Récoltez des items, affrontez les ennemis, terrassez les boss pour trouver la sortie.",
