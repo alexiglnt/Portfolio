@@ -108,9 +108,7 @@
                 ],
                 "techno": [
                     "react.svg",
-                    "JavaScript.svg",
-                    "html.svg",
-                    "css.svg"
+                    "JavaScript.svg"
                 ]
             }
         },

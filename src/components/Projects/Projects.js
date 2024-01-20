@@ -3,9 +3,31 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import jsonProjects from "../../jsons/projects.json"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Projects() {
+  const [activeBtn, setActiveBtn] = useState("Date")
+  const [projects, setProjects] = useState(jsonProjects.projects)
+
+  const handleBtnClick = (btn) => {
+    setActiveBtn(btn);
+
+    switch (btn) {
+      case "Date":
+        setProjects(jsonProjects.projects)
+        break;
+      case "Web":
+        setProjects(jsonProjects.projects.filter(project => project.type === "web").reverse())
+        break;
+      case "Jeux":
+        setProjects(jsonProjects.projects.filter(project => project.type === "game"))
+        break;
+      default:
+        setProjects(jsonProjects.projects)
+        break;
+    }
+
+  };
 
   useEffect(() => {
     console.log(jsonProjects.projects)
@@ -25,7 +47,33 @@ function Projects() {
 
         <br></br> <br></br>
 
-        {jsonProjects.projects.map((project, index) => (
+
+        <div className="sort-btns-container">
+          <button
+            className={`sort-btn ${activeBtn === "Date" ? "active-btn" : ""}`}
+            onClick={() => handleBtnClick("Date")}
+          >
+            Date
+          </button>
+          <button
+            className={`sort-btn ${activeBtn === "Web" ? "active-btn" : ""}`}
+            onClick={() => handleBtnClick("Web")}
+          >
+            Web
+          </button>
+          <button
+            className={`sort-btn ${activeBtn === "Jeux" ? "active-btn" : ""}`}
+            onClick={() => handleBtnClick("Jeux")}
+          >
+            Jeux
+          </button>
+        </div>
+
+        <br></br> <br></br>
+
+
+
+        {projects.map((project, index) => (
           <ProjectCard key={index} data={project} id={index} />
         ))}
 

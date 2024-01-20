@@ -71,7 +71,6 @@ const ProjectDetails = () => {
                             data?.project_details?.techno?.map((item, index) => (
                                 <React.Fragment key={index}>
                                     <img src={`/${item}`} alt="projet" width={70} />
-                                    <br></br>
                                 </React.Fragment>
                             ))
                         }

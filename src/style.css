@@ -1997,3 +1997,29 @@ a.dl-cv {
   height: 100%;
   z-index: -1; /* Place l'élément en arrière-plan */
 }
+
+
+.sort-btns-container {
+  background-color: black;
+  padding: 10px;
+  width: 240px;
+  margin : 0 auto;
+  border-radius: 1.5em;
+  box-shadow: -0.5rem 0.5rem 1rem rgba(53, 40, 82, 0.693), inset -0.25rem 0.25rem 0.5rem rgb(72, 54, 112);
+}
+
+.sort-btn {
+  background-color: transparent;
+  color: white;
+}
+
+.active-btn {
+  background-color: var(--clear-blue);
+  border: none;
+  border-radius: 1.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: black;
+  padding: 5px;
+  padding-inline: 20px;
+}
