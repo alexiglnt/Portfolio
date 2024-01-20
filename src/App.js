@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
 import Experiences from "./components/Experiences/Experiences";
 import Projects from "./components/Projects/Projects";
+import ProjectDetails from "./components/Projects/ProjectDetails";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import {
@@ -38,7 +39,10 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:projectID" element={<ProjectDetails />} />
+
           <Route path="/skills" element={<Skills />} />
           <Route path="/experiences" element={<Experiences />} />
           <Route path="/resume" element={<Resume />} />

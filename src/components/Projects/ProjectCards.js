@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineGithub } from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 function ProjectCards({ data, id }) {
   return (
@@ -22,15 +22,22 @@ function ProjectCards({ data, id }) {
             <div className="project_text">
               <h2> {data.name} </h2>
               <span><center> {data.date} </center></span><br />
-              <p><b>But du jeu :</b> {data.but} </p>
+              <p><b>But :</b> {data.but} </p>
               <p><b>Description :</b> {data.description} </p>
               <p><b>Technologies :</b> {data.technologies} </p>
               <p><b>Type de projet :</b> {data.project_type} </p>
+              <a className="github-icon-btn-card" href={data.github} target="_blank" rel="noreferrer" >
+                <AiOutlineGithub style={{ fontSize: "30px", marginRight: "6px", marginBottom: "2px" }} />
+              </a>
             </div>
           </div>
           <div className="div_download_btn">
-            <a className="download_btn" href={data.github} target="_blank" rel="noreferrer" >
+            {/* <a className="download_btn" href={data.github} target="_blank" rel="noreferrer" >
               <AiOutlineGithub style={{ fontSize: "20px", marginRight: "6px", marginBottom: "2px" }} />
+              Plus d'informations
+            </a> */}
+            <a className="download_btn" href={`/project/${data.id}`} target="_blank" rel="noreferrer" >
+              <AiOutlineFundProjectionScreen style={{ fontSize: "20px", marginRight: "6px", marginBottom: "2px" }} />
               Plus d'informations
             </a>
           </div>
@@ -43,10 +50,13 @@ function ProjectCards({ data, id }) {
             <div className="project_text">
               <h2> {data.name} </h2>
               <span><center> {data.date} </center></span><br />
-              <p><b>But du jeu :</b> {data.but} </p>
+              <p><b>But :</b> {data.but} </p>
               <p><b>Description :</b> {data.description} </p>
               <p><b>Technologies :</b> {data.technologies} </p>
               <p><b>Type de projet :</b> {data.project_type} </p>
+              <a className="github-icon-btn-card" href={data.github} target="_blank" rel="noreferrer" >
+                <AiOutlineGithub style={{ fontSize: "30px", marginRight: "6px", marginBottom: "2px" }} />
+              </a>
             </div>
 
             <div className="show_project">
@@ -60,8 +70,8 @@ function ProjectCards({ data, id }) {
             </div>
           </div>
           <div className="div_download_btn">
-            <a className="download_btn" href={data.github} target="_blank" rel="noreferrer" >
-              <AiOutlineGithub style={{ fontSize: "20px", marginRight: "6px", marginBottom: "2px" }} />
+            <a className="download_btn" href={`/project/${data.id}`} target="_blank" rel="noreferrer" >
+              <AiOutlineFundProjectionScreen style={{ fontSize: "20px", marginRight: "6px", marginBottom: "2px" }} />
               Plus d'informations
             </a>
           </div>

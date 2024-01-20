@@ -3,6 +3,7 @@ import Particles from "react-tsparticles";
 
 function Particle() {
   return (
+    <div className="particles-container">
     <Particles
       id="tsparticles"
       params={{
@@ -15,15 +16,15 @@ function Particle() {
             },
           },
           line_linked: {
-            enable: false,
-            opacity: 0.03,
+            enable: true, 
+            opacity: 0.08,
           },
           move: {
             direction: "right",
-            speed: 0.03,
+            speed: 0.5,
           },
           size: {
-            value: 1,
+            value: 1.3,
           },
           opacity: {
             anim: {
@@ -49,6 +50,7 @@ function Particle() {
         retina_detect: true,
       }}
     />
+    </div>
   );
 }
 

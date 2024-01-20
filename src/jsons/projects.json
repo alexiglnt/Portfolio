@@ -1,94 +1,170 @@
 {
     "projects": [
         {
+            "id": "comics_more",
             "name": "Comics More",
             "date": "2023",
             "but": "Site web de lecture en ligne de comics. Un systeme de crédit est mis en place pour pouvoir acheter des comics. Les crédits peuvent être achetés avec une carte bancaire ou avec un compte Paypal.",
             "description": "Site web e-commerce de lecture de comics",
             "technologies": "Vue.js, Symfony, HTML, CSS",
             "project_type": "Projet étudiant",
-            "video": "Ressources/videos/ComicsMore.mp4",
+            "video": "ComicsMore.mp4",
             "img1": "home.png",
             "img2": "comics.png",
             "img3": "paypal.png",
             "link_project_page": "https://comicsmore.vercel.app/",
             "type": "web",
-            "github": "https://github.com/alexiglnt/comics-more"
+            "github": "https://github.com/alexiglnt/comics-more",
+            "project_details": {
+                "description": [
+                    "Comics More est un site en ligne dédié à la lecture de comics, tels que MARVEL et DC Comics. Le site utilise un système de crédits pour l'achat de ces bandes dessinées, chaque comics étant évalué en fonction de son nombre de pages. Les utilisateurs reçoivent 10 crédits gratuits lors de leur inscription. Ils ont le choix entre deux modes de paiement pour acheter des crédits : par carte bancaire ou via un compte PayPal. Une fois les crédits achetés, les utilisateurs peuvent retrouver leurs comics dans leur bibliothèque personnelle. Ils peuvent effectuer des recherches de comics en utilisant la barre de recherche ou en explorant les différentes collections de personnages. Par exemple, la collection Spider-Man regroupe tous les comics liés à ce personnage, qui est publié sous la maison d'édition Marvel. Les utilisateurs peuvent également ajouter des comics à leurs favoris.",
+                    "Comics More utilise les Frameworks Vue.js et Symfony pour développer le site, stockant les informations dans une base de données. Les images des comics, quant à elles, sont stockées sur Amazon Web Services (AWS). La base de données contient toutes les informations liées aux comics ainsi qu'aux utilisateurs. Le site est relié à la base de données via une API développer en PHP avec Symfony, qui fait le lien entre le back-end et le front-end.",
+                    "Pour l'authentification des utilisateurs, Comics More utilise le système lexik-jwt-authentication avec des tokens qui expirent après un certain temps. Les mots de passe des utilisateurs sont cryptés. Les administrateurs ont accès à des fonctionnalités spéciales, tels que la lecture gratuite de tous les comics et la possibilité de naviguer sur tout le site sans utiliser de crédits."
+                ],
+                "techno": [
+                    "vuejs.svg",
+                    "symfony.svg",
+                    "Sql.svg",
+                    "JavaScript.svg",
+                    "phplogo.svg",
+                    "apiplatform.svg"
+                ]
+            }
         },
         {
+            "id": "remindr",
             "name": "Remindr",
             "date": "2023",
             "but": "L'application permet aux utilisateurs de créer des groupes, d'inviter d'autres utilisateurs et d'ajouter des rappels aux groupes. L'utilisateur peut se connecter à son compte a l'aide du provider GitHub.",
             "description": "Site web de gestion de \"/reminder\" (rappel)",
             "technologies": "NextJS, React, TypeScript",
             "project_type": "Projet étudiant",
-            "video": "Ressources/videos/Remindr.mp4",
+            "video": "Remindr.mp4",
             "img1": "remindr-home.png",
             "img2": "remindr-group.png",
             "img3": "remindr-invite.png",
             "link_project_page": "src/projects/Remindr.html",
             "type": "web",
-            "github": "https://github.com/alexiglnt/remindr"
+            "github": "https://github.com/alexiglnt/remindr",
+            "project_details": {
+                "description": [
+                    "Le but du projet est de créer des rappels pour les différents projets, devoirs, ou attendus à rendre sur des classes, des groupes et autres, avec les détails de contexte nécessaires."
+                ],
+                "techno": [
+                    "nextjs.svg",
+                    "react.svg",
+                    "TypeScript.svg"
+                ]
+            }
         },
         {
+            "id": "artikles",
             "name": "Artikle's - Site Blog",
             "date": "2023",
             "but": "Créer une API avec Symfony et récupérer les données avec Vue.js. Possibilité de se créer un compte, de se connecter, de créer des articles, de les trier, de les liker ainsi que de les commenter et les ajouter à ses favoris.",
             "description": "Site web de type blog",
             "technologies": "Vue.js, Symfony, HTML, CSS",
             "project_type": "Projet étudiant",
-            "video": "Ressources/videos/Artikles.mp4",
+            "video": "Artikles.mp4",
             "img1": "art-home.png",
             "img2": "art-articles.png",
             "img3": "art-login.png",
             "link_project_page": "src/projects/BlogAPIFramework.html",
             "type": "web",
-            "github": "https://github.com/alexiglnt/Blog-API-Framework"
+            "github": "https://github.com/alexiglnt/Blog-API-Framework",
+            "project_details": {
+                "description": [
+                    "Site web de type blog. Lecture d'articles et possibilité des les likés ainsi que de les commenter si vous êtes authentifier. Possibilité de se créer un compte ainsi que de se connecter. Partie Admin pour pouvoir ajouter des articles"
+                ],
+                "techno": [
+                    "vuejs.svg",
+                    "symfony.svg",
+                    "Sql.svg",
+                    "JavaScript.svg",
+                    "phplogo.svg",
+                    "apiplatform.svg"
+                ]
+            }
         },
         {
+            "id": "portfolio",
             "name": "Portfolio",
             "date": "2022",
             "but": "Mon propre Portfolio (sur lequel vous êtes actuellement 😜). Sur ce site, se trouve les projets que j'ai pu réaliser, les compétences que j'ai pu acquérir ainsi que les expériences que j'ai effectuées.",
             "description": "Site web",
             "technologies": "React.js",
             "project_type": "Projet personnel",
-            "video": "Ressources/videos/Artikles.mp4",
+            "video": "",
             "img1": "portfolio-phone.png",
             "img2": "portfolio-home.png",
             "img3": "portfolio-projects.png",
             "link_project_page": "src/projects/BlogAPIFramework.html",
             "type": "web",
-            "github": "https://github.com/alexiglnt/Portfolio"
+            "github": "https://github.com/alexiglnt/Portfolio",
+            "project_details": {
+                "description": [
+                    "Dans ce site, se trouve les projets que j'ai pu réaliser, les compétences que j'ai pu acquérir ainsi que les expériences que j'ai effectué. Il est régulièrement mis à jour avec les nouveaux projets que je réalise ou les nouvelles compétences que j'acquière. Ce site permet d'avoir un aperçu de mon parcours et de mes compétences dans le domaine de l'informatique.",
+                    "Vous êtes actuellement sur mon portfolio, alors je vous laisse le découvrir par vous même 😉"
+                ],
+                "techno": [
+                    "react.svg",
+                    "JavaScript.svg",
+                    "html.svg",
+                    "css.svg"
+                ]
+            }
         },
         {
+            "id": "five-guys",
             "name": "Five Guys",
             "date": "2022",
             "but": "Choisissez l’un des 5 personnages disponibles pour parcourir le donjon. Récoltez des items, affrontez les ennemis, terrassez les boss pour trouver la sortie.",
             "description": "Jeu vidéo de type rogue-like 2D avec génération de map aléatoire",
             "technologies": "C#, moteur Unity",
             "project_type": "Projet étudiant, réalisé en groupe de 5",
-            "video": "Ressources/videos/FiveGuys.mp4",
+            "video": "FiveGuys.mp4",
             "img1": "fg-home.png",
             "img2": "fg-fight.png",
             "img3": "fg-boss.png",
             "link_project_page": "src/projects/FiveGuys.html",
             "type": "game",
-            "github": "https://github.com/alexiglnt/five-guys"
+            "github": "https://github.com/alexiglnt/five-guys",
+            "project_details": {
+                "description": [
+                    "Jeu vidéo de type rogue-like 2D avec génération de map aléatoire, réalisé en groupe de 5. Codé via le moteur de jeu Unity et le langage de programmation C#. Parmi les 5 personnages disponibles, vous devez parcourir le donjon afin d'en trouver la sortie. Attention des ennemis et des boss vont barreront la route."
+                ],
+                "techno": [
+                    "c_sharp.svg",
+                    "unity.svg",
+                    "photoshop.svg"
+                ]
+            }
         },
         {
+            "id": "the_red_knight",
             "name": "The Red Knight",
             "date": "2021",
             "but": "Incarnant un courageux chevalier, vous devrez parcourir le monde et combattre de nombreux ennemis afin de vous en sortir !",
             "description": "Jeu vidéo de type plateformer 2D",
             "technologies": "C#, moteur Unity",
             "project_type": "Projet étudiant, réalisé en binome",
-            "video": "Ressources/videos/The Red Knight 2022-06-26 16-31-25.mp4",
+            "video": "The Red Knight 2022-06-26 16-31-25.mp4",
             "img1": "red-home.png",
             "img2": "red-cave.png",
             "img3": "red-third.png",
             "link_project_page": "src/projects/TheRedKnight.html",
             "type": "game",
-            "github": "https://github.com/alexiglnt/the-red-knight"
+            "github": "https://github.com/alexiglnt/the-red-knight",
+            "project_details": {
+                "description": [
+                    "Jeu vidéo de type plateformer 2D réalisé en binôme. Codé via le moteur de jeu Unity et le langage de programmation C#.Dans ce jeu ou vous incarnez un chevalier, vous devez arriver à la fin du jeu après plusieurs niveaux et après avoir affronté de nombreux ennemis !"
+                ],
+                "techno": [
+                    "c_sharp.svg",
+                    "unity.svg",
+                    "photoshop.svg"
+                ]
+            }
         }
     ],
     "otherProjects": [
