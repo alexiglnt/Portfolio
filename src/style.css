@@ -313,11 +313,14 @@ button:focus {
 @media screen and (max-width: 767px) {
 
   .home-section {
-    width: 100vw;
+    width: 100%;
     background-image: none;
     background-position: none;
     background-repeat: none;
+    padding: 0 !important;
   }
+
+  
 
   .heading {
     font-size: 1.5em !important;
@@ -325,6 +328,15 @@ button:focus {
 
   .heading-name {
     font-size: 2em !important;
+  }
+
+  .home-cards {
+    width: 100% !important;
+    margin-right: 0 auto;
+  }
+
+  .col {
+    padding: 0 !important;
   }
 
 }
@@ -366,7 +378,7 @@ button:focus {
 
 .home-about-section {
   position: relative;
-  padding: 70px !important;
+  padding: 90px !important;
   display: flex;
   justify-content: space-around;
 }
@@ -374,16 +386,31 @@ button:focus {
 @media (max-width: 767px) {
   .home-about-section {
     flex-direction: column !important;
+    padding: 50px !important;
+  }
+
+  .home-about-section p {
+    text-align: justify;
+  }
+
+  .home-about-body {
+    font-size: 1em !important;
   }
 
   .tilt-container {
     display: none !important;
   }
 
-  .home-about-cards {
+  .col a {
     display: block !important;
-    justify-content: center !important;
-    margin-top: 50px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    transform: translateX(-100px);
+    width: 220px !important;
   }
 
   .card-right {
@@ -409,6 +436,7 @@ button:focus {
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
+  width: 100%;
 }
 
 .home-about-cards {
@@ -468,7 +496,7 @@ button:focus {
 
 .home-about-body {
   padding-top: 50px;
-  font-size: 1.2em !important;
+  font-size: 1.2em;
   text-align: justify;
 }
 
@@ -1121,13 +1149,8 @@ button:focus {
 }
 
 @media screen and (max-width: 767px) {
-  .first-image {
-    margin-left: 25px;
-  }
-
   .image-container {
     width: 500px;
-    padding-right: 40px;
   }
 }
 
@@ -2022,4 +2045,11 @@ a.dl-cv {
   color: black;
   padding: 5px;
   padding-inline: 20px;
+}
+
+
+.video-project-details {
+  width: 100%;
+  margin-bottom: 50px;
+  border-radius: .5em;
 }

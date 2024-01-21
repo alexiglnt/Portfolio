@@ -17,9 +17,13 @@
             "github": "https://github.com/alexiglnt/comics-more",
             "project_details": {
                 "description": [
-                    "Comics More est un site en ligne dédié à la lecture de comics, tels que MARVEL et DC Comics. Le site utilise un système de crédits pour l'achat de ces bandes dessinées, chaque comics étant évalué en fonction de son nombre de pages. Les utilisateurs reçoivent 10 crédits gratuits lors de leur inscription. Ils ont le choix entre deux modes de paiement pour acheter des crédits : par carte bancaire ou via un compte PayPal. Une fois les crédits achetés, les utilisateurs peuvent retrouver leurs comics dans leur bibliothèque personnelle. Ils peuvent effectuer des recherches de comics en utilisant la barre de recherche ou en explorant les différentes collections de personnages. Par exemple, la collection Spider-Man regroupe tous les comics liés à ce personnage, qui est publié sous la maison d'édition Marvel. Les utilisateurs peuvent également ajouter des comics à leurs favoris.",
-                    "Comics More utilise les Frameworks Vue.js et Symfony pour développer le site, stockant les informations dans une base de données. Les images des comics, quant à elles, sont stockées sur Amazon Web Services (AWS). La base de données contient toutes les informations liées aux comics ainsi qu'aux utilisateurs. Le site est relié à la base de données via une API développer en PHP avec Symfony, qui fait le lien entre le back-end et le front-end.",
-                    "Pour l'authentification des utilisateurs, Comics More utilise le système lexik-jwt-authentication avec des tokens qui expirent après un certain temps. Les mots de passe des utilisateurs sont cryptés. Les administrateurs ont accès à des fonctionnalités spéciales, tels que la lecture gratuite de tous les comics et la possibilité de naviguer sur tout le site sans utiliser de crédits."
+                    "Lors de la deuxième année du BUT Informatique Graphique au Puy-en-Velay, je devais réaliser un projet tutoré tout au long de l'année. Plusieurs sujets à choisir étaient proposés, et je devais en choisir un. J’ai donc décidé de proposer un projet : un site e-commerce de lecture de comics, nommé Comics More !",
+                    "Pour ce site, le but était de proposer aux utilisateurs un accès instantané à un catalogue expansif de comics, englobant non seulement les titres de Marvel et DC Comics, mais aussi des œuvres de diverses maisons d'édition. Ceci via un système de paiement fluide via PayPal. De ce fait, les utilisateurs peuvent acquérir ces comics en toute simplicité grâce à des crédits achetés via PayPal, chaque comics étant évalué en fonction de son nombre de pages",
+                    "Les utilisateurs reçoivent 10 crédits gratuits lors de leur inscription. Ils ont le choix entre deux modes de paiement pour acheter des crédits : par carte bancaire ou via un compte PayPal. Une fois les crédits achetés, les utilisateurs peuvent retrouver leurs comics dans leur bibliothèque personnelle. Ils peuvent effectuer des recherches en utilisant la barre de recherche ou en explorant les différentes collections de personnages. Par exemple, la collection Spider-Man regroupe tous les comics liés à ce personnage, qui est publié sous la maison d'édition Marvel. Les utilisateurs peuvent également ajouter des comics à leurs favoris.",
+                    "Pour le front-end, j'ai opté pour Vue.js, explorant ainsi la conception d'interfaces utilisateur interactives. J'ai également perfectionné mes compétences en JavaScript et pu découvrir de nombreuses bibliothèques.",
+                    "Côté back-end, j'ai fait usage de Symfony pour développer une API robuste et efficace. Cette API joue un rôle essentiel en assurant la liaison entre le front-end et la base de données MySQL, stockant les données relatives aux comics. Les images quant à elles sont stockées sur Amazon Web Services (AWS).",
+                    "Pour l'authentification des utilisateurs, Comics More utilise le système lexik-jwt-authentication avec des tokens qui expirent après un certain temps. Les mots de passe des utilisateurs sont cryptés. Les administrateurs ont accès à des fonctionnalités spéciales, tels que la lecture gratuite de tous les comics et la possibilité de naviguer sur tout le site sans utiliser de crédits.",
+                    "Ce projet a constitué bien plus qu'un simple apprentissage technique. Il m'a permis d'acquérir une expérience précieuse en gestion de projet, depuis l'élaboration du cahier des charges jusqu'à la mise en production. J'ai développé la capacité à résoudre des problèmes de manière autonome, à optimiser la gestion du temps et à prendre des décisions cruciales pour garantir le succès du projet."
                 ],
                 "techno": [
                     "vuejs.svg",
@@ -48,7 +52,12 @@
             "github": "https://github.com/alexiglnt/remindr",
             "project_details": {
                 "description": [
-                    "Le but du projet est de créer des rappels pour les différents projets, devoirs, ou attendus à rendre sur des classes, des groupes et autres, avec les détails de contexte nécessaires."
+                    "Le but de ce projet est de créer une application web permettant de gérer des rappels. L'application permet aux utilisateurs de créer des groupes, d'inviter d'autres utilisateurs et d'ajouter des rappels aux groupes. L'utilisateur peut se connecter à son compte à l'aide du provider GitHub.",
+                    "Ce projet s'inscrit dans les cours de Web dispensés durant mon BUT Informatique Graphique au Puy-en-Velay. L'ambition était ainsi de réaliser une application web avec une API REST, et de la consommer avec un framework JavaScript.",
+                    "L'application a été réalisée avec Next.js, un framework web, s'occupant à la fois du front-end avec React et du back-end avec un système de routage et de gestion de requêtes. Le tout étant codé en TypeScript",
+                    "Pour ce qui est de la connection des utilisateurs, j'ai utilisé Next-Auth, un package permettant de gérer l'authentification des utilisateurs. Il permet de se connecter avec différents providers (Google, Facebook, GitHub, etc...). Dans ce projet, j'ai utilisé GitHub, car il permet de se connecter avec un compte GitHub, et de récupérer les informations de l'utilisateur (nom, prénom, email, avatar, etc...).",
+                    "Ce projet m'a donc permis de découvrir le framework qu'est Next.js, et de renforcer mes compétences en React, ainsi qu'en TypeScript, un langage de programmation typé, qui permet de détecter des erreurs de typage à la compilation.",
+                    "En plus d'avoir renforcé mes compétences techniques, ce projet m'a également enseigné la capacité à assimiler de nouvelles technologies dans des délais restreints."
                 ],
                 "techno": [
                     "nextjs.svg",
@@ -74,7 +83,11 @@
             "github": "https://github.com/alexiglnt/Blog-API-Framework",
             "project_details": {
                 "description": [
-                    "Site web de type blog. Lecture d'articles et possibilité des les likés ainsi que de les commenter si vous êtes authentifier. Possibilité de se créer un compte ainsi que de se connecter. Partie Admin pour pouvoir ajouter des articles"
+                    "Dans le monde du Web, il existe de nombreux CMS permettant la création de blog, comme WordPress. Mais pour continuer d'acquérir des compétences dans le domaine du web, on peut faire son blog par soi-même. Il s'agit donc ici de permettre la consultation d'articles, les filtrer par catégories, pouvoir commenter, et liker ces articles là. Également, il doit être possible de se connecter pour accéder à ses favoris, en tant qu'utilisateur du blog ou bien en tant qu'administrateur pour pouvoir ajouter ou modifier des articles.",
+                    "Ce projet s'inscrit dans les cours de Web dispensés durant mon BUT Informatique. L'ambition était ainsi de réaliser ce blog sans CMS, comme précisé plus haut.",
+                    "Ce projet s'articule sous différents points. Il y a tout d'abord une partie au niveau de la consultation des articles (en liste, et dans leur détail). Il est aussi question de la gestion du profil utilisateur. D'une part, il y a les utilisateurs classiques, qui doivent pouvoir liker et commenter un article, mais aussi mettre en favori un article. D'autre part, les administrateurs doivent pouvoir faire la même chose, mais aussi créer des articles et les poster.",
+                    "L'objet principal de ce blog, c'est afficher tous les articles à la suite, pouvoir les filtrer par catégorie, et lire un article. Ainsi, sur la page principale, vous pouvez voir tous les derniers articles. Ensuite, une fois que l'on s'intéresse à un article en particulier, on peut le lire.",
+                    "C'est dans la partie administrateur que l'on peut créer un article. Une fois connecté en tant que tel, on peut créer un article, en lui donnant un titre, une catégorie, un contenu, etc... en passant par un WYSIWYG. Une fois l'article créé, il est publié sur le blog."
                 ],
                 "techno": [
                     "vuejs.svg",
@@ -129,7 +142,13 @@
             "github": "https://github.com/alexiglnt/five-guys",
             "project_details": {
                 "description": [
-                    "Jeu vidéo de type rogue-like 2D avec génération de map aléatoire, réalisé en groupe de 5. Codé via le moteur de jeu Unity et le langage de programmation C#. Parmi les 5 personnages disponibles, vous devez parcourir le donjon afin d'en trouver la sortie. Attention des ennemis et des boss vont barreront la route."
+                    "Jeu vidéo de type rogue-like 2D avec génération de map aléatoire, réalisé en groupe de 5. Codé via le moteur de jeu Unity et le langage de programmation C#. Parmi les 5 personnages disponibles, vous devez parcourir le donjon afin d'en trouver la sortie. Attention des ennemis et des boss vont barreront la route.",
+                    "Ce jeu-vidéo a été réalisé dans le cadre d'un projet étudiant durant une période de 3 mois (en même temps que les cours et d'autres projets).",
+                    "Le but de ce projet était de réaliser un jeu-vidéo 2D de notre choix. Parmi les choix possibles (platformer type Super Meat Boy, jeu de cartes type Hearthstone, etc...), notre choix s'est porté vers un jeu de type rogue-like. Ce type de jeu est un genre de jeu vidéo dont le gameplay est caractérisé par la génération procédurale de niveaux, l'exploration et la mort permanente du personnage incarné par le joueur. Le joueur doit donc parcourir un donjon généré aléatoirement, et doit trouver la sortie. Pour cela, il doit affronter des ennemis et des boss, et récolter des items pour améliorer ses statistiques.",
+                    "Ce jeu a été réalisé sous le moteur de jeu Unity pour sa popularité et sa spécialité dans les jeux-vidéos 2D. Le langage de programmation utilisé est le C#.",
+                    "J'ai personnelement pu travailler sur tout les aspects du moteur durant ce projet. Aussi bien sur la partie programmation du jeu (développement des fonctionnalités, ennemis, coffres, etc...), que sur la partie graphique (création/intégration des sprites, de l'UI, des animations, des effets visuels, etc...).",
+                    "J'ai aussi pu renforcer mes compétences transversales en travaillant en groupe. En effet, nous étions 5 à travailler sur ce projet, et nous avons dû nous organiser pour que chacun puisse travailler sur un aspect du jeu sans que cela ne gêne les autres. Nous avons donc utilisé Git pour gérer les versions du projet, et Discord pour communiquer.",
+                    "A la fin de ce projet, nous avons pu présenter notre jeu-vidéo à un jury composé de nos professeurs. Nous avons pu leur présenter notre jeu, et ils ont pu le tester et nous donnés un retour positif."
                 ],
                 "techno": [
                     "c_sharp.svg",
@@ -155,7 +174,10 @@
             "github": "https://github.com/alexiglnt/the-red-knight",
             "project_details": {
                 "description": [
-                    "Jeu vidéo de type plateformer 2D réalisé en binôme. Codé via le moteur de jeu Unity et le langage de programmation C#.Dans ce jeu ou vous incarnez un chevalier, vous devez arriver à la fin du jeu après plusieurs niveaux et après avoir affronté de nombreux ennemis !"
+                    "Jeu vidéo de type plateformer 2D réalisé en binôme. Codé via le moteur de jeu Unity et le langage de programmation C#.Dans ce jeu ou vous incarnez un chevalier, vous devez arriver à la fin du jeu après plusieurs niveaux et après avoir affronté de nombreux ennemis !",
+                    "Ce projet à été réalisé dans le cadre d'un projet étudiant durant la première année de mon BUT Informatique Graphique au Puy-en-Velay. Ce projet a été réalisé en binôme, et nous avons eu 3 mois pour le réaliser (en même temps que les cours et d'autres projets).",
+                    "Etant le premier projet de jeu-vidéo que j'ai réalisé, j'ai pu apprendre les bases de la programmation de jeu-vidéo, ainsi que les bases du moteur de jeu Unity et la programmation via le language C#. J'ai pu apprendre à créer des animations, des effets visuels, des scripts, etc... J'ai aussi pu développer mes compétences transversales en travaillant en binôme. En effet, nous avons dû nous organiser pour que chacun puisse travailler sur un aspect du jeu sans que cela ne gêne les autres. Nous avons donc utilisé Git pour gérer les versions du projet, et Discord pour communiquer lorsque nous n'étions pas en cours ou chez l'un de nous pour travailler ensemble",
+                    "A la fin de ce projet, nous avons pu présenter notre jeu-vidéo à un jury composé de nos professeurs. Nous avons pu leur présenter notre jeu, et ils ont pu le tester et nous donnés un retour positif pour un premier jeu."
                 ],
                 "techno": [
                     "c_sharp.svg",

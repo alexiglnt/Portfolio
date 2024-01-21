@@ -46,7 +46,7 @@ const ProjectDetails = () => {
                     )} */}
 
                     {data.video && (
-                        <video style={{ borderRadius: ".5em", marginBottom: "50px" }} width="560" height="315" src={`/${data.video}`} title={data.name} frameBorder="0" controls>
+                        <video className='video-project-details' src={`/${data.video}`} title={data.name} frameBorder="0" controls>
                             <source src={`/${video}`} type="video/mp4" />
                         </video>
 
