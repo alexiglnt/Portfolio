@@ -66,7 +66,7 @@ function Home2() {
                     {" "} Projets
                   </Card.Title>
                   <br></br>
-                  <Card.Text> Cliquez ici pour découvrir les projets que j'ai réalisez </Card.Text>
+                  <Card.Text> Cliquez ici pour découvrir les projets que j'ai réalisés </Card.Text>
                   <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px"}} />
                 </Card.Body>
               </Card>

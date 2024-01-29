@@ -401,6 +401,11 @@ button:focus {
     display: none !important;
   }
 
+  .home-about-cards .col {
+   display: flex;
+    justify-content: center;
+  }
+
   .col a {
     display: block !important;
     margin-left: 0px !important;
@@ -582,6 +587,10 @@ button:focus {
 }
 
 @media (max-width: 767px) {
+  .footer {
+    margin-top: 150px;
+  }
+
   .footer-copywright {
     text-align: center !important;
   }
@@ -1727,6 +1736,10 @@ video {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .social_line {
+    margin-bottom: 0px !important;
   }
 }
 
