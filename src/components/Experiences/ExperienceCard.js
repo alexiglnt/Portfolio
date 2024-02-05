@@ -12,7 +12,7 @@ function ExperienceCard({title, company, date, description, location, logo}) {
               <div>
                 <h3 class="h5 mb-1"> {title} </h3>
                 <div class="text-muted text-small"> {company} <small> ({date}) </small></div>
-              </div><img src="isitecc_logo.png" width="48" height="48"
+              </div><img src={logo} width="48" height="48"
                 alt="ui-ux" />
             </div>
           </div>

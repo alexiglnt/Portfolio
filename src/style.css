@@ -2066,3 +2066,29 @@ a.dl-cv {
   margin-bottom: 50px;
   border-radius: .5em;
 }
+
+
+details {
+  margin: 0 auto;
+  width: 600px;
+  color: #000;
+  text-align: justify;
+  line-height: 2;
+  word-spacing: 2px;
+  background-color: #ffffffa2;
+  border-radius:.9em;
+  border: 2px solid #fff;
+  padding: 5px 20px;
+  transition: all 0.3s ease;
+}
+
+details:hover {
+  background-color: #ffffffc8;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 767px) {
+  details {
+    width: 100%;
+  }
+}

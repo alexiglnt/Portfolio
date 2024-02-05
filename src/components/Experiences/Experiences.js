@@ -18,10 +18,10 @@ function Experiences() {
           <div className="exp-wrapper" >
 
             <ExperienceCard
-              title="Développeur web (alternance)"
+              title="Développeur web full-stack"
               company="isiTecc"
               date="2023 - 2024"
-              description={["Développements d'applications web sur le logiciel Smart Portal en ASP.NET MVC et React.js.", "IsiTecc est une ESN (Entreprise du Secteur du Digital) créant et intégrant des logiciels informatiques pour l’industrie et le tertiaire."]}
+              description={["Dans le cadre d’une alternance d’une durée d’un an, j’ai contribué au développement d’applications web sur le logiciel Smart Portal en utilisant les technologies ASP.NET, React.js et SQL", "IsiTecc est une ESN (Entreprise du Secteur du Digital) créant et intégrant des logiciels informatiques pour l’industrie et le tertiaire."]}
               location="Saint-Just-Malmont"
               logo="isitecc_logo.png"
             />
@@ -31,10 +31,10 @@ function Experiences() {
             <div className="experience-divider-bullet"></div>
 
             <ExperienceCard
-              title="Développeur web (stage)"
+              title="Développeur web full-stack"
               company="isiTecc"
               date="Avril - Juin 2023"
-              description={["Développements d'applications web sur le logiciel Smart Portal en ASP.NET MVC et React.js.", "IsiTecc est une ESN (Entreprise du Secteur du Digital) créant et intégrant des logiciels informatiques pour l’industrie et le tertiaire."]}
+              description={["Stage d’une durée de trois mois ou j’ai contribué au développement d’applications web sur le logiciel Smart Portal en utilisant les technologies ASP.NET, React.js et SQL", "IsiTecc est une ESN (Entreprise du Secteur du Digital) créant et intégrant des logiciels informatiques pour l’industrie et le tertiaire."]}
               location="Saint-Just-Malmont"
               logo="isitecc_logo.png"
             />
