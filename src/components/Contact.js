@@ -49,12 +49,12 @@ const Contact = () => {
             </div>
             <div className="social_line" data-aos="fade-down" data-aos-duration="3000">
               <div className="social_link" style={socialLinkStyle3}>
-                <a href="mailto:alexigallonet@gmail.com" target="_blank" rel="noreferrer">
+                <a href="mailto:contact@alexigallonet.com" target="_blank" rel="noreferrer">
                   <img src="téléchargement (2).svg" width="12%" alt="how contact me" />
                 </a>
                 <div className="social_text">
-                  <a href="mailto:alexigallonet@gmail.com" target="_blank" rel="noreferrer">
-                    <span>alexigallonet@gmail.com</span>
+                  <a href="mailto:contact@alexigallonet.com" target="_blank" rel="noreferrer">
+                    <span>contact@alexigallonet.com</span>
                   </a>
                 </div>
               </div>
