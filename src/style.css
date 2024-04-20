@@ -318,6 +318,7 @@ button:focus {
     background-position: none;
     background-repeat: none;
     padding: 0 !important;
+    height: 50vh;
   }
 
   
@@ -444,9 +445,32 @@ button:focus {
   width: 100%;
 }
 
+/* .home-about-cards {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  justify-content: center !important;
+} */
+
+
 .home-about-cards {
-  display: grid;
-  justify-content: center;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 10px !important;
+  width: 80% !important;
+  height: 500px !important;
+}
+
+@media (max-width: 767px) {
+  .home-about-cards {
+    grid-template-columns: 1fr;
+    width: 100% !important;
+    margin-bottom: 400px !important;
+  }
+
+  .home-cards {
+    width: 90% !important;
+    margin-bottom: 20px !important;
+  }
 }
 
 .home-about-cards a {
@@ -469,6 +493,7 @@ button:focus {
   background-color: var(--clear-blue) !important;
   cursor: pointer;
   text-align: left;
+  margin: 0 auto;
 }
 
 .home-cards:hover {
@@ -566,6 +591,7 @@ button:focus {
 .icon-colour {
   color: var(--main-color) !important;
 }
+
 
 /* --------- */
 /* Footer */

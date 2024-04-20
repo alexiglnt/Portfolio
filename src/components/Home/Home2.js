@@ -49,93 +49,78 @@ function Home2() {
           {/* ICI */}
         </Col>
 
-        <Row className="home-about-cards">
+        <Container className="home-about-cards">
+          <Row>
+            {/* Première carte */}
+            <Col md={6} xs={12}>
+              <a href="/projects" onClick={(e) => { e.preventDefault(); navigate("/projects") }}>
+                <Card className="home-cards">
+                  <Card.Body>
+                    <Card.Title>
+                      <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} />
+                      {" "} Projets
+                    </Card.Title>
+                    <br />
+                    <Card.Text> Cliquez ici pour découvrir les projets que j'ai réalisés </Card.Text>
+                    <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px" }} />
+                  </Card.Body>
+                </Card>
+              </a>
+            </Col>
 
-          {/* Première carte */}
+            {/* Deuxième carte */}
+            <Col md={6} xs={12}>
+              <a href="/skills" onClick={(e) => { e.preventDefault(); navigate("/skills") }}>
+                <Card className="home-cards">
+                  <Card.Body>
+                    <Card.Title>
+                      <AiOutlineLineChart style={{ marginBottom: "2px" }} />
+                      {" "} Compétences
+                    </Card.Title>
+                    <br />
+                    <Card.Text> Venez découvrir mes compétences dans différents domaines en cliquant ici </Card.Text>
+                    <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px" }} />
+                  </Card.Body>
+                </Card>
+              </a>
+            </Col>
 
-          <Col>
-            <a
-              href="/projects"
-              onClick={(e) => {e.preventDefault(); navigate("/projects") }}
-            >
-              <Card className="home-cards card-left card-top">
-                <Card.Body>
+            {/* Troisième carte */}
+            <Col md={6} xs={12} marginBottom={20} >
+              <a href="/experiences" onClick={(e) => { e.preventDefault(); navigate("/experiences") }}>
+                <Card className="home-cards">
+                  <Card.Body>
+                    <Card.Title>
+                      <AiOutlineThunderbolt style={{ marginBottom: "2px" }} />
+                      {" "} Expériences
+                    </Card.Title>
+                    <br />
+                    <Card.Text> Vous voulez savoir les expériences que j'ai eu en entreprise ? Cliquez ici </Card.Text>
+                    <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px" }} />
+                  </Card.Body>
+                </Card>
+              </a>
+            </Col>
 
-                  <Card.Title>
-                    <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} />
-                    {" "} Projets
-                  </Card.Title>
-                  <br></br>
-                  <Card.Text> Cliquez ici pour découvrir les projets que j'ai réalisés </Card.Text>
-                  <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px"}} />
-                </Card.Body>
-              </Card>
-            </a>
-          </Col>
-
-          {/* Deuxième carte */}
-          <Col>
-            <a
-              href="/skills"
-              onClick={(e) => {e.preventDefault(); navigate("/skills") }}
-            >
-              <Card className="home-cards card-right card-top">
-                <Card.Body>
-                  <Card.Title>
-                    <AiOutlineLineChart
-                      style={{ marginBottom: "2px" }}
-                    />{" "}
-                    Compétences
-                  </Card.Title> <br></br>
-                  <Card.Text> Venez découvrir mes compétences dans différents domaines en cliquant ici </Card.Text>
-                  <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px"}} />
-                </Card.Body>
-              </Card>
-            </a>
-          </Col>
-
-
-          {/* Troisième carte */}
-          <Col>
-            <a
-              href="/experiences"
-              onClick={(e) => {e.preventDefault(); navigate("/experiences") }}
-            >
-              <Card className="home-cards card-left card-bottom">
-                <Card.Body>
-                  <Card.Title>
-                    <AiOutlineThunderbolt style={{ marginBottom: "2px" }} /> Expériences
-                  </Card.Title>  <br></br>
-                  <Card.Text>Vous voulez savoir les expériences que j'ai eu en entreprise ? Cliquez ici</Card.Text>
-                  <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px"}} />
-                </Card.Body>
-              </Card>
-            </a>
-          </Col>
-
-          {/* Quatrième carte */}
-          <Col>
-            <a
-              href="/contact"
-              onClick={(e) => {e.preventDefault(); navigate("/contact") }}
-            >
-              <Card className="home-cards card-right card-bottom">
-                <Card.Body>
-                  <Card.Title>
-                    <AiOutlineUser style={{ marginBottom: "2px" }} /> Contact
-                  </Card.Title> <br></br>
-                  <Card.Text> Si vous voulez me contacter, c'est par ici ! </Card.Text>
-                  <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px"}} />
-                </Card.Body>
-              </Card>
-            </a>
-          </Col>
-
-        </Row>
+            {/* Quatrième carte */}
+            <Col md={6} xs={12}>
+              <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact") }}>
+                <Card className="home-cards">
+                  <Card.Body>
+                    <Card.Title>
+                      <AiOutlineUser style={{ marginBottom: "2px" }} />
+                      {" "} Contact
+                    </Card.Title>
+                    <br />
+                    <Card.Text> Si vous voulez me contacter, c'est par ici ! </Card.Text>
+                    <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px" }} />
+                  </Card.Body>
+                </Card>
+              </a>
+            </Col>
+          </Row>
+        </Container>
       </Container>
-
-
-
 
     </Container>
   );
