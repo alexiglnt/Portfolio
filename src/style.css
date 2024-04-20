@@ -1361,6 +1361,12 @@ video {
   }
 }
 
+.inline-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 #skill h1 {
   color: white;
 }
