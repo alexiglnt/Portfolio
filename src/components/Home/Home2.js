@@ -24,14 +24,13 @@ function Home2() {
             <p className="home-about-body">
               Je suis passionné par le <b className="purple">développement web</b>, que ce soit le coté front-end ou back-end.
               <br />
-              Je me spécialise actuellement et je suis en alternance chez <b className="purple">isiTecc</b>, une entreprise du secteur du digital pour les industries.
-              <br />
+              Je suis actuellement en formation en tant qu'ingénieur en informatique à <b className="purple">ISIMA</b> En alternance chez <b className="purple">PI System Automation</b>, une entreprise du groupe <b className="purple">Galilé</b>.<br />
               <br />
               {/* <i>
                 <b className="purple"> C++, Javascript and Go. </b>
               </i>
               <br />*/}
-              Pour atteindre cet objectif, j'ai eu l'opportunité de concrétiser divers projets, que ce soit pendant mes études ou à titre personnel, afin de maîtriser les multiples langages et technologies du domaine.
+              J'ai eu l'opportunité de concrétiser divers projets, que ce soit pendant mes études ou à titre personnel, afin de maîtriser les multiples langages et technologies du domaine.
               <br />
               <br />
               J'apprécie particulièrement le langage de programmation <b className="purple">JavaScript</b> et les frameworks <b className="purple"> React </b> et <b className="purple"> Next.js </b>

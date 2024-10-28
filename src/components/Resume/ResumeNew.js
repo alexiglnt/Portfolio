@@ -24,7 +24,7 @@ function ResumeNew() {
           Mon <strong className="purple"> CV </strong>
         </h1>
 
-        <br/> <br/>
+        <br /> <br />
 
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
@@ -57,6 +57,22 @@ function ResumeNew() {
         <br /> <br />
 
         <div className="exp-wrapper" >
+
+          <ExperienceCard 
+            title="Diplôme d'Ingénieur en Informatique"
+            company="ISIMA, Clermont-Ferrand 63"
+            date="2024 - 2027"
+            description={["", "Le diplôme d’ingénieur délivré par l'ISIMA est une formation en ingénierie informatique de trois ans en apprentissage, qui forme à la modélisation, la conception et la réalisation de solutions tout en développant les compétences de communication avec l’ensemble des parties prenantes.",
+              "Ce programme couvre un large éventail de domaines, incluant le développement logiciel, web et mobile, ainsi que des spécialités comme l'IoT, l'intelligence artificielle, les bases de données et l'architecture des systèmes d’information."]}
+            location="Clermont-Ferrand"
+            logo="isima-logo.png"
+          />
+
+          <div className="experience-divider-bullet"></div>
+          <div className="experience-divider"></div>
+          <div className="experience-divider-bullet"></div>
+
+
           <ExperienceCard
             title="BUT Informatique Graphique"
             company="IUT Clermont-Auvergne, Antenne  43"
@@ -82,7 +98,7 @@ function ResumeNew() {
           />
         </div>
 
-      <br /> <br />
+        <br /> <br />
 
 
       </Container>
