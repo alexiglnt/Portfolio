@@ -16,12 +16,25 @@ function Projects() {
       case "Date":
         setProjects(jsonProjects.projects)
         break;
+
       case "Web":
-        setProjects(jsonProjects.projects.filter(project => project.type === "web").reverse())
+        // Filtrage + tri par date décroissante
+        setProjects(
+          jsonProjects.projects
+            .filter(project => project.type === "web")
+            .sort((a, b) => Number(b.date) - Number(a.date))
+        );
         break;
+
       case "Jeux":
-        setProjects(jsonProjects.projects.filter(project => project.type === "game"))
+        // Filtrage + tri par date décroissante
+        setProjects(
+          jsonProjects.projects
+            .filter(project => project.type === "game")
+            .sort((a, b) => Number(b.date) - Number(a.date))
+        );
         break;
+        
       default:
         setProjects(jsonProjects.projects)
         break;
