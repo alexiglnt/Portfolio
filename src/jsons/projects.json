@@ -138,7 +138,7 @@
             "but": "Choisissez l’un des 5 personnages disponibles pour parcourir le donjon. Récoltez des items, affrontez les ennemis, terrassez les boss pour trouver la sortie.",
             "description": "Jeu vidéo de type rogue-like 2D avec génération de map aléatoire",
             "technologies": "C#, moteur Unity",
-            "project_type": "Projet étudiant, réalisé en groupe de 5",
+            "project_type": "Projet étudiant",
             "video": "FiveGuys.mp4",
             "img1": "fg-home.png",
             "img2": "fg-fight.png",
@@ -157,9 +157,39 @@
                     "A la fin de ce projet, nous avons pu présenter notre jeu-vidéo à un jury composé de nos professeurs. Nous avons pu leur présenter notre jeu, et ils ont pu le tester et nous donnés un retour positif."
                 ],
                 "techno": [
-                    "c_sharp.svg",
-                    "unity.svg",
-                    "photoshop.svg"
+                    "C_sharp.svg",
+                    "Unity.svg",
+                    "Photoshop.svg"
+                ]
+            }
+        },
+        {
+            "id": "tiny-swords",
+            "name": "Tiny Swords",
+            "date": "2024",
+            "but": "Jeu de stratégie 2D au tour par tour, inspiré du célèbre Civilization VI. Le joueur y contrôle des personnages aux compétences variées, sur une carte découpée en cases.",
+            "description": "Jeu de stratégie 2D au tour par tour sur grille, avec déplacements tactiques et affrontements",
+            "technologies": "C#, moteur Unity",
+            "project_type": "Projet étudiant",
+            "video": "tinyswords.mp4",
+            "img1": "tinyswords1.png",
+            "img2": "tinyswords2.png",
+            "img3": "tinyswords3.png",
+            "link_project_page": "src/projects/TinySwords.html",
+            "type": "game",
+            "github": "https://github.com/alexiglnt/tiny-swords",
+            "project_details": {
+                "description": [
+                    "Tiny Swords est un jeu de stratégie 2D en tour par tour, inspiré de Civilization VI. Le joueur évolue sur une carte en grille, chaque case représentant un espace de déplacement possible.",
+                    "Chaque unité appartient à une classe (chevalier, gobelin, paysan, etc.) et dispose de capacités spécifiques qui influencent sa portée de déplacement, sa puissance d’attaque ou sa défense.",
+                    "Les déplacements se font sur une grille, et la distance maximale est calculée en fonction des statistiques de l’unité sélectionnée. Le système de combat repose sur une mécanique d'attaque au tour par tour et sur le positionnement stratégique.",
+                    "Des ennemis sont placés sur la carte et doivent être éliminés ou contournés selon la stratégie adoptée. La variété des unités rend chaque partie unique et encourage une réflexion tactique.",
+                    "Le projet a été développé sous Unity en C#, avec une attention particulière portée à la gestion des déplacements sur grille et au système de tours."
+                ],
+                "techno": [
+                    "C_sharp.svg",
+                    "Unity.svg",
+                    "Photoshop.svg"
                 ]
             }
         },
