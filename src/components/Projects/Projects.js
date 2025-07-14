@@ -53,7 +53,7 @@ function Projects() {
             className={`sort-btn ${activeBtn === "Date" ? "active-btn" : ""}`}
             onClick={() => handleBtnClick("Date")}
           >
-            Date
+            Ordre Custom
           </button>
           <button
             className={`sort-btn ${activeBtn === "Web" ? "active-btn" : ""}`}
