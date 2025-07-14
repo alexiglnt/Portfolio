@@ -1,6 +1,38 @@
 {
     "projects": [
         {
+            "id": "note_finder",
+            "name": "Note Finder",
+            "date": "2025",
+            "but": "Application web et mobile de reconnaissance musicale, similaire à Shazam. Permet à un utilisateur d’identifier une musique à partir d’un extrait sonore capté par son appareil.",
+            "description": "Application de reconnaissance musicale multiplateforme",
+            "technologies": "Vue.js, Python, PostgreSQL",
+            "project_type": "Projet étudiant",
+            "video": "NoteFinder.mp4",
+            "img1": "notefinder1.png",
+            "img2": "notefinder2.png",
+            "img3": "notefinder3.png",
+            "link_project_page": "https://notefinder.alexigallonet.com/",
+            "type": "web",
+            "github": "https://github.com/alexiglnt/Note-Finder",
+            "project_details": {
+                "description": [
+                    "NoteFinder a été développé dans le cadre d’un projet de première année à l’ISIMA, école d’ingénieur en informatique. Il s’agit d’une application de reconnaissance musicale, conçue pour fonctionner à la fois sur ordinateur et sur mobile.",
+                    "L’utilisateur peut lancer une reconnaissance musicale en cliquant sur un bouton central. Un extrait sonore est alors enregistré, puis envoyé au serveur backend. Ce dernier tente d’identifier le morceau et, en cas de correspondance, renvoie les informations associées (titre, artiste, lien Spotify, etc.) au front-end pour affichage.",
+                    "Le projet comprend une application web responsive développée en Vue.js avec TailwindCSS, ainsi qu’une version mobile Android grâce à une intégration WebView réalisée via Android Studio.",
+                    "Le backend repose sur Python avec le framework FastAPI, et utilise une base de données PostgreSQL accessible via SQLAlchemy. L’API assure la réception des extraits audio, le traitement des empreintes sonores, la recherche de correspondances et la gestion des utilisateurs.",
+                    "L’application propose un historique des morceaux identifiés, accessible si l’utilisateur est connecté ou stocké localement via les cookies. L’authentification s’appuie sur un système de tokens JWT.",
+                    "Ce projet a représenté une opportunité concrète d’expérimenter le développement complet d’un produit logiciel : architecture fullstack, gestion de projet en équipe, adaptation multiplateforme, et prise en main d’outils modernes pour l’interface comme pour le traitement de données."
+                ],
+                "techno": [
+                    "vuejs.svg",
+                    "python.svg",
+                    "Postgresql.svg",
+                    "Tailwind.svg"
+                ]
+            }
+        },
+        {
             "id": "comics_more",
             "name": "Comics More",
             "date": "2023",
@@ -180,9 +212,9 @@
                     "A la fin de ce projet, nous avons pu présenter notre jeu-vidéo à un jury composé de nos professeurs. Nous avons pu leur présenter notre jeu, et ils ont pu le tester et nous donnés un retour positif pour un premier jeu."
                 ],
                 "techno": [
-                    "c_sharp.svg",
-                    "unity.svg",
-                    "photoshop.svg"
+                    "C_sharp.svg",
+                    "Unity.svg",
+                    "Photoshop.svg"
                 ]
             }
         }
