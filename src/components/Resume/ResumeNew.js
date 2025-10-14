@@ -1,106 +1,97 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/CV - Alexi GALLONET - Portfolio.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import ExperienceCard from "../Experiences/ExperienceCard";
+import { useTranslation } from "react-i18next";
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(800);
+  const { t, i18n } = useTranslation();
 
+  const [width, setWidth] = useState(800);
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
 
+  // 🔹 PDF par langue (mets tes fichiers dans /public/cv/)
+  const resumeByLang = {
+    fr: "/cv/CV_Alexi_Gallonet_FR.pdf",
+    en: "/cv/CV_Alexi_Gallonet_EN.pdf",
+  };
+  const resumeHref = i18n.language?.startsWith("en")
+    ? resumeByLang.en
+    : resumeByLang.fr;
+
+  // 🔹 Formations traduites
+  const educations = t("education.items", { returnObjects: true });
+
   return (
     <div>
       <Container fluid className="project-section">
-
         <h1 className="project-heading">
-          Mon <strong className="purple"> CV </strong>
+          {t("resumePage.title.part1")}{" "}
+          <strong className="purple">{t("resumePage.title.part2")}</strong>
         </h1>
 
-        <br /> <br />
+        <br /><br />
 
         <Particle />
+
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <a
-            href={pdf}
+            href={resumeHref}
             target="_blank"
             rel="noreferrer"
             className="download_btn"
-            style={{ width: "200px", marginBottom: "0" }}
+            aria-label={t("resumePage.download_aria")}
+            style={{ width: "260px", marginBottom: 0, textAlign: "center" }}
           >
             <AiOutlineDownload />
-            &nbsp;Télécharger le CV
+            &nbsp;{t("resumePage.download")}
           </a>
         </Row>
 
         <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
+          <Document file={resumeHref} className="d-flex justify-content-center">
             <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.47} />
           </Document>
         </Row>
 
-
-        <br /> <br /> <br /> <br /><br /> <br />
-
-
+        <br /><br /><br /><br /><br /><br />
 
         <h1 className="project-heading">
-          Mes <strong className="purple"> Formations </strong>
+          {t("educationPage.title.part1")}{" "}
+          <strong className="purple">{t("educationPage.title.part2")}</strong>
         </h1>
-        <br /> <br />
+        <br /><br />
 
-        <div className="exp-wrapper" >
-
-          <ExperienceCard 
-            title="Diplôme d'Ingénieur en Informatique"
-            company="ISIMA, Clermont-Ferrand 63"
-            date="2024 - 2027"
-            description={["", "Le diplôme d’ingénieur délivré par l'ISIMA est une formation en ingénierie informatique de trois ans en apprentissage, qui forme à la modélisation, la conception et la réalisation de solutions tout en développant les compétences de communication avec l’ensemble des parties prenantes.",
-              "Ce programme couvre un large éventail de domaines, incluant le développement logiciel, web et mobile, ainsi que des spécialités comme l'IoT, l'intelligence artificielle, les bases de données et l'architecture des systèmes d’information."]}
-            location="Clermont-Ferrand"
-            logo="isima-logo.png"
-          />
-
-          <div className="experience-divider-bullet"></div>
-          <div className="experience-divider"></div>
-          <div className="experience-divider-bullet"></div>
-
-
-          <ExperienceCard
-            title="BUT Informatique Graphique"
-            company="IUT Clermont-Auvergne, Antenne  43"
-            date="2021 - 2024"
-            description={["", "Le Bachelor Universitaire de Technologie (BUT) Informatique Graphique est un programme de trois ans axé sur l'informatique, offrant une couverture complète des différents domaines de ce secteur.",
-              "Il englobe le développement logiciel, web et de jeux vidéo, tout en incluant des aspects cruciaux tels que la modélisation 3D, les bases de données, la réalité virtuelle et la synthèse d'images."]}
-            location="Puy-en-Velay"
-            logo="uca_logo.jpg"
-          />
-
-          <div className="experience-divider-bullet"></div>
-          <div className="experience-divider"></div>
-          <div className="experience-divider-bullet"></div>
-
-          <ExperienceCard
-            title="BAC Général (NSI, Mathématiques)"
-            company="Lycée Notre-Dame du Château"
-            date="2019 - 2021"
-            description={["", "Baccalauréat général avec les spécialités NSI (Numérique et Sciences Informatiques) et Mathématiques",
-              "La troisème spécialité choisie était les Sciences Economiques et Sociales (SES)"]}
-            location="Monistrol-sur-Loire"
-            logo="lycee_logo.jpg"
-          />
+        <div className="exp-wrapper">
+          {educations.map((edu, idx) => (
+            <React.Fragment key={idx}>
+              <ExperienceCard
+                title={edu.title}
+                company={edu.company}
+                date={edu.date}
+                description={edu.description}
+                location={edu.location}
+                logo={edu.logo}
+              />
+              {idx < educations.length - 1 && (
+                <>
+                  <div className="experience-divider-bullet"></div>
+                  <div className="experience-divider"></div>
+                  <div className="experience-divider-bullet"></div>
+                </>
+              )}
+            </React.Fragment>
+          ))}
         </div>
 
-        <br /> <br />
-
-
+        <br /><br />
       </Container>
     </div>
   );

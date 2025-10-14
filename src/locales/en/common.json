@@ -47,9 +47,23 @@
             "part2": "Projects"
         },
         "sort": {
-            "custom": "Custom Order",
+            "custom": "Custom",
             "web": "Web",
             "games": "Games"
+        }
+    },
+    "skillsPage": {
+        "title": {
+            "part1": "My",
+            "part2": "Skills"
+        },
+        "categories": {
+            "part3": "Software / Games"
+        }
+    },
+    "skills": {
+        "categories": {
+            "software_games": "Software / Games"
         }
     },
     "labels": {
@@ -58,5 +72,108 @@
         "technologies": "Technologies",
         "type": "Project Type",
         "more": "More Information"
+    },
+    "experiencesPage": {
+        "title": {
+            "part1": "My",
+            "part2": "Experiences"
+        }
+    },
+    "experiences": {
+        "items": [
+            {
+                "title": "Software Engineer",
+                "company": "PI System Automation",
+                "date": "2024 - 2027",
+                "description": [
+                    "Three-year apprenticeship within the company’s software engineering team, contributing to BoggieGuard — a system designed to detect metro tire pressure.",
+                    "PISA, a subsidiary of the Galilé Group, delivers innovative industrial solutions. Key clients include Michelin and RATP."
+                ],
+                "location": "Clermont-Ferrand",
+                "logo": "logo-pisa.png"
+            },
+            {
+                "title": "Full-stack Web Developer",
+                "company": "isiTecc",
+                "date": "2023 - 2024",
+                "description": [
+                    "One-year apprenticeship contributing to Smart Portal web applications using ASP.NET, React.js, and SQL.",
+                    "isiTecc is a digital services company delivering and integrating software for industry and services."
+                ],
+                "location": "Saint-Just-Malmont",
+                "logo": "isitecc_logo.png"
+            },
+            {
+                "title": "Full-stack Web Developer (Intern)",
+                "company": "isiTecc",
+                "date": "April – June 2023",
+                "description": [
+                    "Three-month internship working on Smart Portal web apps with ASP.NET, React.js, and SQL.",
+                    "isiTecc is a digital services company delivering and integrating software for industry and services."
+                ],
+                "location": "Saint-Just-Malmont",
+                "logo": "isitecc_logo.png"
+            }
+        ]
+    },
+    "resumePage": {
+        "title": {
+            "part1": "My",
+            "part2": "Résumé"
+        },
+        "download": "Download Résumé",
+        "download_aria": "Download my résumé"
+    },
+    "educationPage": {
+        "title": {
+            "part1": "My",
+            "part2": "Education"
+        }
+    },
+    "education": {
+        "items": [
+            {
+                "title": "Master's-level Engineering Degree in Computer Science",
+                "company": "ISIMA, Clermont-Ferrand (63)",
+                "date": "2024 - 2027",
+                "description": [
+                    "",
+                    "Three-year apprenticeship program in Computer Engineering (French Diplôme d’Ingénieur), covering modeling, design, and delivery of software solutions, while building communication skills with all stakeholders.",
+                    "Curriculum spans software, web and mobile development, with tracks such as IoT, Artificial Intelligence, Databases, and Information Systems architecture."
+                ],
+                "location": "Clermont-Ferrand",
+                "logo": "isima-logo.png"
+            },
+            {
+                "title": "BUT in Computer Graphics (Bachelor of Technology)",
+                "company": "IUT Clermont Auvergne, Campus (43)",
+                "date": "2021 - 2024",
+                "description": [
+                    "",
+                    "Three-year undergraduate degree in Computer Science with a strong focus on graphics-related topics.",
+                    "Covers software, web and game development, along with 3D modeling, databases, virtual reality, and computer graphics."
+                ],
+                "location": "Le Puy-en-Velay",
+                "logo": "uca_logo.jpg"
+            },
+            {
+                "title": "French Baccalauréat (NSI, Mathematics)",
+                "company": "Lycée Notre-Dame du Château",
+                "date": "2019 - 2021",
+                "description": [
+                    "",
+                    "General Baccalauréat with specializations in NSI (Computer Science) and Mathematics.",
+                    "Third specialization: Economics & Social Sciences (SES)."
+                ],
+                "location": "Monistrol-sur-Loire",
+                "logo": "lycee_logo.jpg"
+            }
+        ]
+    },
+    "contactPage": {
+        "title": {
+            "part1": "Contact",
+            "part2": "Me"
+        }
     }
 }

@@ -52,11 +52,128 @@
             "games": "Jeux"
         }
     },
+    "skillsPage": {
+        "title": {
+            "part1": "Mes",
+            "part2": "Compétences"
+        },
+        "categories": {
+            "part3": "Logiciels / Jeux"
+        }
+    },
+    "skills": {
+        "categories": {
+            "software_games": "Logiciels / jeux"
+        }
+    },
     "labels": {
         "goal": "But",
         "description": "Description",
         "technologies": "Technologies",
         "type": "Type de projet",
         "more": "Plus d'informations"
+    },
+    "experiencesPage": {
+        "title": {
+            "part1": "Mes",
+            "part2": "Expériences"
+        }
+    },
+    "experiences": {
+        "items": [
+            {
+                "title": "Ingénieur informatique",
+                "company": "PI System Automation",
+                "date": "2024 - 2027",
+                "description": [
+                    "En alternance pour une durée de trois ans, j'évolue au sein du bureau d'études informatiques de l'entreprise, où je participe au développement du système Boggieguard, conçu pour détecter la pression des pneus de métro.",
+                    "PISA, filiale du Groupe Galilé, conçoit des solutions innovantes pour l'industrie. Parmi ses plus gros clients figurent Michelin et la RATP."
+                ],
+                "location": "Clermont-Ferrand",
+                "logo": "logo-pisa.png"
+            },
+            {
+                "title": "Développeur web full-stack",
+                "company": "isiTecc",
+                "date": "2023 - 2024",
+                "description": [
+                    "Dans le cadre d’une alternance d’un an, j’ai contribué au développement d’applications web sur le logiciel Smart Portal avec ASP.NET, React.js et SQL.",
+                    "isiTecc est une ESN (Entreprise du Secteur du Digital) créant et intégrant des logiciels pour l’industrie et le tertiaire."
+                ],
+                "location": "Saint-Just-Malmont",
+                "logo": "isitecc_logo.png"
+            },
+            {
+                "title": "Développeur web full-stack (stage)",
+                "company": "isiTecc",
+                "date": "Avril - Juin 2023",
+                "description": [
+                    "Stage de trois mois durant lequel j’ai participé au développement d’applications web Smart Portal en ASP.NET, React.js et SQL.",
+                    "isiTecc est une ESN (Entreprise du Secteur du Digital) créant et intégrant des logiciels pour l’industrie et le tertiaire."
+                ],
+                "location": "Saint-Just-Malmont",
+                "logo": "isitecc_logo.png"
+            }
+        ]
+    },
+    "resumePage": {
+        "title": {
+            "part1": "Mon",
+            "part2": "CV"
+        },
+        "download": "Télécharger le CV",
+        "download_aria": "Télécharger mon CV"
+    },
+    "educationPage": {
+        "title": {
+            "part1": "Mes",
+            "part2": "Formations"
+        }
+    },
+    "education": {
+        "items": [
+            {
+                "title": "Diplôme d'Ingénieur en Informatique",
+                "company": "ISIMA, Clermont-Ferrand (63)",
+                "date": "2024 - 2027",
+                "description": [
+                    "",
+                    "Le diplôme d’ingénieur délivré par l'ISIMA est une formation en ingénierie informatique de trois ans en apprentissage, qui forme à la modélisation, la conception et la réalisation de solutions tout en développant les compétences de communication avec l’ensemble des parties prenantes.",
+                    "Ce programme couvre un large éventail de domaines, incluant le développement logiciel, web et mobile, ainsi que des spécialités comme l'IoT, l'intelligence artificielle, les bases de données et l'architecture des SI."
+                ],
+                "location": "Clermont-Ferrand",
+                "logo": "isima-logo.png"
+            },
+            {
+                "title": "BUT Informatique Graphique",
+                "company": "IUT Clermont Auvergne, Antenne (43)",
+                "date": "2021 - 2024",
+                "description": [
+                    "",
+                    "Le Bachelor Universitaire de Technologie (BUT) Informatique Graphique est un programme de trois ans axé sur l'informatique, offrant une couverture complète des différents domaines du secteur.",
+                    "Il englobe le développement logiciel, web et jeux vidéo, avec des aspects tels que la modélisation 3D, les bases de données, la réalité virtuelle et la synthèse d'images."
+                ],
+                "location": "Le Puy-en-Velay",
+                "logo": "uca_logo.jpg"
+            },
+            {
+                "title": "BAC Général (NSI, Mathématiques)",
+                "company": "Lycée Notre-Dame du Château",
+                "date": "2019 - 2021",
+                "description": [
+                    "",
+                    "Baccalauréat général avec spécialités NSI (Numérique et Sciences Informatiques) et Mathématiques.",
+                    "Troisième spécialité : Sciences Économiques et Sociales (SES)."
+                ],
+                "location": "Monistrol-sur-Loire",
+                "logo": "lycee_logo.jpg"
+            }
+        ]
+    },
+    "contactPage": {
+        "title": {
+            "part1": "Me",
+            "part2": "Contacter"
+        }
     }
 }
