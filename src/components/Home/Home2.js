@@ -8,43 +8,65 @@ import {
   AiOutlineThunderbolt
 } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { Trans, useTranslation } from "react-i18next";
 
 function Home2() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <Container fluid className="home-about-section" id="about">
-
       <Container className="home-about-left-side">
         <Row>
           <Col className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              JE ME <span className="purple"> PRÉSENTE </span>
+              <Trans
+                i18nKey="home2.introTitle"
+                components={[<span className="purple" />]}
+              />
             </h1>
+
             <p className="home-about-body">
-              Je suis passionné par le <b className="purple">développement web</b>, que ce soit le coté front-end ou back-end.
+              <Trans
+                i18nKey="home2.introText1"
+                components={[<b className="purple" />]}
+              />
               <br />
-              Je suis actuellement en formation en tant qu'ingénieur en informatique à <b className="purple">ISIMA</b> En alternance chez <b className="purple">PI System Automation</b>, une entreprise du groupe <b className="purple">Galilé</b>.<br />
+              <Trans
+                i18nKey="home2.introText2"
+                components={[
+                  <b className="purple" />, // ISIMA
+                  <b className="purple" />, // PI System Automation
+                  <b className="purple" />  // Galilé
+                ]}
+              />
               <br />
-              {/* <i>
-                <b className="purple"> C++, Javascript and Go. </b>
-              </i>
-              <br />*/}
-              J'ai eu l'opportunité de concrétiser divers projets, que ce soit pendant mes études ou à titre personnel, afin de maîtriser les multiples langages et technologies du domaine.
+              <br />
+              {t("home2.introText3")}
               <br />
               <br />
-              J'apprécie particulièrement le langage de programmation <b className="purple">JavaScript</b> et les frameworks <b className="purple"> React </b> et <b className="purple"> Next.js </b>
+              <Trans
+                i18nKey="home2.introText4"
+                components={[
+                  <b className="purple" />, // JavaScript
+                  <b className="purple" />, // React
+                  <b className="purple" />  // Next.js
+                ]}
+              />
             </p>
           </Col>
         </Row>
       </Container>
 
-
       <Container className="home-about-right-side">
         <Col className="home-about-description">
           <h1 style={{ fontSize: "2.6em" }}>
-            POUR EN SAVOIR <span className="purple"> PLUS </span>
-          </h1> <br></br>
+            <Trans
+              i18nKey="home2.moreTitle"
+              components={[<span className="purple" />]}
+            />
+          </h1>
+          <br />
           {/* ICI */}
         </Col>
 
@@ -52,15 +74,22 @@ function Home2() {
           <Row>
             {/* Première carte */}
             <Col md={6} xs={12}>
-              <a href="/projects" onClick={(e) => { e.preventDefault(); navigate("/projects") }}>
+              <a
+                href="/projects"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/projects");
+                }}
+              >
                 <Card className="home-cards">
                   <Card.Body>
                     <Card.Title>
                       <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} />
-                      {" "} Projets
+                      {" "}
+                      {t("home2.cardProjectsTitle")}
                     </Card.Title>
                     <br />
-                    <Card.Text> Cliquez ici pour découvrir les projets que j'ai réalisés </Card.Text>
+                    <Card.Text>{t("home2.cardProjectsText")}</Card.Text>
                     <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px" }} />
                   </Card.Body>
                 </Card>
@@ -69,15 +98,22 @@ function Home2() {
 
             {/* Deuxième carte */}
             <Col md={6} xs={12}>
-              <a href="/skills" onClick={(e) => { e.preventDefault(); navigate("/skills") }}>
+              <a
+                href="/skills"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/skills");
+                }}
+              >
                 <Card className="home-cards">
                   <Card.Body>
                     <Card.Title>
                       <AiOutlineLineChart style={{ marginBottom: "2px" }} />
-                      {" "} Compétences
+                      {" "}
+                      {t("home2.cardSkillsTitle")}
                     </Card.Title>
                     <br />
-                    <Card.Text> Venez découvrir mes compétences dans différents domaines en cliquant ici </Card.Text>
+                    <Card.Text>{t("home2.cardSkillsText")}</Card.Text>
                     <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px" }} />
                   </Card.Body>
                 </Card>
@@ -85,16 +121,23 @@ function Home2() {
             </Col>
 
             {/* Troisième carte */}
-            <Col md={6} xs={12} marginBottom={20} >
-              <a href="/experiences" onClick={(e) => { e.preventDefault(); navigate("/experiences") }}>
+            <Col md={6} xs={12} margin-bottom={20}>
+              <a
+                href="/experiences"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/experiences");
+                }}
+              >
                 <Card className="home-cards">
                   <Card.Body>
                     <Card.Title>
                       <AiOutlineThunderbolt style={{ marginBottom: "2px" }} />
-                      {" "} Expériences
+                      {" "}
+                      {t("home2.cardExperiencesTitle")}
                     </Card.Title>
                     <br />
-                    <Card.Text> Vous voulez savoir les expériences que j'ai eu en entreprise ? Cliquez ici </Card.Text>
+                    <Card.Text>{t("home2.cardExperiencesText")}</Card.Text>
                     <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px" }} />
                   </Card.Body>
                 </Card>
@@ -103,15 +146,22 @@ function Home2() {
 
             {/* Quatrième carte */}
             <Col md={6} xs={12}>
-              <a href="/contact" onClick={(e) => { e.preventDefault(); navigate("/contact") }}>
+              <a
+                href="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/contact");
+                }}
+              >
                 <Card className="home-cards">
                   <Card.Body>
                     <Card.Title>
                       <AiOutlineUser style={{ marginBottom: "2px" }} />
-                      {" "} Contact
+                      {" "}
+                      {t("home2.cardContactTitle")}
                     </Card.Title>
                     <br />
-                    <Card.Text> Si vous voulez me contacter, c'est par ici ! </Card.Text>
+                    <Card.Text>{t("home2.cardContactText")}</Card.Text>
                     <AiOutlineArrowRight className="icon-card-move" style={{ marginBottom: "2px" }} />
                   </Card.Body>
                 </Card>
@@ -120,7 +170,6 @@ function Home2() {
           </Row>
         </Container>
       </Container>
-
     </Container>
   );
 }

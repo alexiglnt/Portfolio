@@ -2125,3 +2125,21 @@ details:hover {
     width: 100%;
   }
 }
+
+
+/* ✅ Bouton FR/EN en haut à droite */
+.lang-toggle {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #fff; /* ou #000 selon ton thème */
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}

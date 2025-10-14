@@ -1,0 +1,62 @@
+{
+    "nav": {
+        "home": "Home",
+        "projects": "Projects",
+        "about": "About",
+        "contact": "Contact",
+        "skills": "Skills",
+        "experiences": "Experiences",
+        "lang": "FR"
+    },
+    "hero": {
+        "hello": "Hi!",
+        "nameIntro": "My name is",
+        "name": "ALEXI GALLONET",
+        "title": "Hi, I'm Alexi",
+        "subtitle": "Computer Science engineering apprentice",
+        "cta": "See my projects"
+    },
+    "typewriter": {
+        "lines": [
+            "CS engineering apprentice at ISIMA",
+            "Web / Software Developer"
+        ]
+    },
+    "home2": {
+        "introTitle": "LET ME <0>INTRODUCE</0> MYSELF",
+        "introText1": "I am passionate about <0>web development</0>, both front-end and back-end.",
+        "introText2": "I am currently studying Computer Science engineering at <0>ISIMA</0> while working at <1>PI System Automation</1>, a company in the <2>Galilé</2> group.",
+        "introText3": "I’ve had the opportunity to carry out various projects, both academic and personal, to master multiple programming languages and technologies.",
+        "introText4": "I particularly enjoy programming in <0>JavaScript</0> and using frameworks like <1>React</1> and <2>Next.js</2>.",
+        "moreTitle": "TO LEARN <0>MORE</0>",
+        "cardProjectsTitle": "Projects",
+        "cardProjectsText": "Click here to discover the projects I have developed.",
+        "cardSkillsTitle": "Skills",
+        "cardSkillsText": "Check out my skills in different fields by clicking here.",
+        "cardExperiencesTitle": "Experiences",
+        "cardExperiencesText": "Want to know about my professional experience? Click here.",
+        "cardContactTitle": "Contact",
+        "cardContactText": "If you want to contact me, this way!"
+    },
+    "footer": {
+        "rights": "All rights reserved"
+    },
+    "projectsPage": {
+        "title": {
+            "part1": "My",
+            "part2": "Projects"
+        },
+        "sort": {
+            "custom": "Custom Order",
+            "web": "Web",
+            "games": "Games"
+        }
+    },
+    "labels": {
+        "goal": "Goal",
+        "description": "Description",
+        "technologies": "Technologies",
+        "type": "Project Type",
+        "more": "More Information"
+    }
+}

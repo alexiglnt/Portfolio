@@ -14,13 +14,21 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { useTranslation } from 'react-i18next'; 
 
 function NavBar() {
+  const { t, i18n } = useTranslation();
+
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
+
+  const toggleLang = () => {
+    const next = i18n.language.startsWith('fr') ? 'en' : 'fr';
+    i18n.changeLanguage(next);
+  };
 
   const redirectToContact = () => {
     updateExpanded(false);
@@ -70,7 +78,7 @@ function NavBar() {
                 as={Link} to="/"
                 onClick={() => updateExpanded(false)}
                 style={isLinkActive("/") ? { fontWeight: "bold" } : {}} >
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Accueil
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> {t('nav.home')}
               </Nav.Link>
             </Nav.Item>
 
@@ -84,7 +92,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Projets
+                {t('nav.projects')}
               </Nav.Link>
             </Nav.Item>
 
@@ -98,7 +106,7 @@ function NavBar() {
                 <AiOutlineLineChart
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Compétences
+                {t('nav.skills')}
               </Nav.Link>
             </Nav.Item>
 
@@ -109,7 +117,7 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
                 style={isLinkActive("/experiences") ? { fontWeight: "bold" } : {}}
               >
-                <AiOutlineThunderbolt style={{ marginBottom: "2px" }} /> Expériences
+                <AiOutlineThunderbolt style={{ marginBottom: "2px" }} /> {t('nav.experiences')}
               </Nav.Link>
             </Nav.Item>
 
@@ -130,12 +138,15 @@ function NavBar() {
                 onClick={redirectToContact}
                 className="fork-btn-inner"
               >
-                <AiOutlineUser style={{ fontSize: "1.2em" }} /> Contact
+                <AiOutlineUser style={{ fontSize: "1.2em" }} /> {t('nav.contact')}
               </Button>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
+      <button onClick={toggleLang} className="lang-toggle">
+        {t('nav.lang')}
+      </button>
     </Navbar>
   );
 }

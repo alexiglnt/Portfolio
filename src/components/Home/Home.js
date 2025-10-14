@@ -5,8 +5,11 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import img_avatar from "../../Assets/ReadyPlayerMe-Avatar.jpeg";
 import Tilt from "react-parallax-tilt";
+import { useTranslation } from 'react-i18next'; 
 
 function Home() {
+  const { t } = useTranslation();
+
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -15,14 +18,14 @@ function Home() {
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
-                Salut !{" "}
+                {t('hero.hello')}{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
               <h1 className="heading-name">
-                Je m'appelle
+                {t('hero.nameIntro')}
                 <strong className="main-name"> ALEXI GALLONET</strong>
               </h1>
 

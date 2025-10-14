@@ -1,0 +1,132 @@
+{
+    "comics_more": {
+        "name": "Comics More",
+        "but": "Site web de lecture en ligne de comics. Un systeme de crédit est mis en place pour pouvoir acheter des comics. Les crédits peuvent être achetés avec une carte bancaire ou avec un compte Paypal.",
+        "description": "Site web e-commerce de lecture de comics",
+        "technologies": "Vue.js, Symfony, HTML, CSS",
+        "project_type": "Projet étudiant",
+        "project_details": {
+            "description": [
+                "Lors de la deuxième année du BUT Informatique Graphique au Puy-en-Velay, je devais réaliser un projet tutoré tout au long de l'année. Plusieurs sujets à choisir étaient proposés, et je devais en choisir un. J’ai donc décidé de proposer un projet : un site e-commerce de lecture de comics, nommé Comics More !",
+                "Pour ce site, le but était de proposer aux utilisateurs un accès instantané à un catalogue expansif de comics, englobant non seulement les titres de Marvel et DC Comics, mais aussi des œuvres de diverses maisons d'édition. Ceci via un système de paiement fluide via PayPal. De ce fait, les utilisateurs peuvent acquérir ces comics en toute simplicité grâce à des crédits achetés via PayPal, chaque comics étant évalué en fonction de son nombre de pages",
+                "Les utilisateurs reçoivent 10 crédits gratuits lors de leur inscription. Ils ont le choix entre deux modes de paiement pour acheter des crédits : par carte bancaire ou via un compte PayPal. Une fois les crédits achetés, les utilisateurs peuvent retrouver leurs comics dans leur bibliothèque personnelle. Ils peuvent effectuer des recherches en utilisant la barre de recherche ou en explorant les différentes collections de personnages. Par exemple, la collection Spider-Man regroupe tous les comics liés à ce personnage, qui est publié sous la maison d'édition Marvel. Les utilisateurs peuvent également ajouter des comics à leurs favoris.",
+                "Pour le front-end, j'ai opté pour Vue.js, explorant ainsi la conception d'interfaces utilisateur interactives. J'ai également perfectionné mes compétences en JavaScript et pu découvrir de nombreuses bibliothèques.",
+                "Côté back-end, j'ai fait usage de Symfony pour développer une API robuste et efficace. Cette API joue un rôle essentiel en assurant la liaison entre le front-end et la base de données MySQL, stockant les données relatives aux comics. Les images quant à elles sont stockées sur Amazon Web Services (AWS).",
+                "Pour l'authentification des utilisateurs, Comics More utilise le système lexik-jwt-authentication avec des tokens qui expirent après un certain temps. Les mots de passe des utilisateurs sont cryptés. Les administrateurs ont accès à des fonctionnalités spéciales, tels que la lecture gratuite de tous les comics et la possibilité de naviguer sur tout le site sans utiliser de crédits.",
+                "Ce projet a constitué bien plus qu'un simple apprentissage technique. Il m'a permis d'acquérir une expérience précieuse en gestion de projet, depuis l'élaboration du cahier des charges jusqu'à la mise en production. J'ai développé la capacité à résoudre des problèmes de manière autonome, à optimiser la gestion du temps et à prendre des décisions cruciales pour garantir le succès du projet."
+            ]
+        }
+    },
+    "note_finder": {
+        "name": "Note Finder",
+        "but": "Application web et mobile de reconnaissance musicale, similaire à Shazam. Permet à un utilisateur d’identifier une musique à partir d’un extrait sonore capté par son appareil.",
+        "description": "Application de reconnaissance musicale multiplateforme",
+        "technologies": "Vue.js, Python, PostgreSQL",
+        "project_type": "Projet étudiant",
+        "project_details": {
+            "description": [
+                "NoteFinder a été développé dans le cadre d’un projet de première année à l’ISIMA, école d’ingénieur en informatique. Il s’agit d’une application de reconnaissance musicale, conçue pour fonctionner à la fois sur ordinateur et sur mobile.",
+                "L’utilisateur peut lancer une reconnaissance musicale en cliquant sur un bouton central. Un extrait sonore est alors enregistré, puis envoyé au serveur backend. Ce dernier tente d’identifier le morceau et, en cas de correspondance, renvoie les informations associées (titre, artiste, lien Spotify, etc.) au front-end pour affichage.",
+                "Le projet comprend une application web responsive développée en Vue.js avec TailwindCSS, ainsi qu’une version mobile Android grâce à une intégration WebView réalisée via Android Studio.",
+                "Le backend repose sur Python avec le framework FastAPI, et utilise une base de données PostgreSQL accessible via SQLAlchemy. L’API assure la réception des extraits audio, le traitement des empreintes sonores, la recherche de correspondances et la gestion des utilisateurs.",
+                "L’application propose un historique des morceaux identifiés, accessible si l’utilisateur est connecté ou stocké localement via les cookies. L’authentification s’appuie sur un système de tokens JWT.",
+                "Ce projet a représenté une opportunité concrète d’expérimenter le développement complet d’un produit logiciel : architecture fullstack, gestion de projet en équipe, adaptation multiplateforme, et prise en main d’outils modernes pour l’interface comme pour le traitement de données."
+            ]
+        }
+    },
+    "remindr": {
+        "name": "Remindr",
+        "but": "L'application permet aux utilisateurs de créer des groupes, d'inviter d'autres utilisateurs et d'ajouter des rappels aux groupes. L'utilisateur peut se connecter à son compte a l'aide du provider GitHub.",
+        "description": "Site web de gestion de \"/reminder\" (rappel)",
+        "technologies": "NextJS, React, TypeScript",
+        "project_type": "Projet étudiant",
+        "project_details": {
+            "description": [
+                "Le but de ce projet est de créer une application web permettant de gérer des rappels. L'application permet aux utilisateurs de créer des groupes, d'inviter d'autres utilisateurs et d'ajouter des rappels aux groupes. L'utilisateur peut se connecter à son compte à l'aide du provider GitHub.",
+                "Ce projet s'inscrit dans les cours de Web dispensés durant mon BUT Informatique Graphique au Puy-en-Velay. L'ambition était ainsi de réaliser une application web avec une API REST, et de la consommer avec un framework JavaScript.",
+                "L'application a été réalisée avec Next.js, un framework web, s'occupant à la fois du front-end avec React et du back-end avec un système de routage et de gestion de requêtes. Le tout étant codé en TypeScript",
+                "Pour ce qui est de la connection des utilisateurs, j'ai utilisé Next-Auth, un package permettant de gérer l'authentification des utilisateurs. Il permet de se connecter avec différents providers (Google, Facebook, GitHub, etc...). Dans ce projet, j'ai utilisé GitHub, car il permet de se connecter avec un compte GitHub, et de récupérer les informations de l'utilisateur (nom, prénom, email, avatar, etc...).",
+                "Ce projet m'a donc permis de découvrir le framework qu'est Next.js, et de renforcer mes compétences en React, ainsi qu'en TypeScript, un langage de programmation typé, qui permet de détecter des erreurs de typage à la compilation.",
+                "En plus d'avoir renforcé mes compétences techniques, ce projet m'a également enseigné la capacité à assimiler de nouvelles technologies dans des délais restreints."
+            ]
+        }
+    },
+    "artikles": {
+        "name": "Artikle's - Site Blog",
+        "but": "Créer une API avec Symfony et récupérer les données avec Vue.js. Possibilité de se créer un compte, de se connecter, de créer des articles, de les trier, de les liker ainsi que de les commenter et les ajouter à ses favoris.",
+        "description": "Site web de type blog",
+        "technologies": "Vue.js, Symfony, HTML, CSS",
+        "project_type": "Projet étudiant",
+        "project_details": {
+            "description": [
+                "Dans le monde du Web, il existe de nombreux CMS permettant la création de blog, comme WordPress. Mais pour continuer d'acquérir des compétences dans le domaine du web, on peut faire son blog par soi-même. Il s'agit donc ici de permettre la consultation d'articles, les filtrer par catégories, pouvoir commenter, et liker ces articles là. Également, il doit être possible de se connecter pour accéder à ses favoris, en tant qu'utilisateur du blog ou bien en tant qu'administrateur pour pouvoir ajouter ou modifier des articles.",
+                "Ce projet s'inscrit dans les cours de Web dispensés durant mon BUT Informatique. L'ambition était ainsi de réaliser ce blog sans CMS, comme précisé plus haut.",
+                "Ce projet s'articule sous différents points. Il y a tout d'abord une partie au niveau de la consultation des articles (en liste, et dans leur détail). Il est aussi question de la gestion du profil utilisateur. D'une part, il y a les utilisateurs classiques, qui doivent pouvoir liker et commenter un article, mais aussi mettre en favori un article. D'autre part, les administrateurs doivent pouvoir faire la même chose, mais aussi créer des articles et les poster.",
+                "L'objet principal de ce blog, c'est afficher tous les articles à la suite, pouvoir les filtrer par catégorie, et lire un article. Ainsi, sur la page principale, vous pouvez voir tous les derniers articles. Ensuite, une fois que l'on s'intéresse à un article en particulier, on peut le lire.",
+                "C'est dans la partie administrateur que l'on peut créer un article. Une fois connecté en tant que tel, on peut créer un article, en lui donnant un titre, une catégorie, un contenu, etc... en passant par un WYSIWYG. Une fois l'article créé, il est publié sur le blog."
+            ]
+        }
+    },
+    "five-guys": {
+        "name": "Five Guys",
+        "but": "Choisissez l’un des 5 personnages disponibles pour parcourir le donjon. Récoltez des items, affrontez les ennemis, terrassez les boss pour trouver la sortie.",
+        "description": "Jeu vidéo de type rogue-like 2D avec génération de map aléatoire",
+        "technologies": "C#, moteur Unity",
+        "project_type": "Projet étudiant",
+        "project_details": {
+            "description": [
+                "Jeu vidéo de type rogue-like 2D avec génération de map aléatoire, réalisé en groupe de 5. Codé via le moteur de jeu Unity et le langage de programmation C#. Parmi les 5 personnages disponibles, vous devez parcourir le donjon afin d'en trouver la sortie. Attention des ennemis et des boss vont barreront la route.",
+                "Ce jeu-vidéo a été réalisé dans le cadre d'un projet étudiant durant une période de 3 semaines (en même temps que les cours et d'autres projets).",
+                "Le but de ce projet était de réaliser un jeu-vidéo 2D de notre choix. Parmi les choix possibles (platformer type Super Meat Boy, jeu de cartes type Hearthstone, etc...), notre choix s'est porté vers un jeu de type rogue-like. Ce type de jeu est un genre de jeu vidéo dont le gameplay est caractérisé par la génération procédurale de niveaux, l'exploration et la mort permanente du personnage incarné par le joueur. Le joueur doit donc parcourir un donjon généré aléatoirement, et doit trouver la sortie. Pour cela, il doit affronter des ennemis et des boss, et récolter des items pour améliorer ses statistiques.",
+                "Ce jeu a été réalisé sous le moteur de jeu Unity pour sa popularité et sa spécialité dans les jeux-vidéos 2D. Le langage de programmation utilisé est le C#.",
+                "J'ai personnelement pu travailler sur tout les aspects du moteur durant ce projet. Aussi bien sur la partie programmation du jeu (développement des fonctionnalités, ennemis, coffres, etc...), que sur la partie graphique (création/intégration des sprites, de l'UI, des animations, des effets visuels, etc...).",
+                "J'ai aussi pu renforcer mes compétences transversales en travaillant en groupe. En effet, nous étions 5 à travailler sur ce projet, et nous avons dû nous organiser pour que chacun puisse travailler sur un aspect du jeu sans que cela ne gêne les autres. Nous avons donc utilisé Git pour gérer les versions du projet, et Discord pour communiquer.",
+                "A la fin de ce projet, nous avons pu présenter notre jeu-vidéo à un jury composé de nos professeurs. Nous avons pu leur présenter notre jeu, et ils ont pu le tester et nous donnés un retour positif."
+            ]
+        }
+    },
+    "tiny-swords": {
+        "name": "Tiny Swords",
+        "but": "Jeu de stratégie 2D au tour par tour, inspiré du célèbre Civilization VI. Le joueur y contrôle des personnages aux compétences variées, sur une carte découpée en cases.",
+        "description": "Jeu de stratégie 2D au tour par tour sur grille, avec déplacements tactiques et affrontements",
+        "technologies": "C#, moteur Unity",
+        "project_type": "Projet étudiant",
+        "project_details": {
+            "description": [
+                "Tiny Swords est un jeu de stratégie 2D en tour par tour, inspiré de Civilization VI. Le joueur évolue sur une carte en grille, chaque case représentant un espace de déplacement possible.",
+                "Chaque unité appartient à une classe (chevalier, gobelin, paysan, etc.) et dispose de capacités spécifiques qui influencent sa portée de déplacement, sa puissance d’attaque ou sa défense.",
+                "Les déplacements se font sur une grille, et la distance maximale est calculée en fonction des statistiques de l’unité sélectionnée. Le système de combat repose sur une mécanique d'attaque au tour par tour et sur le positionnement stratégique.",
+                "Des ennemis sont placés sur la carte et doivent être éliminés ou contournés selon la stratégie adoptée. La variété des unités rend chaque partie unique et encourage une réflexion tactique.",
+                "Le projet a été développé sous Unity en C#, avec une attention particulière portée à la gestion des déplacements sur grille et au système de tours."
+            ]
+        }
+    },
+    "the_red_knight": {
+        "name": "The Red Knight",
+        "but": "Incarnant un courageux chevalier, vous devrez parcourir le monde et combattre de nombreux ennemis afin de vous en sortir !",
+        "description": "Jeu vidéo de type plateformer 2D",
+        "technologies": "C#, moteur Unity",
+        "project_type": "Projet étudiant, réalisé en binome",
+        "project_details": {
+            "description": [
+                "Jeu vidéo de type plateformer 2D réalisé en binôme. Codé via le moteur de jeu Unity et le langage de programmation C#.Dans ce jeu ou vous incarnez un chevalier, vous devez arriver à la fin du jeu après plusieurs niveaux et après avoir affronté de nombreux ennemis !",
+                "Ce projet à été réalisé dans le cadre d'un projet étudiant durant la première année de mon BUT Informatique Graphique au Puy-en-Velay. Ce projet a été réalisé en binôme, et nous avons eu 1 mois pour le réaliser (en même temps que les cours et d'autres projets).",
+                "Etant le premier projet de jeu-vidéo que j'ai réalisé, j'ai pu apprendre les bases de la programmation de jeu-vidéo, ainsi que les bases du moteur de jeu Unity et la programmation via le language C#. J'ai pu apprendre à créer des animations, des effets visuels, des scripts, etc... J'ai aussi pu développer mes compétences transversales en travaillant en binôme. En effet, nous avons dû nous organiser pour que chacun puisse travailler sur un aspect du jeu sans que cela ne gêne les autres. Nous avons donc utilisé Git pour gérer les versions du projet, et Discord pour communiquer lorsque nous n'étions pas en cours ou chez l'un de nous pour travailler ensemble",
+                "A la fin de ce projet, nous avons pu présenter notre jeu-vidéo à un jury composé de nos professeurs. Nous avons pu leur présenter notre jeu, et ils ont pu le tester et nous donnés un retour positif pour un premier jeu."
+            ]
+        }
+    },
+    "portfolio": {
+        "name": "Portfolio",
+        "but": "Mon propre Portfolio (sur lequel vous êtes actuellement 😜). Sur ce site, se trouve les projets que j'ai pu réaliser, les compétences que j'ai pu acquérir ainsi que les expériences que j'ai effectuées.",
+        "description": "Site web",
+        "technologies": "React.js",
+        "project_type": "Projet personnel",
+        "project_details": {
+            "description": [
+                "Dans ce site, se trouve les projets que j'ai pu réaliser, les compétences que j'ai pu acquérir ainsi que les expériences que j'ai effectué. Il est régulièrement mis à jour avec les nouveaux projets que je réalise ou les nouvelles compétences que j'acquière. Ce site permet d'avoir un aperçu de mon parcours et de mes compétences dans le domaine de l'informatique.",
+                "Vous êtes actuellement sur mon portfolio, alors je vous laisse le découvrir par vous même 😉"
+            ]
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "projects": "Projets",
+        "about": "À propos",
+        "contact": "Contact",
+        "skills": "Compétences",
+        "experiences": "Expériences",
+        "lang": "EN"
+    },
+    "hero": {
+        "hello": "Salut !",
+        "nameIntro": "Je m'appelle",
+        "name": "ALEXI GALLONET",
+        "title": "Bonjour, je suis Alexi",
+        "subtitle": "Ingénieur alternant en informatique",
+        "cta": "Voir mes projets"
+    },
+    "typewriter": {
+        "lines": [
+            "Apprenti Ingénieur à ISIMA",
+            "Développeur Web / Informatique"
+        ]
+    },
+    "home2": {
+        "introTitle": "JE ME <0>PRÉSENTE</0>",
+        "introText1": "Je suis passionné par le <0>développement web</0>, que ce soit le côté front-end ou back-end.",
+        "introText2": "Je suis actuellement en formation en tant qu'ingénieur en informatique à <0>ISIMA</0> en alternance chez <1>PI System Automation</1>, une entreprise du groupe <2>Galilé</2>.",
+        "introText3": "J'ai eu l'opportunité de concrétiser divers projets, que ce soit pendant mes études ou à titre personnel, afin de maîtriser les multiples langages et technologies du domaine.",
+        "introText4": "J'apprécie particulièrement le langage de programmation <0>JavaScript</0> et les frameworks <1>React</1> et <2>Next.js</2>.",
+        "moreTitle": "POUR EN SAVOIR <0>PLUS</0>",
+        "cardProjectsTitle": "Projets",
+        "cardProjectsText": "Cliquez ici pour découvrir les projets que j'ai réalisés.",
+        "cardSkillsTitle": "Compétences",
+        "cardSkillsText": "Venez découvrir mes compétences dans différents domaines en cliquant ici.",
+        "cardExperiencesTitle": "Expériences",
+        "cardExperiencesText": "Vous voulez savoir les expériences que j'ai eues en entreprise ? Cliquez ici.",
+        "cardContactTitle": "Contact",
+        "cardContactText": "Si vous voulez me contacter, c'est par ici !"
+    },
+    "footer": {
+        "rights": "Tous droits réservés"
+    },
+    "projectsPage": {
+        "title": {
+            "part1": "Mes",
+            "part2": "Projets"
+        },
+        "sort": {
+            "custom": "Ordre Custom",
+            "web": "Web",
+            "games": "Jeux"
+        }
+    },
+    "labels": {
+        "goal": "But",
+        "description": "Description",
+        "technologies": "Technologies",
+        "type": "Type de projet",
+        "more": "Plus d'informations"
+    }
+}
