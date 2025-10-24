@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "./Particle";
 import pdf from "../Assets/CV - Alexi GALLONET - Portfolio.pdf";
+import { useTranslation } from "react-i18next";
 // ... (autres imports et composants) ...
 
 const Contact = () => {
+  const { t } = useTranslation();
 
   const socialLinkStyle = {
     '--size': '119.13px',
@@ -23,7 +25,7 @@ const Contact = () => {
     <Container fluid className="about-section" id="contact_section">
       <Particle />
       <h1 className="project-heading">
-        Me <strong className="purple"> Contacter </strong>
+        {t("contactPage.title.part1")} <strong className="purple"> {t("contactPage.title.part2")} </strong>
       </h1>
 
 

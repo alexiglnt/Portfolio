@@ -1,0 +1,132 @@
+{
+    "comics_more": {
+        "name": "Comics More",
+        "but": "Online comic reading website. A credit system lets users purchase comics. Credits can be bought by card or via PayPal.",
+        "description": "E-commerce website for reading comics",
+        "technologies": "Vue.js, Symfony, HTML, CSS",
+        "project_type": "Student project",
+        "project_details": {
+            "description": [
+                "During the second year of my BUT (Bachelor of Technology) in Computer Graphics at Le Puy-en-Velay, I had to complete a year-long tutored project. Several topics were proposed and I had to choose one. I decided to propose my own: an e-commerce website for reading comics, called Comics More!",
+                "The goal was to provide users with instant access to a large catalog of comics, not only from Marvel and DC Comics but also from various other publishers. Purchases are handled through a smooth PayPal payment flow. Users can easily acquire comics using credits purchased via PayPal, with each comic priced according to its page count.",
+                "Users receive 10 free credits upon registration. They can buy more credits either by bank card or with a PayPal account. Once credits are purchased, comics are available in their personal library. Users can search via the search bar or browse character collections. For example, the Spider-Man collection groups all comics related to that character, published by Marvel. Users can also add comics to their favorites.",
+                "For the front-end, I chose Vue.js to build interactive user interfaces. I also improved my JavaScript skills and discovered many useful libraries.",
+                "On the back-end, I used Symfony to develop a robust and efficient API. This API connects the front-end to a MySQL database storing comic data. Images are hosted on Amazon Web Services (AWS).",
+                "For user authentication, Comics More uses lexik-jwt-authentication with tokens that expire after a set time. User passwords are encrypted. Administrators have special features such as free reading of all comics and the ability to browse the entire site without spending credits.",
+                "This project was far more than just technical practice. It gave me valuable experience in project management, from drafting the specification to production deployment. I developed the ability to solve problems autonomously, optimize time management, and make key decisions to ensure the project’s success."
+            ]
+        }
+    },
+    "note_finder": {
+        "name": "Note Finder",
+        "but": "Web and mobile music-recognition app, similar to Shazam. It identifies a song from a short audio snippet captured by the user’s device.",
+        "description": "Cross-platform music recognition application",
+        "technologies": "Vue.js, Python, PostgreSQL",
+        "project_type": "Student project",
+        "project_details": {
+            "description": [
+                "NoteFinder was developed as a first-year project at ISIMA, an engineering school in Computer Science. It is a music recognition application designed to run on both desktop and mobile.",
+                "The user can start recognition by pressing a central button. A short audio sample is recorded and sent to the backend server, which tries to identify the track and, if successful, returns the associated information (title, artist, Spotify link, etc.) to the front-end for display.",
+                "The project includes a responsive web application built with Vue.js and TailwindCSS, plus an Android mobile version using a WebView integration via Android Studio.",
+                "The backend uses Python with FastAPI and a PostgreSQL database accessed through SQLAlchemy. The API handles receiving audio samples, processing audio fingerprints, searching for matches, and managing users.",
+                "The app provides a history of identified tracks, available to logged-in users or stored locally via cookies. Authentication uses a JWT token system.",
+                "This project was a concrete opportunity to build a complete software product: full-stack architecture, team project management, multi-platform adaptation, and modern tooling for both UI and data processing."
+            ]
+        }
+    },
+    "remindr": {
+        "name": "Remindr",
+        "but": "Users can create groups, invite other users, and add reminders to groups. Sign-in is available via the GitHub provider.",
+        "description": "Web app for managing \"/reminder\" items",
+        "technologies": "Next.js, React, TypeScript",
+        "project_type": "Student project",
+        "project_details": {
+            "description": [
+                "The goal was to create a web application to manage reminders. Users can create groups, invite others, and add reminders to those groups. Sign-in is handled via GitHub.",
+                "This project was part of my Web courses during the BUT program in Computer Graphics at Le Puy-en-Velay. The aim was to build a web application with a REST API and consume it from a JavaScript framework.",
+                "The app was built with Next.js, handling both the front-end with React and the back-end with routing and request handling — all coded in TypeScript.",
+                "For user sign-in, I used Next-Auth to manage authentication. It supports several providers (Google, Facebook, GitHub, etc.). In this project I chose GitHub, which enables sign-in with a GitHub account and fetching user information (name, email, avatar, etc.).",
+                "This project helped me discover the Next.js framework and strengthen my skills in React and TypeScript — a typed language that catches type errors at compile time.",
+                "Beyond technical skills, the project also taught me how to learn new technologies under tight deadlines."
+            ]
+        }
+    },
+    "artikles": {
+        "name": "Artikle's – Blog Website",
+        "but": "Build an API with Symfony and consume it with Vue.js. Users can register, sign in, create articles, sort them, like them, comment on them, and add them to favorites.",
+        "description": "Blog-style website",
+        "technologies": "Vue.js, Symfony, HTML, CSS",
+        "project_type": "Student project",
+        "project_details": {
+            "description": [
+                "In the web world, many CMS solutions exist for blogs (e.g., WordPress). But to keep improving my web skills, I chose to build a blog from scratch. The goal: browse articles, filter by category, comment, like, and add to favorites. Users should be able to sign in to access favorites; admins can add or edit posts.",
+                "This project was part of my Web courses during the BUT program. The ambition was to build the blog without a CMS, as stated above.",
+                "The project includes several aspects: article browsing (lists and details), user profile management, and both user roles. Regular users can like and comment on posts and mark favorites. Admins have the same, plus the ability to create and publish posts.",
+                "The main purpose of the blog is to display all articles chronologically, allow filtering by category, and read individual posts. The homepage shows the latest posts; then you can open any one to read it.",
+                "In the admin area, you can create an article (title, category, content, etc.) using a WYSIWYG editor. Once created, the post is published on the blog."
+            ]
+        }
+    },
+    "five-guys": {
+        "name": "Five Guys",
+        "but": "Choose one of five available characters to explore the dungeon. Gather items, fight enemies, and defeat bosses to find the exit.",
+        "description": "2D rogue-like video game with random map generation",
+        "technologies": "C#, Unity engine",
+        "project_type": "Student project",
+        "project_details": {
+            "description": [
+                "2D rogue-like video game with random map generation, created in a team of five. Developed with the Unity game engine in C#. Among the five characters available, you must explore the dungeon to find the exit — beware of enemies and bosses along the way.",
+                "This game was made as a student project over three weeks (alongside classes and other assignments).",
+                "Our goal was to build a 2D game of our choice. Among several options (platformer like Super Meat Boy, card game like Hearthstone, etc.), we chose a rogue-like. This genre features procedurally generated levels, exploration, and permadeath. The player explores a randomly generated dungeon, finds the exit, fights enemies and bosses, and collects items to upgrade stats.",
+                "We used Unity for its popularity and strength in 2D games. The programming language was C#.",
+                "I personally worked on all areas of the engine during this project: gameplay programming (features, enemies, chests, etc.) as well as graphics (creating/integrating sprites, UI, animations, VFX, etc.).",
+                "I also improved my soft skills by working in a team of five. We organized ourselves so everyone could contribute without blocking others, used Git for version control, and Discord for communication.",
+                "At the end, we presented our game to a jury of teachers. They tested it and gave us positive feedback."
+            ]
+        }
+    },
+    "tiny-swords": {
+        "name": "Tiny Swords",
+        "but": "2D turn-based strategy game inspired by Civilization VI. The player controls units with different abilities on a grid-based map.",
+        "description": "2D turn-based strategy game on a grid with tactical movement and combat",
+        "technologies": "C#, Unity engine",
+        "project_type": "Student project",
+        "project_details": {
+            "description": [
+                "Tiny Swords is a 2D turn-based strategy game inspired by Civilization VI. The player moves on a grid map where each tile represents a possible movement.",
+                "Each unit belongs to a class (knight, goblin, peasant, etc.) and has specific abilities impacting movement range, attack power, or defense.",
+                "Movement occurs on the grid, and the maximum distance is computed from the selected unit’s stats. Combat uses a traditional turn-based mechanic and relies on strategic positioning.",
+                "Enemies are placed on the map and must be eliminated or avoided depending on the chosen strategy. The variety of units makes each playthrough unique and encourages tactical thinking.",
+                "The project was developed in Unity with C#, focusing on grid movement and turn management."
+            ]
+        }
+    },
+    "the_red_knight": {
+        "name": "The Red Knight",
+        "but": "Play as a brave knight, travel the world, and fight many enemies to survive!",
+        "description": "2D platformer video game",
+        "technologies": "C#, Unity engine",
+        "project_type": "Student project, in pairs",
+        "project_details": {
+            "description": [
+                "2D platformer video game created by a team of two. Built with the Unity game engine and programmed in C#. As a knight, you must reach the end of the game across several levels and many enemies.",
+                "This project was completed during the first year of my BUT in Computer Graphics at Le Puy-en-Velay. We had one month to build it (alongside classes and other projects).",
+                "As my first video game project, it taught me the basics of game programming, Unity engine, and C# scripting. I learned to create animations, VFX, scripts, etc. I also developed soft skills by working as a pair — organizing tasks so we could work in parallel without blocking each other, using Git for version control, and Discord to coordinate when not on campus or working together.",
+                "At the end, we presented the game to a teacher jury. They played it and gave us positive feedback for a first game."
+            ]
+        }
+    },
+    "portfolio": {
+        "name": "Portfolio",
+        "but": "My own portfolio (the website you’re on 😜). It showcases projects I’ve built, skills I’ve developed, and experiences I’ve had.",
+        "description": "Website",
+        "technologies": "React.js",
+        "project_type": "Personal project",
+        "project_details": {
+            "description": [
+                "This site presents the projects I’ve built, the skills I’ve acquired, and the experiences I’ve had. It’s regularly updated with new projects and skills. It provides a quick overview of my background and competencies in computer science.",
+                "You’re currently on my portfolio — feel free to explore it 😉"
+            ]
+        }
+    }
+}

@@ -1,0 +1,179 @@
+{
+    "nav": {
+        "home": "Home",
+        "projects": "Projects",
+        "about": "About",
+        "contact": "Contact",
+        "skills": "Skills",
+        "experiences": "Experiences",
+        "lang": "FR"
+    },
+    "hero": {
+        "hello": "Hi!",
+        "nameIntro": "My name is",
+        "name": "ALEXI GALLONET",
+        "title": "Hi, I'm Alexi",
+        "subtitle": "Computer Science engineering apprentice",
+        "cta": "See my projects"
+    },
+    "typewriter": {
+        "lines": [
+            "CS engineering apprentice at ISIMA",
+            "Web / Software Developer"
+        ]
+    },
+    "home2": {
+        "introTitle": "LET ME <0>INTRODUCE</0> MYSELF",
+        "introText1": "I am passionate about <0>web development</0>, both front-end and back-end.",
+        "introText2": "I am currently studying Computer Science engineering at <0>ISIMA</0> while working at <1>PI System Automation</1>, a company in the <2>Galilé</2> group.",
+        "introText3": "I’ve had the opportunity to carry out various projects, both academic and personal, to master multiple programming languages and technologies.",
+        "introText4": "I particularly enjoy programming in <0>JavaScript</0> and using frameworks like <1>React</1> and <2>Next.js</2>.",
+        "moreTitle": "TO LEARN <0>MORE</0>",
+        "cardProjectsTitle": "Projects",
+        "cardProjectsText": "Click here to discover the projects I have developed.",
+        "cardSkillsTitle": "Skills",
+        "cardSkillsText": "Check out my skills in different fields by clicking here.",
+        "cardExperiencesTitle": "Experiences",
+        "cardExperiencesText": "Want to know about my professional experience? Click here.",
+        "cardContactTitle": "Contact",
+        "cardContactText": "If you want to contact me, this way!"
+    },
+    "footer": {
+        "rights": "All rights reserved"
+    },
+    "projectsPage": {
+        "title": {
+            "part1": "My",
+            "part2": "Projects"
+        },
+        "sort": {
+            "custom": "Custom",
+            "web": "Web",
+            "games": "Games"
+        }
+    },
+    "skillsPage": {
+        "title": {
+            "part1": "My",
+            "part2": "Skills"
+        },
+        "categories": {
+            "part3": "Software / Games"
+        }
+    },
+    "skills": {
+        "categories": {
+            "software_games": "Software / Games"
+        }
+    },
+    "labels": {
+        "goal": "Goal",
+        "description": "Description",
+        "technologies": "Technologies",
+        "type": "Project Type",
+        "more": "More Information"
+    },
+    "experiencesPage": {
+        "title": {
+            "part1": "My",
+            "part2": "Experiences"
+        }
+    },
+    "experiences": {
+        "items": [
+            {
+                "title": "Software Engineer",
+                "company": "PI System Automation",
+                "date": "2024 - 2027",
+                "description": [
+                    "Three-year apprenticeship within the company’s software engineering team, contributing to BoggieGuard — a system designed to detect metro tire pressure.",
+                    "PISA, a subsidiary of the Galilé Group, delivers innovative industrial solutions. Key clients include Michelin and RATP."
+                ],
+                "location": "Clermont-Ferrand",
+                "logo": "logo-pisa.png"
+            },
+            {
+                "title": "Full-stack Web Developer",
+                "company": "isiTecc",
+                "date": "2023 - 2024",
+                "description": [
+                    "One-year apprenticeship contributing to Smart Portal web applications using ASP.NET, React.js, and SQL.",
+                    "isiTecc is a digital services company delivering and integrating software for industry and services."
+                ],
+                "location": "Saint-Just-Malmont",
+                "logo": "isitecc_logo.png"
+            },
+            {
+                "title": "Full-stack Web Developer (Intern)",
+                "company": "isiTecc",
+                "date": "April – June 2023",
+                "description": [
+                    "Three-month internship working on Smart Portal web apps with ASP.NET, React.js, and SQL.",
+                    "isiTecc is a digital services company delivering and integrating software for industry and services."
+                ],
+                "location": "Saint-Just-Malmont",
+                "logo": "isitecc_logo.png"
+            }
+        ]
+    },
+    "resumePage": {
+        "title": {
+            "part1": "My",
+            "part2": "Résumé"
+        },
+        "download": "Download Résumé",
+        "download_aria": "Download my résumé"
+    },
+    "educationPage": {
+        "title": {
+            "part1": "My",
+            "part2": "Education"
+        }
+    },
+    "education": {
+        "items": [
+            {
+                "title": "Master in CS Engineering (apprenticeship)",
+                "company": "ISIMA, Clermont-Ferrand (63)",
+                "date": "2024 - 2027",
+                "description": [
+                    "",
+                    "Three-year apprenticeship program in Computer Engineering (French Diplôme d’Ingénieur), covering modeling, design, and delivery of software solutions, while building communication skills with all stakeholders.",
+                    "Curriculum spans software, web and mobile development, with tracks such as IoT, Artificial Intelligence, Databases, and Information Systems architecture."
+                ],
+                "location": "Clermont-Ferrand",
+                "logo": "isima-logo.png"
+            },
+            {
+                "title": "Bachelor of Science in Computer Science (BUT)",
+                "company": "IUT Clermont Auvergne, Campus (43)",
+                "date": "2021 - 2024",
+                "description": [
+                    "",
+                    "Three-year undergraduate degree in Computer Science with a strong focus on graphics-related topics.",
+                    "Covers software, web and game development, along with 3D modeling, databases, virtual reality, and computer graphics."
+                ],
+                "location": "Le Puy-en-Velay",
+                "logo": "uca_logo.jpg"
+            },
+            {
+                "title": "General Baccalaureate (NSI, Mathematics)",
+                "company": "Lycée Notre-Dame du Château",
+                "date": "2019 - 2021",
+                "description": [
+                    "",
+                    "General Baccalaureate with specializations in NSI (Computer Science) and Mathematics.",
+                    "Third specialization: Economics & Social Sciences (SES)."
+                ],
+                "location": "Monistrol-sur-Loire",
+                "logo": "lycee_logo.jpg"
+            }
+        ]
+    },
+    "contactPage": {
+        "title": {
+            "part1": "Contact",
+            "part2": "Me"
+        }
+    }
+}
