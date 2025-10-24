@@ -3,7 +3,10 @@ import { AiOutlineGithub, AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 
 function ProjectCards({ data, id }) {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+
+  const langParam = i18n.language?.startsWith('en') ? 'en' : 'fr';
+  const detailsHref = `/project/${data.id}?lng=${langParam}`;
 
   return (
     <>
@@ -33,7 +36,7 @@ function ProjectCards({ data, id }) {
             </div>
           </div>
           <div className="div_download_btn">
-            <a className="download_btn" href={`/project/${data.id}`} target="_blank" rel="noreferrer">
+            <a className="download_btn" href={detailsHref} target="_blank" rel="noreferrer">
               <AiOutlineFundProjectionScreen style={{ fontSize: "20px", marginRight: "6px", marginBottom: "2px" }} />
               {t('labels.more')}
             </a>
@@ -65,7 +68,7 @@ function ProjectCards({ data, id }) {
             </div>
           </div>
           <div className="div_download_btn">
-            <a className="download_btn" href={`/project/${data.id}`} target="_blank" rel="noreferrer">
+            <a className="download_btn" href={detailsHref} target="_blank" rel="noreferrer">
               <AiOutlineFundProjectionScreen style={{ fontSize: "20px", marginRight: "6px", marginBottom: "2px" }} />
               {t('labels.more')}
             </a>

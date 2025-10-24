@@ -8,24 +8,26 @@ import enCommon from './locales/en/common.json';
 import frProjects from './locales/fr/projects.json';
 import enProjects from './locales/en/projects.json';
 
+const savedLng = (typeof window !== 'undefined' && localStorage.getItem('i18nextLng')) || 'fr';
+
 i18n
     .use(LanguageDetector)     // détecte (localStorage, query ?lng=, etc.)
     .use(initReactI18next)
     .init({
         resources: {
-      fr: { common: frCommon, projects: frProjects },
-      en: { common: enCommon, projects: enProjects },
-    },
+            fr: { common: frCommon, projects: frProjects },
+            en: { common: enCommon, projects: enProjects },
+        },
         fallbackLng: 'fr',       // FR par défaut
-        lng: 'fr',               // langue initiale si rien détecté
+        lng: savedLng,
         ns: ['common', 'projects'],
         defaultNS: 'common',
         interpolation: { escapeValue: false },
         detection: {
-            // ordre de détection (tu peux ajouter 'path' si tu fais /en)
-            order: ['localStorage', 'querystring', 'navigator', 'htmlTag'],
-            // sauvegarde la langue choisie
-            caches: ['localStorage'],
+            order: ['querystring', 'localStorage', 'navigator', 'htmlTag'],
+            caches: ['localStorage'],            // ← écrit dans localStorage
+            lookupQuerystring: 'lng',            // ← lit ?lng=en
+            lookupLocalStorage: 'i18nextLng',    // ← clé utilisée
         },
     });
 
@@ -34,6 +36,8 @@ i18n.on('languageChanged', (lng) => {
     if (typeof document !== 'undefined') {
         document.documentElement.lang = lng;
     }
+    // 🔒 force l’écriture explicite (belt & suspenders)
+    try { localStorage.setItem('i18nextLng', lng); } catch { }
 });
 
 export default i18n;

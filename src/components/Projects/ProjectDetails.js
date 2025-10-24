@@ -8,16 +8,28 @@ import { useTranslation } from "react-i18next";
 import { localizeProject } from "../../utils/i18nProjects";
 
 const ProjectDetails = () => {
-    const { t } = useTranslation(['common', 'projects']);
+    const { t, i18n } = useTranslation(['common', 'projects']);
     const { projectID } = useParams();
     const [data, setData] = useState(null);
 
+    // 🧭 synchroniser la langue au mount
     useEffect(() => {
-        const p = jsonProjects.projects.find(p => p.id === projectID);
-        if (p) {
-            setData(localizeProject(t, p));
-        }
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const urlLng = params.get('lng');
+            const cached = localStorage.getItem('i18nextLng');
+            const target = urlLng || cached || 'fr';
+
+            if (target && i18n.language !== target) {
+                i18n.changeLanguage(target);
+            }
+        } catch { }
         // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []); // une seule fois suffit
+
+    useEffect(() => {
+        const p = jsonProjects.projects.find((p) => p.id === projectID);
+        if (p) setData(localizeProject(t, p));
     }, [projectID, t]);
 
     if (!data) return null;

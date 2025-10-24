@@ -133,7 +133,7 @@
     "education": {
         "items": [
             {
-                "title": "Master's-level Engineering Degree in Computer Science",
+                "title": "Master in CS Engineering (apprenticeship)",
                 "company": "ISIMA, Clermont-Ferrand (63)",
                 "date": "2024 - 2027",
                 "description": [
@@ -145,7 +145,7 @@
                 "logo": "isima-logo.png"
             },
             {
-                "title": "BUT in Computer Graphics (Bachelor of Technology)",
+                "title": "Bachelor of Science in Computer Science (BUT)",
                 "company": "IUT Clermont Auvergne, Campus (43)",
                 "date": "2021 - 2024",
                 "description": [
@@ -157,12 +157,12 @@
                 "logo": "uca_logo.jpg"
             },
             {
-                "title": "French Baccalauréat (NSI, Mathematics)",
+                "title": "General Baccalaureate (NSI, Mathematics)",
                 "company": "Lycée Notre-Dame du Château",
                 "date": "2019 - 2021",
                 "description": [
                     "",
-                    "General Baccalauréat with specializations in NSI (Computer Science) and Mathematics.",
+                    "General Baccalaureate with specializations in NSI (Computer Science) and Mathematics.",
                     "Third specialization: Economics & Social Sciences (SES)."
                 ],
                 "location": "Monistrol-sur-Loire",
