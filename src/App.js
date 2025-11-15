@@ -24,6 +24,7 @@ function App() {
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
+    console.log("App component mounted");
     const timer = setTimeout(() => {
       upadateLoad(false);
     }, 1200);

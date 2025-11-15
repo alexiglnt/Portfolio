@@ -1,0 +1,51 @@
+name: Build & Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Ensure target folder exists on VPS
+        run: |
+          ssh -o StrictHostKeyChecking=no \
+            ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} \
+            "mkdir -p /home/${{ secrets.SSH_USERNAME }}/sites/Portfolio/build"
+
+      - name: Deploy build to VPS with rsync
+        run: |
+          rsync -az --delete \
+            -e "ssh -o StrictHostKeyChecking=no" \
+            build/ \
+            ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USERNAME }}/sites/Portfolio/build/
+
+      # Optionnel : uniquement si ton user peut faire sudo systemctl sans mot de passe
+      # - name: Reload caddy
+      #   run: |
+      #     ssh -o StrictHostKeyChecking=no \
+      #       ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} \
+      #       "sudo systemctl reload caddy"
