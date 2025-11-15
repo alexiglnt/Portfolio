@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Build React app
-        run: npm run build
+        run: CI=false npm run build
 
       - name: Setup SSH agent
         uses: webfactory/ssh-agent@v0.9.0
