@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio - v2.0<br/>
-  <a href="https://alexigallonet.vercel.app/" target="_blank">alexi.gallonet</a>
+  <a href="https://alexigallonet.com/" target="_blank">alexi.gallonet</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="./Images/home.png" />
