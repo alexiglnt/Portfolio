@@ -44,8 +44,8 @@ jobs:
             ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USERNAME }}/sites/Portfolio/build/
 
       # Optionnel : uniquement si ton user peut faire sudo systemctl sans mot de passe
-      - name: Reload caddy
-        run: |
-          ssh -o StrictHostKeyChecking=no \
-            ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} \
-            "sudo systemctl reload caddy"
+      # - name: Reload caddy
+      #   run: |
+      #     ssh -o StrictHostKeyChecking=no \
+      #       ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} \
+      #       "sudo systemctl reload caddy"
