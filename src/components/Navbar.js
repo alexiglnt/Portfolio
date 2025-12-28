@@ -133,7 +133,7 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
                 style={isLinkActive("/resume") ? { fontWeight: "bold" } : {}}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> CV
+                <CgFileDocument style={{ marginBottom: "2px" }} /> {t('nav.cv')}
               </Nav.Link>
             </Nav.Item>
 

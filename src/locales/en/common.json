@@ -6,6 +6,7 @@
         "contact": "Contact",
         "skills": "Skills",
         "experiences": "Experiences",
+        "cv": "Resume",
         "lang": "FR"
     },
     "hero": {
@@ -119,10 +120,10 @@
     "resumePage": {
         "title": {
             "part1": "My",
-            "part2": "Résumé"
+            "part2": "Resume"
         },
-        "download": "Download Résumé",
-        "download_aria": "Download my résumé"
+        "download": "Download Resume",
+        "download_aria": "Download my resume"
     },
     "educationPage": {
         "title": {
