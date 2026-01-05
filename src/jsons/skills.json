@@ -44,6 +44,11 @@
 					"link": "https://nextjs.org"
 				},
 				{
+					"name": "WordPress",
+					"logo": "WordPress.svg",
+					"link": "https://wordpress.com/"
+				},
+				{
 					"name": "Photoshop",
 					"logo": "Photoshop.svg",
 					"link": "https://www.adobe.com/products/photoshop.html"
