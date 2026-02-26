@@ -96,18 +96,14 @@ function ProjectCards({ data, id }) {
     >
       <div className="glass-card__glow" ref={glowRef} />
 
+      {/* DOM toujours : textBlock puis imagesBlock
+          CSS gère l'ordre visuel via flex-direction :
+          - even → row-reverse : images à gauche, texte à droite
+          - odd  → row         : texte à gauche, images à droite
+          - mobile → column    : texte en haut, images en bas */}
       <div className={`glass-card__inner ${isEven ? "glass-card__inner--even" : "glass-card__inner--odd"}`}>
-        {isEven ? (
-          <>
-            {imagesBlock}
-            {textBlock}
-          </>
-        ) : (
-          <>
-            {textBlock}
-            {imagesBlock}
-          </>
-        )}
+        {textBlock}
+        {imagesBlock}
       </div>
     </div>
   );
