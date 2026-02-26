@@ -62,9 +62,11 @@ function Projects() {
 
         <br /><br />
 
-        {filteredLocalizedProjects.map((project, index) => (
-          <ProjectCard key={project.id} data={project} id={index} />
-        ))}
+        <div className="projects-grid">
+          {filteredLocalizedProjects.map((project, index) => (
+            <ProjectCard key={project.id} data={project} id={index} />
+          ))}
+        </div>
       </Container>
     </Container>
   );

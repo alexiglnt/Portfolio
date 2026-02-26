@@ -24,11 +24,6 @@
 					"link": "https://www.typescriptlang.org"
 				},
 				{
-					"name": "jQuery",
-					"logo": "jquery-icon.svg",
-					"link": "https://jquery.com/"
-				},
-				{
 					"name": "Vue.js",
 					"logo": "vuejs.svg",
 					"link": "https://vuejs.org"
@@ -82,11 +77,6 @@
 					"name": ".NET",
 					"logo": "dotnet-logo.svg",
 					"link": "https://dotnet.microsoft.com/en-us/"
-				},
-				{
-					"name": "API Platform",
-					"logo": "apiplatform.svg",
-					"link": "https://api-platform.com/"
 				},
 				{
 					"name": "NodeJS",

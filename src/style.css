@@ -2200,3 +2200,792 @@ details:hover {
     /* un poil plus court en mobile si besoin */
   }
 }
+
+
+
+/* =========================================
+   GLASS CARD — Project Cards (glassmorphism)
+   ========================================= */
+
+/* ── Section projets + blobs d'ambiance ── */
+.project-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 60px !important;
+  overflow: hidden;
+}
+
+/* Blob violet haut-gauche */
+.project-section::before {
+  content: '';
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 60, 255, 0.28), transparent 70%);
+  filter: blur(80px);
+  top: -150px;
+  left: -200px;
+  pointer-events: none;
+  z-index: 0;
+  animation: blobDrift1 12s ease-in-out infinite alternate;
+}
+
+/* Blob rose bas-droite */
+.project-section::after {
+  content: '';
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(220, 60, 180, 0.22), transparent 70%);
+  filter: blur(90px);
+  bottom: -100px;
+  right: -150px;
+  pointer-events: none;
+  z-index: 0;
+  animation: blobDrift2 15s ease-in-out infinite alternate;
+}
+
+@keyframes blobDrift1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(80px, 60px) scale(1.1); }
+}
+
+@keyframes blobDrift2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-60px, -80px) scale(1.15); }
+}
+
+/* ── Liste des cards ── */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 20px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Card principale ── */
+.glass-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 28px 32px;
+  overflow: hidden;
+  cursor: default;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px) saturate(2);
+  -webkit-backdrop-filter: blur(24px) saturate(2);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.20);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* ── Glow orb (suit la souris) ── */
+.glass-card__glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.glass-card > *:not(.glass-card__glow) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Layout intérieur alterné ── */
+.glass-card__inner {
+  display: flex;
+  align-items: center;  /* centre le texte verticalement par rapport aux images */
+  gap: 36px;
+}
+
+/* Desktop : paire = texte à droite (images visuellement à gauche) */
+.glass-card__inner--even { flex-direction: row-reverse; }
+
+/* Desktop : impaire = texte à gauche (images visuellement à droite) */
+.glass-card__inner--odd  { flex-direction: row; }
+
+/* ── Bloc images ── */
+.glass-card__images {
+  flex-shrink: 0;
+  width: 62%;
+  height: 280px;       /* garde la plus grande hauteur */
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  gap: 6px;
+}
+
+.glass-card__img-container--main {
+  flex: 2;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.glass-card__img-container--halves {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+}
+
+.glass-card__img-container--main {
+  flex: 2;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0;       /* reset — le parent s'en occupe */
+}
+
+.glass-card__img-container--halves {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+}
+
+.glass-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* revient à cover pour remplir sans bords */
+  border-radius: 0;
+}
+
+.glass-card__img--half {
+  height: 50%;
+}
+
+/* ── Coins plats là où les images se touchent ── */
+
+/* Pair : images à gauche — bords DROITS de la grande image = plats */
+.glass-card__inner--even .glass-card__img-container--main {
+  border-radius: 0;
+}
+
+/* Impair : images à droite — bords GAUCHES de la grande image = plats */
+.glass-card__inner--odd .glass-card__img-container--main {
+  border-radius: 0;
+}
+
+/* Le gap de 6px entre les images suffit à montrer la séparation,
+   les coins externes sont gérés par overflow:hidden sur .glass-card__images */
+
+.glass-card__img--half {
+  height: 50%;
+}
+
+/* ── Bloc texte ── */
+.glass-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Top row ── */
+.glass-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.glass-card__year {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.glass-card__badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(160, 130, 255, 0.90);
+  background: rgba(120, 80, 255, 0.15);
+  border: 1px solid rgba(120, 80, 255, 0.28);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ── Titre & sous-titre ── */
+.glass-card__title {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 6px !important;
+  text-align: left !important;
+}
+
+.glass-card__subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.42);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+/* ── Divider ── */
+.glass-card__divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
+  margin-bottom: 14px;
+}
+
+/* ── Corps ── */
+.glass-card__body {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.65;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+/* ── Tech tags ── */
+.glass-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.glass-card__tag {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.68);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 4px 10px;
+  border-radius: 8px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.glass-card__tag:hover {
+  background: rgba(120, 80, 255, 0.18);
+  border-color: rgba(120, 80, 255, 0.35);
+  color: #d4c4ff;
+}
+
+/* ── Footer ── */
+.glass-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.glass-card__link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.50) !important;
+  text-decoration: none !important;
+  transition: color 0.2s;
+}
+
+.glass-card__link:hover { color: #fff !important; }
+
+.glass-card__link svg { transition: transform 0.2s; }
+.glass-card__link:hover svg { transform: translateX(3px); }
+
+.glass-card__github {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.60) !important;
+  text-decoration: none !important;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.glass-card__github:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #fff !important;
+  transform: rotate(-8deg) scale(1.1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .glass-card__inner--even,
+  .glass-card__inner--odd {
+    flex-direction: column !important;
+  }
+  .glass-card__images {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+
+
+/* =========================================
+   EXPERIENCE CARDS — glassmorphism
+   ========================================= */
+
+/* ── Section expériences (blobs identiques aux projets) ── */
+.about-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 60px !important;
+  overflow: hidden;
+  color: white !important;
+}
+
+.about-section::before {
+  content: '';
+  position: fixed;
+  width: 650px; height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(80, 40, 255, 0.26), transparent 70%);
+  filter: blur(90px);
+  top: -120px; left: -180px;
+  pointer-events: none;
+  z-index: 0;
+  animation: blobDrift1 12s ease-in-out infinite alternate;
+}
+
+.about-section::after {
+  content: '';
+  position: fixed;
+  width: 550px; height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 50, 180, 0.20), transparent 70%);
+  filter: blur(100px);
+  bottom: -80px; right: -120px;
+  pointer-events: none;
+  z-index: 0;
+  animation: blobDrift2 15s ease-in-out infinite alternate;
+}
+
+/* ── Wrapper timeline ── */
+.exp-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 10px 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Connecteurs timeline ── */
+.experience-divider {
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  margin: 0;
+}
+
+.experience-divider-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.30);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(120, 80, 255, 0.5);
+}
+
+/* ── Card ── */
+.exp-card {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  padding: 24px 28px 20px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px) saturate(2);
+  -webkit-backdrop-filter: blur(24px) saturate(2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.50),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.20);
+}
+
+/* Glow souris */
+.exp-card__glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.exp-card > *:not(.exp-card__glow) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Header ── */
+.exp-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.exp-card__header-left {
+  flex: 1;
+}
+
+.exp-card__title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin-bottom: 6px !important;
+  line-height: 1.2 !important;
+}
+
+.exp-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.exp-card__company {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: rgba(160, 130, 255, 0.90);
+}
+
+.exp-card__date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 2px 9px;
+  border-radius: 20px;
+}
+
+/* Logo */
+.exp-card__logo-wrapper {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.exp-card__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── Divider ── */
+.exp-card__divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
+  margin-bottom: 14px;
+}
+
+/* ── Description ── */
+.exp-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.exp-card__desc {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.60);
+  line-height: 1.70;
+  margin: 0 !important;
+  text-align: left;
+}
+
+/* ── Footer localisation ── */
+.exp-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.30);
+}
+
+.exp-card__location {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .exp-card { padding: 18px 16px; }
+  .exp-card__title { font-size: 17px !important; }
+  .exp-card__header { flex-direction: column-reverse; }
+}
+
+
+
+/* =========================================
+   HOME NAV CARDS — glassmorphism
+   ========================================= */
+
+/* ── Grille 2x2 ── */
+.home-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── Overrides sur .glass-card pour version "nav" ── */
+.home-nav-card {
+  padding: 28px 20px 28px !important;
+  border-radius: 18px !important;
+  cursor: pointer !important;
+  min-height: 170px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-nav-card:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+}
+
+/* ── Neon blob propre à chaque card au hover ── */
+.home-nav-card::before {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(100, 60, 255, 0.30), transparent 70%);
+  filter: blur(30px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-nav-card:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Tout le contenu au dessus du blob */
+.home-nav-card > *:not(.glass-card__glow) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Icône ── */
+.home-nav-card__icon {
+  font-size: 26px;
+  color: rgba(160, 130, 255, 0.85);
+  margin-bottom: 12px;
+  line-height: 1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.home-nav-card:hover .home-nav-card__icon {
+  transform: scale(1.15);
+  color: rgba(190, 160, 255, 1);
+}
+
+/* ── Titre ── */
+.home-nav-card__title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin-bottom: 10px !important;
+  line-height: 1.2 !important;
+}
+
+/* ── Texte ── */
+.home-nav-card__text {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.52);
+  line-height: 1.60;
+  margin: 0;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .home-nav-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+  }
+  .home-nav-card { min-height: 140px; }
+}
+
+@media (max-width: 480px) {
+  .home-nav-grid { grid-template-columns: 1fr; }
+}
+
+
+/* =========================================
+   SKILL CARDS — glassmorphism
+   ========================================= */
+
+/* ── Catégorie ── */
+.skill-category {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-category__title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  text-align: left;
+  margin-left: 4px;
+  margin-bottom: 20px !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 13px !important;
+  border-left: 3px solid rgba(120, 80, 255, 0.60);
+  padding-left: 10px;
+}
+
+/* ── Grille des icônes ── */
+.skill-grid {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 0 !important;
+  justify-content: flex-start;
+}
+
+/* ── Card skill (override .glass-card) ── */
+.skill-card {
+  width: 110px !important;
+  height: 110px !important;
+  padding: 14px 10px 10px !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease !important;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.06) !important;
+  border-color: rgba(120, 80, 255, 0.40) !important;
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.50),
+    0 0 0 1px rgba(120, 80, 255, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+/* ── Image de l'icône ── */
+.skill-card__img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  /* Drop-shadow pour rendre visibles les SVG fins/noirs (Next.js, Symfony, Unity...) */
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.18));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skill-card:hover .skill-card__img {
+  transform: scale(1.10);
+  filter: drop-shadow(0 0 10px rgba(160, 130, 255, 0.45));
+}
+
+/* ── Nom de la techno ── */
+.skill-card__name {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+  line-height: 1.2;
+  transition: color 0.2s;
+}
+
+.skill-card:hover .skill-card__name {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ── Responsive ── */
+@media (max-width: 576px) {
+  .skill-card {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  .skill-card__img {
+    width: 40px;
+    height: 40px;
+  }
+}
