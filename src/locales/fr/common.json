@@ -67,6 +67,12 @@
             "software_games": "Logiciels / jeux"
         }
     },
+    "lightbox": {
+        "close": "Fermer",
+        "prev": "Image précédente",
+        "next": "Image suivante",
+        "open": "Agrandir l'image"
+    },
     "labels": {
         "goal": "But",
         "description": "Description",

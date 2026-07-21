@@ -1,11 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { AiOutlineGithub, AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
+import ImageLightbox from "./ImageLightbox";
+
+// 🔹 Tag "Projet étudiant / Personnel" masqué : peu d'intérêt tant que la quasi-totalité
+//    des projets sont scolaires. Repasser à true pour le réafficher.
+const SHOW_PROJECT_TYPE = false;
 
 function ProjectCards({ data, id }) {
   const { i18n, t } = useTranslation();
   const cardRef = useRef(null);
   const glowRef = useRef(null);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const langParam = i18n.language?.startsWith("en") ? "en" : "fr";
   const detailsHref = `/project/${data.id}?lng=${langParam}`;
@@ -31,18 +37,68 @@ function ProjectCards({ data, id }) {
 
   const isEven = id % 2 === 0;
 
+  // 🔹 Galerie du projet, dans l'ordre d'affichage (img1 = grande, puis les 2 petites)
+  const gallery = [data.img1, data.img2, data.img3].filter(Boolean);
+
+  // Props communes pour rendre une image cliquable (souris + clavier)
+  const openAt = (position) => ({
+    onClick: () => setLightboxIndex(position),
+    onKeyDown: (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        setLightboxIndex(position);
+      }
+    },
+    role: "button",
+    tabIndex: 0,
+    "aria-label": t("lightbox.open"),
+  });
+
   const imagesBlock = (
     <div className="glass-card__images">
       {data.img1 && (
         <div className="glass-card__img-container glass-card__img-container--main">
-          <img src={data.img1} alt={data.name} className="glass-card__img" />
+          {/* Le cadre reste fixe, seule l'image zoome à l'intérieur */}
+          <div className="glass-card__img-frame" {...openAt(0)}>
+            <img src={data.img1} alt={data.name} className="glass-card__img" />
+          </div>
         </div>
       )}
       {(data.img2 || data.img3) && (
         <div className="glass-card__img-container glass-card__img-container--halves">
-          {data.img2 && <img src={data.img2} alt={data.name} className="glass-card__img glass-card__img--half" />}
-          {data.img3 && <img src={data.img3} alt={data.name} className="glass-card__img glass-card__img--half" />}
+          {data.img2 && (
+            <div
+              className="glass-card__img-frame glass-card__img-frame--half"
+              {...openAt(data.img1 ? 1 : 0)}
+            >
+              <img src={data.img2} alt={data.name} className="glass-card__img" />
+            </div>
+          )}
+          {data.img3 && (
+            <div
+              className="glass-card__img-frame glass-card__img-frame--half"
+              {...openAt(gallery.length - 1)}
+            >
+              <img src={data.img3} alt={data.name} className="glass-card__img" />
+            </div>
+          )}
         </div>
+      )}
+
+      {/* Pastille : signale la visionneuse (indispensable sur mobile, sans survol) */}
+      {gallery.length > 0 && (
+        <button
+          type="button"
+          className="glass-card__gallery-badge"
+          onClick={() => setLightboxIndex(0)}
+          aria-label={t("lightbox.open")}
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+          {gallery.length > 1 && <span>{gallery.length}</span>}
+        </button>
       )}
     </div>
   );
@@ -51,7 +107,9 @@ function ProjectCards({ data, id }) {
     <div className="glass-card__content">
       <div className="glass-card__top">
         <span className="glass-card__year">{data.date}</span>
-        <span className="glass-card__badge">{data.project_type}</span>
+        {SHOW_PROJECT_TYPE && (
+          <span className="glass-card__badge">{data.project_type}</span>
+        )}
       </div>
 
       <h2 className="glass-card__title">{data.name}</h2>
@@ -105,6 +163,16 @@ function ProjectCards({ data, id }) {
         {textBlock}
         {imagesBlock}
       </div>
+
+      {lightboxIndex !== null && (
+        <ImageLightbox
+          images={gallery}
+          index={lightboxIndex}
+          alt={data.name}
+          onClose={() => setLightboxIndex(null)}
+          onNavigate={setLightboxIndex}
+        />
+      )}
     </div>
   );
 }
