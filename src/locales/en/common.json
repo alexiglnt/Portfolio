@@ -81,11 +81,14 @@
         }
     },
     "experiences": {
+        "badgeCurrent": "Current",
         "items": [
             {
                 "title": "Software Engineer",
-                "company": "PI System Automation",
+                "company": "PI Signia",
                 "date": "2024 - 2027",
+                "current": true,
+                "tags": ["C++", "Python", "IoT", "Embedded systems"],
                 "description": [
                     "Three-year apprenticeship within the company’s software engineering team, contributing to BoggieGuard — a system designed to detect metro tire pressure.",
                     "PISA, a subsidiary of the Galilé Group, delivers innovative industrial solutions. Key clients include Michelin and RATP."
@@ -94,9 +97,23 @@
                 "logo": "logo-pisa.png"
             },
             {
+                "title": "Machine Learning Research Intern",
+                "company": "UNC Charlotte — DEAM Lab",
+                "date": "June 1 – August 27, 2026",
+                "tags": ["Python", "PySR", "scikit-learn", "NumPy / pandas"],
+                "description": [
+                    "Second-year engineering research internship at the DEAM Lab, University of North Carolina at Charlotte (UNC Charlotte), under Professor Jose C. M. Outeiro.",
+                    "Building a Machine Learning model to predict the residual stresses induced in the Ti-6Al-4V titanium alloy."
+                ],
+                "location": "Charlotte, USA",
+                "flag": "us",
+                "logo": "unc-charlotte.png"
+            },
+            {
                 "title": "Full-stack Web Developer",
                 "company": "isiTecc",
                 "date": "2023 - 2024",
+                "tags": ["ASP.NET", "React.js", "SQL"],
                 "description": [
                     "One-year apprenticeship contributing to Smart Portal web applications using ASP.NET, React.js, and SQL.",
                     "isiTecc is a digital services company delivering and integrating software for industry and services."
@@ -108,6 +125,7 @@
                 "title": "Full-stack Web Developer (Intern)",
                 "company": "isiTecc",
                 "date": "April – June 2023",
+                "tags": ["ASP.NET", "React.js", "SQL"],
                 "description": [
                     "Three-month internship working on Smart Portal web apps with ASP.NET, React.js, and SQL.",
                     "isiTecc is a digital services company delivering and integrating software for industry and services."
@@ -123,7 +141,9 @@
             "part2": "Resume"
         },
         "download": "Download Resume",
-        "download_aria": "Download my resume"
+        "download_aria": "Download my resume",
+        "preview": "Resume preview",
+        "previewNote": "The resume adapts automatically to the site language: French CV format, or English resume format."
     },
     "educationPage": {
         "title": {
@@ -140,7 +160,8 @@
                 "description": [
                     "",
                     "Three-year apprenticeship program in Computer Engineering (French Diplôme d’Ingénieur), covering modeling, design, and delivery of software solutions, while building communication skills with all stakeholders.",
-                    "Curriculum spans software, web and mobile development, with tracks such as IoT, Artificial Intelligence, Databases, and Information Systems architecture."
+                    "Curriculum spans software, web and mobile development, with tracks such as IoT, Artificial Intelligence, Databases, and Information Systems architecture.",
+                    "As part of this program, I completed my second-year internship in the United States, at UNC Charlotte, working on a Machine Learning project."
                 ],
                 "location": "Clermont-Ferrand",
                 "logo": "isima-logo.png"

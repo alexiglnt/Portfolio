@@ -838,6 +838,33 @@ button:focus {
   justify-content: center;
 }
 
+/* ── Aperçu CV compact et cliquable ── */
+.resume-preview-heading {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1;
+}
+
+.resume-preview-note {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.40);
+  font-size: 0.9em;
+  max-width: 520px;
+  margin: 8px auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+.resume-preview {
+  display: inline-block;
+  line-height: 0;
+  cursor: pointer;
+}
+
 .resume-left {
   padding-right: 80px !important;
 }
@@ -2595,33 +2622,116 @@ details:hover {
   animation: blobDrift2 15s ease-in-out infinite alternate;
 }
 
-/* ── Wrapper timeline ── */
-.exp-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 10px 0 40px;
+/* ── Timeline zigzag ── */
+.exp-timeline {
   position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 0 50px;
   z-index: 1;
 }
 
-/* ── Connecteurs timeline ── */
-.experience-divider {
+/* Ligne centrale */
+.exp-timeline__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
   width: 2px;
-  height: 60px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
-  margin: 0;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 2px;
+  overflow: hidden;
 }
 
-.experience-divider-bullet {
-  width: 10px;
-  height: 10px;
+/* Remplissage violet piloté au scroll */
+.exp-timeline__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to bottom, rgba(120, 80, 255, 0.95), rgba(160, 130, 255, 0.75));
+  box-shadow: 0 0 12px rgba(120, 80, 255, 0.8);
+  transition: height 0.1s linear;
+}
+
+/* ── Rangée (une expérience) ── */
+.exp-row {
+  position: relative;
+  width: 100%;
+  margin-bottom: 46px;
+}
+
+.exp-row:last-child {
+  margin-bottom: 0;
+}
+
+.exp-row--left {
+  padding-right: calc(50% + 34px);
+}
+
+.exp-row--right {
+  padding-left: calc(50% + 34px);
+}
+
+/* Point sur la ligne */
+.exp-node {
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.30);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 8px rgba(120, 80, 255, 0.5);
+  background: #140f28;
+  border: 2px solid rgba(160, 130, 255, 0.60);
+  box-shadow: 0 0 10px rgba(120, 80, 255, 0.5);
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.15s,
+    opacity 0.4s ease 0.15s;
+  z-index: 2;
+}
+
+.exp-row.is-visible .exp-node {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Connecteur horizontal ligne → carte */
+.exp-connector {
+  position: absolute;
+  top: 34px;
+  height: 2px;
+  width: 34px;
+  background: linear-gradient(90deg, rgba(160, 130, 255, 0.45), rgba(160, 130, 255, 0.12));
+  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease 0.2s, opacity 0.4s ease 0.2s;
+  z-index: 1;
+}
+
+.exp-row--left .exp-connector {
+  right: 50%;
+  transform-origin: right center;
+}
+
+.exp-row--right .exp-connector {
+  left: 50%;
+  transform-origin: left center;
+}
+
+.exp-row.is-visible .exp-connector {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Expérience en cours : point renforcé */
+.exp-row--current .exp-node {
+  border-color: #a78bfa;
+  background: rgba(120, 80, 255, 0.9);
+  box-shadow: 0 0 18px rgba(120, 80, 255, 0.9);
 }
 
 /* ── Card ── */
@@ -2681,6 +2791,7 @@ details:hover {
 
 .exp-card__header-left {
   flex: 1;
+  text-align: left;
 }
 
 .exp-card__title {
@@ -2719,12 +2830,16 @@ details:hover {
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+/* Cadre optionnel autour du logo (désactivé par défaut) */
+.exp-card__logo-wrapper--framed {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 4px;
 }
 
@@ -2771,11 +2886,167 @@ details:hover {
   letter-spacing: 0.04em;
 }
 
+.exp-card__flag {
+  display: block;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+/* ── Révélation au scroll : la carte glisse depuis son côté ── */
+.exp-row .exp-card {
+  opacity: 0;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.exp-row--left .exp-card {
+  transform: translateX(-40px);
+}
+
+.exp-row--right .exp-card {
+  transform: translateX(40px);
+}
+
+.exp-row.is-visible .exp-card {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Le hover garde la priorité une fois la carte révélée */
+.exp-row.is-visible .exp-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ── Badge « Actuel » ── */
+.exp-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(190, 170, 255, 0.95);
+  background: rgba(120, 80, 255, 0.14);
+  border: 1px solid rgba(160, 130, 255, 0.35);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.exp-card__badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 8px #a78bfa;
+  animation: expBadgePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes expBadgePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.65); }
+}
+
+/* Carte de l'expérience en cours : halo violet plus marqué */
+.exp-card--current {
+  border-color: rgba(160, 130, 255, 0.40);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(120, 80, 255, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.exp-row.is-visible .exp-card--current:hover {
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.50),
+    0 0 50px rgba(120, 80, 255, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+/* ── Tags technos ── */
+.exp-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.exp-card__tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 4px 11px;
+  border-radius: 8px;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.exp-card__tag:hover {
+  background: rgba(120, 80, 255, 0.18);
+  border-color: rgba(160, 130, 255, 0.40);
+  color: #fff;
+}
+
 /* ── Responsive ── */
+@media (max-width: 768px) {
+  .exp-timeline {
+    padding-left: 6px;
+  }
+  .exp-timeline__line {
+    left: 18px;
+  }
+  .exp-row--left,
+  .exp-row--right {
+    padding-left: 46px;
+    padding-right: 0;
+  }
+  .exp-node {
+    left: 18px;
+  }
+  .exp-connector,
+  .exp-row--left .exp-connector,
+  .exp-row--right .exp-connector {
+    left: 18px;
+    right: auto;
+    width: 28px;
+    transform-origin: left center;
+  }
+  .exp-row--left .exp-card,
+  .exp-row--right .exp-card {
+    transform: translateX(30px);
+  }
+  .exp-row.is-visible .exp-card {
+    transform: translateX(0);
+  }
+}
+
 @media (max-width: 600px) {
   .exp-card { padding: 18px 16px; }
   .exp-card__title { font-size: 17px !important; }
   .exp-card__header { flex-direction: column-reverse; }
+}
+
+/* Accessibilité : on désactive les animations si demandé */
+@media (prefers-reduced-motion: reduce) {
+  .exp-row .exp-card,
+  .exp-node,
+  .exp-connector,
+  .exp-timeline__progress {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .exp-node {
+    transform: translate(-50%, -50%) !important;
+  }
+  .exp-card__badge-dot {
+    animation: none;
+  }
 }
 
 

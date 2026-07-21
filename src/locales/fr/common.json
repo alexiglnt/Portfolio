@@ -81,11 +81,14 @@
         }
     },
     "experiences": {
+        "badgeCurrent": "Actuel",
         "items": [
             {
                 "title": "Ingénieur informatique",
-                "company": "PI System Automation",
+                "company": "PI Signia",
                 "date": "2024 - 2027",
+                "current": true,
+                "tags": ["C++", "Python", "IoT", "Systèmes embarqués"],
                 "description": [
                     "En alternance pour une durée de trois ans, j'évolue au sein du bureau d'études informatiques de l'entreprise, où je participe au développement du système Boggieguard, conçu pour détecter la pression des pneus de métro.",
                     "PISA, filiale du Groupe Galilé, conçoit des solutions innovantes pour l'industrie. Parmi ses plus gros clients figurent Michelin et la RATP."
@@ -94,9 +97,23 @@
                 "logo": "logo-pisa.png"
             },
             {
+                "title": "Stagiaire recherche — Machine Learning",
+                "company": "UNC Charlotte — DEAM Lab",
+                "date": "1er juin - 27 août 2026",
+                "tags": ["Python", "PySR", "scikit-learn", "NumPy / pandas"],
+                "description": [
+                    "Stage de recherche de 2ᵉ année d'école d'ingénieur au sein du DEAM Lab de l'Université de Caroline du Nord à Charlotte (UNC Charlotte), sous la direction du professeur Jose C. M. Outeiro.",
+                    "Développement d'un modèle de Machine Learning visant à prédire les contraintes résiduelles (residual stress) induites dans l'alliage de titane Ti-6Al-4V."
+                ],
+                "location": "Charlotte, États-Unis",
+                "flag": "us",
+                "logo": "unc-charlotte.png"
+            },
+            {
                 "title": "Développeur web full-stack",
                 "company": "isiTecc",
                 "date": "2023 - 2024",
+                "tags": ["ASP.NET", "React.js", "SQL"],
                 "description": [
                     "Dans le cadre d’une alternance d’un an, j’ai contribué au développement d’applications web sur le logiciel Smart Portal avec ASP.NET, React.js et SQL.",
                     "isiTecc est une ESN (Entreprise du Secteur du Digital) créant et intégrant des logiciels pour l’industrie et le tertiaire."
@@ -108,6 +125,7 @@
                 "title": "Développeur web full-stack (stage)",
                 "company": "isiTecc",
                 "date": "Avril - Juin 2023",
+                "tags": ["ASP.NET", "React.js", "SQL"],
                 "description": [
                     "Stage de trois mois durant lequel j’ai participé au développement d’applications web Smart Portal en ASP.NET, React.js et SQL.",
                     "isiTecc est une ESN (Entreprise du Secteur du Digital) créant et intégrant des logiciels pour l’industrie et le tertiaire."
@@ -123,7 +141,9 @@
             "part2": "CV"
         },
         "download": "Télécharger le CV",
-        "download_aria": "Télécharger mon CV"
+        "download_aria": "Télécharger mon CV",
+        "preview": "Aperçu du CV",
+        "previewNote": "Le CV s'adapte automatiquement à la langue du site : format et langue française, ou format resume anglophone."
     },
     "educationPage": {
         "title": {
@@ -140,7 +160,8 @@
                 "description": [
                     "",
                     "Le diplôme d’ingénieur délivré par l'ISIMA est une formation en ingénierie informatique de trois ans en apprentissage, qui forme à la modélisation, la conception et la réalisation de solutions tout en développant les compétences de communication avec l’ensemble des parties prenantes.",
-                    "Ce programme couvre un large éventail de domaines, incluant le développement logiciel, web et mobile, ainsi que des spécialités comme l'IoT, l'intelligence artificielle, les bases de données et l'architecture des SI."
+                    "Ce programme couvre un large éventail de domaines, incluant le développement logiciel, web et mobile, ainsi que des spécialités comme l'IoT, l'intelligence artificielle, les bases de données et l'architecture des SI.",
+                    "Dans le cadre de ce cursus, j'ai réalisé mon stage de 2ᵉ année aux États-Unis, à l'UNC Charlotte, sur un projet de Machine Learning."
                 ],
                 "location": "Clermont-Ferrand",
                 "logo": "isima-logo.png"
