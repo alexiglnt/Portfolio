@@ -17,6 +17,8 @@ function About() {
             {t('skillsPage.title.part1')} <strong className="purple">{t('skillsPage.title.part2')}</strong>
           </h1>
 
+          <p className="skills-subtitle">{t('skillsPage.subtitle')}</p>
+
           <Techstack /> <br></br>
 
           {/* <Github /> */}

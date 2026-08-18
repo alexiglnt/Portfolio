@@ -54,6 +54,7 @@
         }
     },
     "skillsPage": {
+        "subtitle": "Technologies que j'utilise souvent ou que j'ai déjà eu l'occasion de manipuler dans le cadre de projets en entreprise, stage, école ou personnels.",
         "title": {
             "part1": "Mes",
             "part2": "Compétences"
@@ -64,7 +65,8 @@
     },
     "skills": {
         "categories": {
-            "software_games": "Logiciels / jeux"
+            "software_games": "Logiciels / jeux",
+            "ai_ml": "IA / Machine Learning"
         }
     },
     "lightbox": {
@@ -88,7 +90,7 @@
     },
     "experiences": {
         "badgeCurrent": "Actuel",
-        "items": [
+        "items": [  
             {
                 "title": "Ingénieur informatique",
                 "company": "PI Signia",

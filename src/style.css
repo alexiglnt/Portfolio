@@ -744,6 +744,14 @@ button:focus {
   padding-top: 10px !important;
 }
 
+.skills-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1em;
+  max-width: 700px;
+  margin: -10px auto 20px;
+  text-align: center;
+}
+
 /* --------- */
 /* About */
 /* --------- */

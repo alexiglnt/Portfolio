@@ -124,14 +124,14 @@
 					"link": "https://en.wikipedia.org/wiki/C%2B%2B"
 				},
 				{
+					"name": "Qt",
+					"logo": "Qt.png",
+					"link": "https://www.qt.io/"
+				},
+				{
 					"name": "C#",
 					"logo": "C_sharp.svg",
 					"link": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
-				},
-				{
-					"name": "Python",
-					"logo": "Python.svg",
-					"link": "https://www.python.org/"
 				},
 				{
 					"name": "Unity",
@@ -139,9 +139,79 @@
 					"link": "https://unity.com/"
 				},
 				{
+					"name": "Python",
+					"logo": "Python.svg",
+					"link": "https://www.python.org/"
+				},
+				{
 					"name": "Git",
 					"logo": "Git.svg",
 					"link": "https://git-scm.com/"
+				}
+			]
+		},
+		{
+			"name": "IA / Machine Learning",
+			"skills": [
+				{
+					"name": "Python",
+					"logo": "Python.svg",
+					"link": "https://www.python.org/"
+				},
+				{
+					"name": "NumPy",
+					"logo": "numpy.png",
+					"link": "https://numpy.org/"
+				},
+				{
+					"name": "Pandas",
+					"logo": "pandas.png",
+					"link": "https://pandas.pydata.org/"
+				},
+				{
+					"name": "SciPy",
+					"logo": "scipy.svg",
+					"link": "https://scipy.org/"
+				},
+				{
+					"name": "Scikit-learn",
+					"logo": "scikit-learn.png",
+					"link": "https://scikit-learn.org/"
+				}
+			]
+		},
+		{
+			"name": "DevOps",
+			"skills": [
+				{
+					"name": "Docker",
+					"logo": "docker.svg",
+					"link": "https://www.docker.com/"
+				},
+				{
+					"name": "GitHub Actions",
+					"logo": "GitHub Actions.png",
+					"link": "https://github.com/features/actions"
+				},
+				{
+					"name": "GitLab CI",
+					"logo": "GitLab.png",
+					"link": "https://docs.gitlab.com/ee/ci/"
+				},
+				{
+					"name": "Linux",
+					"logo": "Linux.png",
+					"link": "https://www.linux.org/"
+				},
+				{
+					"name": "Bash",
+					"logo": "Bash.png",
+					"link": "https://www.gnu.org/software/bash/"
+				},
+				{
+					"name": "Caddy",
+					"logo": "caddy.svg",
+					"link": "https://caddyserver.com/"
 				}
 			]
 		}

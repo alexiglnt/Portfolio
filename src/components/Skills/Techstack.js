@@ -45,10 +45,12 @@ function Techstack() {
   return (
     <>
       {jsonSkills.skills_categories.map((category, idx) => {
-        const displayName =
-          category.name === "Logiciels / jeux"
-            ? t("skills.categories.software_games", "Logiciels / jeux")
-            : category.name;
+        let displayName = category.name;
+        if (category.name === "Logiciels / jeux") {
+          displayName = t("skills.categories.software_games", "Logiciels / jeux");
+        } else if (category.name === "IA / Machine Learning") {
+          displayName = t("skills.categories.ai_ml", "IA / Machine Learning");
+        }
 
         return (
           <div key={`${displayName}-${idx}`} className="skill-category">

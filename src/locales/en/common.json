@@ -54,6 +54,7 @@
         }
     },
     "skillsPage": {
+        "subtitle": "Technologies I use often, or that I've had the chance to work with on professional projects, internships, school or personal projects.",
         "title": {
             "part1": "My",
             "part2": "Skills"
@@ -64,7 +65,8 @@
     },
     "skills": {
         "categories": {
-            "software_games": "Software / Games"
+            "software_games": "Software / Games",
+            "ai_ml": "AI / Machine Learning"
         }
     },
     "lightbox": {
