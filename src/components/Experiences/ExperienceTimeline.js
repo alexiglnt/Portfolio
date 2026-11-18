@@ -64,6 +64,7 @@ function ExperienceTimeline({ items = [], badgeCurrent }) {
           logo={item.logo}
           logoFrame={item.logoFrame}
           tags={item.tags}
+          project={item.project}
           current={item.current}
           badgeCurrent={badgeCurrent}
         />

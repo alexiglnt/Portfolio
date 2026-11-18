@@ -1,4 +1,45 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import jsonProjects from "../../jsons/projects.json";
+import { localizeProject } from "../../utils/i18nProjects";
+
+// Encart cliquable vers un projet du portfolio (id de projects.json)
+function ProjectLink({ projectId }) {
+  const { t, i18n } = useTranslation(["common", "projects"]);
+  const raw = jsonProjects.projects.find((p) => p.id === projectId);
+  if (!raw) return null;
+
+  const project = localizeProject(t, raw);
+  const lng = i18n.language?.startsWith("en") ? "en" : "fr";
+
+  return (
+    <Link to={`/project/${project.id}?lng=${lng}`} className="exp-project">
+      {project.img1 && (
+        <img src={`/${project.img1}`} alt="" className="exp-project__thumb" loading="lazy" />
+      )}
+      <span className="exp-project__text">
+        <span className="exp-project__label">{t("experiences.projectLink")}</span>
+        <span className="exp-project__name">{project.name}</span>
+        <span className="exp-project__desc">{project.description}</span>
+      </span>
+      <svg
+        className="exp-project__arrow"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </svg>
+    </Link>
+  );
+}
 
 // Petit drapeau US en SVG (les emojis drapeaux ne s'affichent pas sous Windows)
 function UsFlag() {
@@ -54,6 +95,7 @@ function ExperienceCard({
   logo,
   logoFrame,
   tags,
+  project,
   current,
   badgeCurrent,
 }) {
@@ -159,6 +201,9 @@ function ExperienceCard({
             <p className="exp-card__desc">{description}</p>
           )}
         </div>
+
+        {/* Projet associé */}
+        {project && <ProjectLink projectId={project} />}
 
         {/* Tags technos */}
         {Array.isArray(tags) && tags.length > 0 && (

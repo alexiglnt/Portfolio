@@ -91,6 +91,7 @@
     },
     "experiences": {
         "badgeCurrent": "Actuel",
+        "projectLink": "Projet réalisé",
         "items": [  
             {
                 "title": "Ingénieur informatique",
@@ -116,7 +117,8 @@
                 ],
                 "location": "Charlotte, États-Unis",
                 "flag": "us",
-                "logo": "unc-charlotte.png"
+                "logo": "unc-charlotte.png",
+                "project": "ml_federated_learning"
             },
             {
                 "title": "Développeur web full-stack",

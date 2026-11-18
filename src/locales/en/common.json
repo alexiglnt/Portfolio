@@ -91,6 +91,7 @@
     },
     "experiences": {
         "badgeCurrent": "Current",
+        "projectLink": "Related project",
         "items": [
             {
                 "title": "Software Engineer",
@@ -116,7 +117,8 @@
                 ],
                 "location": "Charlotte, USA",
                 "flag": "us",
-                "logo": "unc-charlotte.png"
+                "logo": "unc-charlotte.png",
+                "project": "ml_federated_learning"
             },
             {
                 "title": "Full-stack Web Developer",
