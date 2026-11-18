@@ -78,7 +78,7 @@
             "description": "Plateforme de Machine Learning fédéré pour la recherche",
             "technologies": "Python, FastAPI, React, PostgreSQL",
             "project_type": "Stage de recherche — DEAM Lab, UNC Charlotte",
-            "video": "",
+            "video": "MLFederatedLearning.mp4",
             "img1": "mlfl-home.webp",
             "img2": "mlfl-project.webp",
             "img3": "mlfl-model.webp",
