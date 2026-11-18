@@ -50,7 +50,8 @@
         "sort": {
             "custom": "Ordre Custom",
             "web": "Web",
-            "games": "Jeux"
+            "games": "Jeux",
+            "ml": "Machine Learning"
         }
     },
     "skillsPage": {

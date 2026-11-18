@@ -22,6 +22,10 @@ function Projects() {
       arr = arr
         .filter((p) => p.type === "game")
         .sort((a, b) => Number(b.date) - Number(a.date));
+    } else if (activeBtn === "ML") {
+      arr = arr
+        .filter((p) => p.type === "ml")
+        .sort((a, b) => Number(b.date) - Number(a.date));
     }
 
     // ⚡️ Localise ici à chaque rendu → suit la langue active
@@ -57,6 +61,12 @@ function Projects() {
             onClick={() => setActiveBtn("Jeux")}
           >
             {t("projectsPage.sort.games", "Jeux")}
+          </button>
+          <button
+            className={`sort-btn ${activeBtn === "ML" ? "active-btn" : ""}`}
+            onClick={() => setActiveBtn("ML")}
+          >
+            {t("projectsPage.sort.ml", "Machine Learning")}
           </button>
         </div>
 

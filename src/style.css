@@ -2107,7 +2107,13 @@ a.dl-cv {
 .sort-btns-container {
   background-color: black;
   padding: 10px;
-  width: 310px;
+  /* S'adapte au nombre de boutons et passe à la ligne sur petit écran */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  max-width: 100%;
   margin: 0 auto;
   border-radius: 1.5em;
   box-shadow: -0.5rem 0.5rem 1rem rgba(53, 40, 82, 0.693), inset -0.25rem 0.25rem 0.5rem rgb(72, 54, 112);
@@ -2116,6 +2122,36 @@ a.dl-cv {
 .sort-btn {
   background-color: transparent;
   color: white;
+  /* Même padding actif/inactif : évite que la barre change de taille au clic */
+  margin-inline: 0;
+  padding: 5px 20px;
+  border-radius: 1.5em;
+  white-space: nowrap;
+}
+
+/* Mobile : grille 2×2, boutons de même largeur et hauteur fixe (pas de saut au clic) */
+@media (max-width: 576px) {
+  .sort-btns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    width: 100%;
+    max-width: 360px;
+    padding: 8px;
+  }
+
+  .sort-btn,
+  .sort-btn.active-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px; /* assez haut pour « Machine Learning » sur 2 lignes (≈320px) */
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 .active-btn {

@@ -1,4 +1,23 @@
 {
+    "ml_federated_learning": {
+        "name": "ML Federated Learning",
+        "but": "Federated Machine Learning platform built during my internship at the University of North Carolina at Charlotte (USA), letting research labs pool their machining measurements.",
+        "description": "Federated Machine Learning platform for research",
+        "technologies": "Python, FastAPI, React, PostgreSQL",
+        "project_type": "Research internship — DEAM Lab, UNC Charlotte",
+        "project_details": {
+            "description": [
+                "This project was built during my 3-month research internship (June to August 2026) at the DEAM Lab of the University of North Carolina at Charlotte (UNC Charlotte), USA, under the supervision of Dr. Jose C. M. Outeiro.",
+                "It starts from a data-scarcity problem: in machining, measuring residual stresses (by X-ray diffraction) in an alloy such as Ti-6Al-4V is expensive in machine time and money. A published study often has only a handful of measured conditions, far too few to train a model that generalizes. No single lab can gather enough data on its own.",
+                "The platform addresses this: a researcher creates a project by declaring the input variables they measure (cutting speed, rake angle, edge radius…) and the quantity they want to predict, then uploads their data to get a model. Other researchers measuring the same quantities can find that project and contribute their data, receiving access to the improved model in exchange.",
+                "Federated learning is at the heart of the project. A contributor can choose to send only aggregated statistics (D'D, D'y, y'y and n) instead of their file: their measurements never leave their machine. Unlike classic FedAvg, which averages model weights, this aggregation is mathematically exact: the resulting coefficients are identical, to numerical precision, to those of a fit on the pooled data.",
+                "On the Machine Learning side, every project trains two models: a reference model (linear regression, ridge, or PIML, a physics-informed model that penalizes coefficients whose sign contradicts physical laws) fed by every contribution, and a more flexible main model (Gaussian process, gradient boosting, random forest) fed only by shared data. Models are evaluated with leave-one-lab-out cross-validation, and every contribution receives two scores (transfer and refit) plus a poolability score to help the project owner accept or reject it.",
+                "Technically, the API is built in Python with FastAPI, SQLAlchemy and Alembic on a PostgreSQL database, and training relies on scikit-learn, NumPy and pandas. The front-end is built with React, Vite and TypeScript. Everything is containerized with Docker Compose, served behind Caddy, and deployed automatically through a GitHub Actions CI/CD pipeline.",
+                "The platform also includes a canonical registry of physical variables (with units and automatic conversion), a permission system (anonymous, contributor, owner), owner review of contributions, model version history, notifications, and a benchmark of learning engines with live training progress.",
+                "This internship let me work in a genuine international research environment, in English, combining full-stack development, Machine Learning and applied mathematics."
+            ]
+        }
+    },
     "comics_more": {
         "name": "Comics More",
         "but": "Online comic reading website. A credit system lets users purchase comics. Credits can be bought by card or via PayPal.",
