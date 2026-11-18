@@ -2,10 +2,16 @@ import React, { useRef, useState } from "react";
 import { AiOutlineGithub, AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import ImageLightbox from "./ImageLightbox";
+import { FLAGS } from "../Flags";
 
 // 🔹 Tag "Projet étudiant / Personnel" masqué : peu d'intérêt tant que la quasi-totalité
 //    des projets sont scolaires. Repasser à true pour le réafficher.
 const SHOW_PROJECT_TYPE = false;
+
+// ⭐ Étoile "projet coup de cœur" en haut à gauche des cartes marquées "featured": true
+//    dans projects.json. Passer à false pour masquer toutes les étoiles d'un coup
+//    (ou retirer "featured" d'un projet pour l'enlever uniquement sur celui-ci).
+const SHOW_FEATURED_STAR = true;
 
 function ProjectCards({ data, id }) {
   const { i18n, t } = useTranslation();
@@ -15,6 +21,8 @@ function ProjectCards({ data, id }) {
 
   const langParam = i18n.language?.startsWith("en") ? "en" : "fr";
   const detailsHref = `/project/${data.id}?lng=${langParam}`;
+
+  const FlagIcon = data.flag ? FLAGS[data.flag] : null;
 
   const techList = data.technologies
     ? data.technologies.split(",").map((tech) => tech.trim())
@@ -112,7 +120,11 @@ function ProjectCards({ data, id }) {
         )}
       </div>
 
-      <h2 className="glass-card__title">{data.name}</h2>
+      <h2 className="glass-card__title">
+        {data.name}
+        {/* Drapeau optionnel (champ "flag" de projects.json, ex. "us") */}
+        {FlagIcon && <FlagIcon className="glass-card__flag" />}
+      </h2>
       <p className="glass-card__subtitle">{data.description}</p>
 
       <div className="glass-card__divider" />
@@ -153,6 +165,41 @@ function ProjectCards({ data, id }) {
       onMouseLeave={handleMouseLeave}
     >
       <div className="glass-card__glow" ref={glowRef} />
+
+      {SHOW_FEATURED_STAR && data.featured && (
+        data.corner === "us" ? (
+          // 🇺🇸 Variante : coin aux couleurs du drapeau américain ("corner": "us" dans projects.json).
+          //    Retirer "corner" du projet pour revenir au coin doré avec l'étoile.
+          <span className="glass-card__star glass-card__star--us" title={t("labels.featured")} aria-label={t("labels.featured")} role="img">
+            <svg viewBox="0 0 52 52" aria-hidden="true">
+              <defs>
+                <clipPath id={`corner-us-${data.id}`}>
+                  <polygon points="0,0 52,0 0,52" />
+                </clipPath>
+              </defs>
+              <g clipPath={`url(#corner-us-${data.id})`}>
+                {/* 13 bandes rouges/blanches de 4px */}
+                {Array.from({ length: 13 }, (_, i) => (
+                  <rect key={i} x="0" y={i * 4} width="52" height="4" fill={i % 2 === 0 ? "#b22234" : "#fff"} />
+                ))}
+                {/* Canton bleu + étoile */}
+                <rect x="0" y="0" width="24" height="24" fill="#3c3b6e" />
+                <path
+                  transform="translate(5 5) scale(0.58)"
+                  fill="#fff"
+                  d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5z"
+                />
+              </g>
+            </svg>
+          </span>
+        ) : (
+          <span className="glass-card__star" title={t("labels.featured")} aria-label={t("labels.featured")} role="img">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5z" />
+            </svg>
+          </span>
+        )
+      )}
 
       {/* DOM toujours : textBlock puis imagesBlock
           CSS gère l'ordre visuel via flex-direction :

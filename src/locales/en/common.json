@@ -81,7 +81,8 @@
         "description": "Description",
         "technologies": "Technologies",
         "type": "Project Type",
-        "more": "More Information"
+        "more": "More Information",
+        "featured": "Featured project"
     },
     "experiencesPage": {
         "title": {

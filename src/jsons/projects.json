@@ -1,44 +1,6 @@
 {
     "projects": [
         {
-            "id": "ml_federated_learning",
-            "name": "ML Federated Learning",
-            "date": "2026",
-            "but": "Plateforme de Machine Learning fédéré réalisée durant mon stage à l'Université de Caroline du Nord à Charlotte (USA), permettant à des laboratoires de mutualiser leurs mesures d'usinage.",
-            "description": "Plateforme de Machine Learning fédéré pour la recherche",
-            "technologies": "Python, FastAPI, React, PostgreSQL",
-            "project_type": "Stage de recherche — DEAM Lab, UNC Charlotte",
-            "video": "",
-            "img1": "mlfl-home.webp",
-            "img2": "mlfl-project.webp",
-            "img3": "mlfl-model.webp",
-            "link_project_page": "https://ml-federated-learning.uncc.alexigallonet.com/",
-            "type": "ml",
-            "github": "https://github.com/alexiglnt/ML_Federeted_Learning",
-            "project_details": {
-                "description": [
-                    "Ce projet a été réalisé durant mon stage de recherche de 3 mois (juin à août 2026) au DEAM Lab de l'University of North Carolina at Charlotte (UNC Charlotte), aux États-Unis, sous la supervision du Dr Jose C. M. Outeiro.",
-                    "Le point de départ est un problème de rareté des données : en usinage, mesurer les contraintes résiduelles (par diffraction des rayons X) dans un alliage comme le Ti-6Al-4V coûte cher en temps machine et en argent. Une étude publiée ne compte souvent qu'une poignée de conditions mesurées, ce qui est bien trop peu pour entraîner un modèle qui généralise. Aucun laboratoire ne peut, seul, réunir assez de données.",
-                    "La plateforme répond à ce problème : un chercheur crée un projet en déclarant les variables d'entrée qu'il mesure (vitesse de coupe, angle de coupe, rayon d'arête…) et la grandeur qu'il veut prédire, puis importe ses données pour obtenir un modèle. D'autres chercheurs qui mesurent les mêmes grandeurs peuvent retrouver ce projet et y contribuer leurs données, et obtiennent en échange l'accès au modèle amélioré.",
-                    "Le cœur du projet est l'apprentissage fédéré. Un contributeur peut choisir de ne transmettre que des statistiques agrégées (D'D, D'y, y'y et n) au lieu de son fichier : ses mesures ne quittent jamais sa machine. Contrairement au FedAvg classique qui moyenne les poids des modèles, cette agrégation est mathématiquement exacte : les coefficients obtenus sont identiques, à la précision numérique près, à ceux d'un entraînement sur les données réunies.",
-                    "Côté Machine Learning, chaque projet entraîne deux modèles : un modèle de référence (régression linéaire, ridge, ou PIML, un modèle « informé par la physique » qui pénalise les coefficients dont le signe contredit les lois physiques) alimenté par toutes les contributions, et un modèle principal plus flexible (processus gaussien, gradient boosting, random forest) alimenté uniquement par les données partagées. Les modèles sont évalués par validation croisée « leave-one-lab-out », et chaque contribution reçoit deux scores (transfert et réajustement) ainsi qu'un score de « poolabilité » pour aider le propriétaire du projet à l'accepter ou la refuser.",
-                    "Techniquement, l'API est développée en Python avec FastAPI, SQLAlchemy et Alembic sur une base PostgreSQL, et l'entraînement repose sur scikit-learn, NumPy et pandas. Le front-end est réalisé en React avec Vite et TypeScript. Le tout est conteneurisé avec Docker Compose, servi derrière Caddy, et déployé automatiquement via une pipeline CI/CD GitHub Actions.",
-                    "La plateforme intègre aussi un registre canonique de variables physiques (avec unités et conversions automatiques), un système de permissions (anonyme, contributeur, propriétaire), une relecture des contributions par le propriétaire, un historique des versions du modèle, des notifications, ainsi qu'un benchmark des moteurs d'apprentissage avec suivi de l'entraînement en direct.",
-                    "Ce stage m'a permis de travailler dans un véritable environnement de recherche internationale, en anglais, et de mêler développement full-stack, Machine Learning et mathématiques appliquées."
-                ],
-                "techno": [
-                    "Python.svg",
-                    "react.svg",
-                    "TypeScript.svg",
-                    "Postgresql.svg",
-                    "docker.svg",
-                    "scikit-learn.png",
-                    "numpy.png",
-                    "pandas.png"
-                ]
-            }
-        },
-        {
             "id": "comics_more",
             "name": "Comics More",
             "date": "2023",
@@ -71,7 +33,8 @@
                     "phplogo.svg",
                     "apiplatform.svg"
                 ]
-            }
+            },
+            "featured": true
         },
         {
             "id": "note_finder",
@@ -103,7 +66,48 @@
                     "Postgresql.svg",
                     "Tailwind.svg"
                 ]
-            }
+            },
+            "featured": true
+        },
+        {
+            "id": "ml_federated_learning",
+            "name": "ML Federated Learning",
+            "flag": "us",
+            "date": "2026",
+            "but": "Plateforme de Machine Learning fédéré réalisée durant mon stage à l'Université de Caroline du Nord à Charlotte (USA), permettant à des laboratoires de mutualiser leurs mesures d'usinage.",
+            "description": "Plateforme de Machine Learning fédéré pour la recherche",
+            "technologies": "Python, FastAPI, React, PostgreSQL",
+            "project_type": "Stage de recherche — DEAM Lab, UNC Charlotte",
+            "video": "",
+            "img1": "mlfl-home.webp",
+            "img2": "mlfl-project.webp",
+            "img3": "mlfl-model.webp",
+            "link_project_page": "https://ml-federated-learning.uncc.alexigallonet.com/",
+            "type": "ml",
+            "github": "https://github.com/alexiglnt/ML_Federeted_Learning",
+            "project_details": {
+                "description": [
+                    "Ce projet a été réalisé durant mon stage de recherche de 3 mois (juin à août 2026) au DEAM Lab de l'University of North Carolina at Charlotte (UNC Charlotte), aux États-Unis, sous la supervision du Dr Jose C. M. Outeiro.",
+                    "Le point de départ est un problème de rareté des données : en usinage, mesurer les contraintes résiduelles (par diffraction des rayons X) dans un alliage comme le Ti-6Al-4V coûte cher en temps machine et en argent. Une étude publiée ne compte souvent qu'une poignée de conditions mesurées, ce qui est bien trop peu pour entraîner un modèle qui généralise. Aucun laboratoire ne peut, seul, réunir assez de données.",
+                    "La plateforme répond à ce problème : un chercheur crée un projet en déclarant les variables d'entrée qu'il mesure (vitesse de coupe, angle de coupe, rayon d'arête…) et la grandeur qu'il veut prédire, puis importe ses données pour obtenir un modèle. D'autres chercheurs qui mesurent les mêmes grandeurs peuvent retrouver ce projet et y contribuer leurs données, et obtiennent en échange l'accès au modèle amélioré.",
+                    "Le cœur du projet est l'apprentissage fédéré. Un contributeur peut choisir de ne transmettre que des statistiques agrégées (D'D, D'y, y'y et n) au lieu de son fichier : ses mesures ne quittent jamais sa machine. Contrairement au FedAvg classique qui moyenne les poids des modèles, cette agrégation est mathématiquement exacte : les coefficients obtenus sont identiques, à la précision numérique près, à ceux d'un entraînement sur les données réunies.",
+                    "Côté Machine Learning, chaque projet entraîne deux modèles : un modèle de référence (régression linéaire, ridge, ou PIML, un modèle « informé par la physique » qui pénalise les coefficients dont le signe contredit les lois physiques) alimenté par toutes les contributions, et un modèle principal plus flexible (processus gaussien, gradient boosting, random forest) alimenté uniquement par les données partagées. Les modèles sont évalués par validation croisée « leave-one-lab-out », et chaque contribution reçoit deux scores (transfert et réajustement) ainsi qu'un score de « poolabilité » pour aider le propriétaire du projet à l'accepter ou la refuser.",
+                    "Techniquement, l'API est développée en Python avec FastAPI, SQLAlchemy et Alembic sur une base PostgreSQL, et l'entraînement repose sur scikit-learn, NumPy et pandas. Le front-end est réalisé en React avec Vite et TypeScript. Le tout est conteneurisé avec Docker Compose, servi derrière Caddy, et déployé automatiquement via une pipeline CI/CD GitHub Actions.",
+                    "La plateforme intègre aussi un registre canonique de variables physiques (avec unités et conversions automatiques), un système de permissions (anonyme, contributeur, propriétaire), une relecture des contributions par le propriétaire, un historique des versions du modèle, des notifications, ainsi qu'un benchmark des moteurs d'apprentissage avec suivi de l'entraînement en direct.",
+                    "Ce stage m'a permis de découvrir le monde de la recherche scientifique, en travaillant en anglais au sein d'un environnement de recherche international. Il m'a également permis d'allier développement full-stack, Machine Learning et mathématiques appliquées."
+                ],
+                "techno": [
+                    "Python.svg",
+                    "react.svg",
+                    "Postgresql.svg",
+                    "docker.svg",
+                    "scikit-learn.png",
+                    "numpy.png",
+                    "pandas.png"
+                ]
+            },
+            "featured": true,
+            "corner": "us"
         },
         {
             "id": "remindr",

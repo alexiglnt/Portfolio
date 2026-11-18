@@ -81,7 +81,8 @@
         "description": "Description",
         "technologies": "Technologies",
         "type": "Type de projet",
-        "more": "Plus d'informations"
+        "more": "Plus d'informations",
+        "featured": "Projet coup de cœur"
     },
     "experiencesPage": {
         "title": {

@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+  /* Footer collé en bas : la page fait au moins la hauteur de l'écran,
+     et le footer est poussé tout en bas quand le contenu est court
+     (ex. page Projets filtrée sur un seul projet, sur grand écran). */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App > .footer {
+  margin-top: auto;
 }
 
 .App-logo {

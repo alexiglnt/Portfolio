@@ -14,7 +14,7 @@
                 "On the Machine Learning side, every project trains two models: a reference model (linear regression, ridge, or PIML, a physics-informed model that penalizes coefficients whose sign contradicts physical laws) fed by every contribution, and a more flexible main model (Gaussian process, gradient boosting, random forest) fed only by shared data. Models are evaluated with leave-one-lab-out cross-validation, and every contribution receives two scores (transfer and refit) plus a poolability score to help the project owner accept or reject it.",
                 "Technically, the API is built in Python with FastAPI, SQLAlchemy and Alembic on a PostgreSQL database, and training relies on scikit-learn, NumPy and pandas. The front-end is built with React, Vite and TypeScript. Everything is containerized with Docker Compose, served behind Caddy, and deployed automatically through a GitHub Actions CI/CD pipeline.",
                 "The platform also includes a canonical registry of physical variables (with units and automatic conversion), a permission system (anonymous, contributor, owner), owner review of contributions, model version history, notifications, and a benchmark of learning engines with live training progress.",
-                "This internship let me work in a genuine international research environment, in English, combining full-stack development, Machine Learning and applied mathematics."
+                "This internship introduced me to the world of scientific research, working in English within an international research environment. It also allowed me to combine full-stack development, Machine Learning and applied mathematics."
             ]
         }
     },

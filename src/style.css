@@ -2386,6 +2386,61 @@ details:hover {
   z-index: 1;
 }
 
+/* ── ⭐ Étoile "projet coup de cœur" (voir SHOW_FEATURED_STAR dans ProjectCards.js) ── */
+/* Coin doré triangulaire logé dans l'angle : ne chevauche jamais le contenu,
+   que le texte soit à gauche ou à droite. L'arrondi de la carte (overflow hidden) le découpe. */
+.glass-card > .glass-card__star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #ffe08a 0%, #ffc34d 45%, transparent 45.5%);
+  filter: drop-shadow(0 0 10px rgba(255, 196, 77, 0.45));
+  pointer-events: auto;
+  transition: filter 0.35s ease;
+}
+
+.glass-card__star svg {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  color: #2a1650;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-card:hover > .glass-card__star {
+  filter: drop-shadow(0 0 16px rgba(255, 196, 77, 0.7));
+}
+
+.glass-card:hover > .glass-card__star svg {
+  transform: rotate(-15deg) scale(1.15);
+}
+
+/* 🇺🇸 Variante drapeau américain ("corner": "us" dans projects.json) */
+.glass-card > .glass-card__star--us {
+  background: none;
+  filter: drop-shadow(0 0 10px rgba(178, 34, 52, 0.45));
+}
+
+.glass-card__star--us svg {
+  top: 0;
+  left: 0;
+  width: 52px;
+  height: 52px;
+}
+
+.glass-card:hover > .glass-card__star--us {
+  filter: drop-shadow(0 0 16px rgba(60, 59, 110, 0.8));
+}
+
+.glass-card:hover > .glass-card__star--us svg {
+  transform: none; /* le drapeau ne pivote pas, sinon il sort du coin */
+}
+
 /* ── Layout intérieur alterné ── */
 .glass-card__inner {
   display: flex;
@@ -2695,6 +2750,17 @@ details:hover {
   letter-spacing: -0.02em !important;
   margin-bottom: 6px !important;
   text-align: left !important;
+}
+
+/* Drapeau à droite du titre (ex. projet réalisé aux USA) */
+.glass-card__flag {
+  display: inline-block;
+  width: 26px;
+  height: 14px; /* même proportion que le viewBox 26×14 du SVG */
+  margin-left: 10px;
+  vertical-align: 0.05em;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .glass-card__subtitle {
